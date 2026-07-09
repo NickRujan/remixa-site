@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Remixa — Full Guide</title>
+<link rel="icon" href="./logo.png">
+
+<!-- Rich embeds (Discord / iMessage / Twitter / Slack). og:url and og:image
+     must stay ABSOLUTE urls — update them if the guide moves off /guide.html.
+     TEMPORARY: pointing at GitHub Pages until remixa.app is live. When the
+     domain goes live, restore these three URLs to:
+       og:url        https://remixa.app/guide.html
+       og:image      https://remixa.app/images/social-card.png
+       twitter:image https://remixa.app/images/social-card.png -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Remixa">
+<meta property="og:title" content="Remixa — Full Guide">
+<meta property="og:description" content="From download to your first batch of finished videos: install, activate, modes, text & overlays, generate.">
+<meta property="og:url" content="https://nickrujan.github.io/remixa-site/guide.html">
+<meta property="og:image" content="https://nickrujan.github.io/remixa-site/images/social-card.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Remixa — Full Guide">
+<meta name="twitter:description" content="From download to your first batch of finished videos: install, activate, modes, text & overlays, generate.">
+<meta name="twitter:image" content="https://nickrujan.github.io/remixa-site/images/social-card.png">
+<meta name="theme-color" content="#D4A62A">
+<style>
+  :root{
+    --gold:#D4A62A; --gold-soft:#F0DFA8;
+    --bg:#0b0d11; --card:#14171d; --card2:#1a1e26;
+    --ink:#e8e6df; --dim:#9a978d; --line:#262b35;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);
+       font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+       -webkit-font-smoothing:antialiased}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+  .wrap{max-width:960px;margin:0 auto;padding:0 20px}
+
+  header{border-bottom:1px solid var(--line);padding:22px 0;position:sticky;top:0;
+         background:rgba(11,13,17,.92);backdrop-filter:blur(8px);z-index:10}
+  .hrow{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .hrow img{width:40px;height:40px}
+  .hrow h1{font-size:1.35rem;letter-spacing:.2px}
+  .hrow h1 b{color:var(--gold)}
+  .hrow .back{margin-left:auto;font-size:.9rem;color:var(--dim)}
+  .hrow .back:hover{color:var(--gold)}
+
+  .hero{padding:48px 0 8px}
+  .hero p{color:var(--dim);max-width:640px}
+
+  nav.toc{margin:26px 0 8px;display:flex;flex-wrap:wrap;gap:8px}
+  nav.toc a{background:var(--card);border:1px solid var(--line);border-radius:999px;
+            padding:6px 14px;font-size:.85rem;color:var(--ink)}
+  nav.toc a:hover{border-color:var(--gold);text-decoration:none;color:var(--gold-soft)}
+
+  section{padding:44px 0 6px}
+  .kicker{color:var(--gold);font-size:.8rem;font-weight:700;letter-spacing:.18em;
+          text-transform:uppercase;margin-bottom:6px}
+  h2{font-size:1.7rem;margin-bottom:14px}
+  h3{font-size:1.12rem;margin:30px 0 8px;color:var(--gold-soft)}
+  section > p, .col p, .step p{color:var(--dim)}
+  section > p{max-width:700px;margin-bottom:14px}
+  section p b, .col p b{color:var(--ink);font-weight:600}
+
+  .shot{display:block;width:100%;height:auto;border:1px solid var(--line);
+        border-radius:12px;margin:14px 0;background:#000}
+  .shot.small{max-width:520px}
+  figcaption{font-size:.83rem;color:var(--dim);margin:-6px 0 18px 2px}
+
+  .cols{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:16px}
+  .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+  .col h3{margin-top:0}
+  ol.steps{margin:10px 0 0 20px;color:var(--dim)}
+  ol.steps li{margin:8px 0}
+  ol.steps b{color:var(--ink)}
+
+  .note{background:var(--card2);border:1px solid var(--gold);border-radius:12px;
+        padding:14px 16px;margin:16px 0;font-size:.92rem;color:var(--ink)}
+  .note .t{color:var(--gold);font-weight:700;margin-right:6px}
+
+  .vidrow{display:flex;flex-wrap:wrap;gap:16px;margin:16px 0 8px}
+  .vid{flex:1 1 220px;max-width:270px}
+  .vid video{width:100%;border-radius:12px;border:1px solid var(--line);
+             background:#000;display:block;aspect-ratio:9/16}
+  .vid .cap{font-size:.85rem;color:var(--dim);margin-top:7px;line-height:1.45}
+  .vid .cap b{color:var(--gold-soft)}
+
+  table.modes{width:100%;border-collapse:collapse;margin:14px 0;font-size:.92rem}
+  table.modes th,table.modes td{border:1px solid var(--line);padding:10px 12px;
+                                text-align:left;vertical-align:top}
+  table.modes th{color:var(--gold-soft);background:var(--card);font-weight:600;white-space:nowrap}
+  table.modes td{color:var(--dim)}
+  table.modes td b{color:var(--ink)}
+  .tablewrap{overflow-x:auto}
+
+  ul.tips{margin:12px 0 0 20px;color:var(--dim)}
+  ul.tips li{margin:10px 0}
+  ul.tips b{color:var(--ink)}
+
+  .pill{display:inline-block;background:var(--card2);border:1px solid var(--line);
+        border-radius:6px;padding:1px 8px;font-size:.85em;color:var(--gold-soft);
+        white-space:nowrap}
+
+  footer{border-top:1px solid var(--line);margin-top:64px;padding:34px 0 46px;
+         color:var(--dim);font-size:.9rem}
+  footer .frow{display:flex;flex-wrap:wrap;gap:10px 26px;align-items:center}
+
+  @media (max-width:720px){
+    .cols{grid-template-columns:1fr}
+    .hero{padding-top:34px}
+    h2{font-size:1.45rem}
+    .vid{max-width:100%}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap hrow">
+    <img src="./logo.png" alt="Remixa logo">
+    <h1><b>Remixa</b> — Full Guide</h1>
+    <a class="back" href="https://remixa.app">← remixa.app</a>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="hero">
+    <p>Everything you need to go from download to your first batch of finished videos.
+       Remixa runs on your computer — your clips never leave your machine.</p>
+    <nav class="toc">
+      <a href="#install">Download &amp; install</a>
+      <a href="#activate">Activate</a>
+      <a href="#clips">Add clips</a>
+      <a href="#modes">Modes</a>
+      <a href="#mix">Mix clips</a>
+      <a href="#text">Text on your hook</a>
+      <a href="#overlays">Overlays</a>
+      <a href="#settings">Auto-variation</a>
+      <a href="#generate">Generate</a>
+      <a href="#tips">Tips</a>
+    </nav>
+  </div>
+
+  <!-- ============================== INSTALL ============================== -->
+  <section id="install">
+    <div class="kicker">Step 1</div>
+    <h2>Download &amp; install</h2>
+    <p>Your download link is in your purchase email, and always available at
+       <a href="https://remixa.app">remixa.app</a>. Pick your platform:</p>
+
+    <div class="cols">
+      <div class="col">
+        <h3>Windows</h3>
+        <ol class="steps">
+          <li>Download <b>Remixa-Setup.exe</b> from your purchase email or remixa.app.</li>
+          <li><b>Double-click</b> the installer and click through — it installs
+              just for your user account, no admin password needed.</li>
+          <li>Launch <b>Remixa</b> from the Start menu. The app opens in your
+              web browser — that's normal, everything still runs locally on your PC.</li>
+        </ol>
+      </div>
+      <div class="col">
+        <h3>Mac</h3>
+        <ol class="steps">
+          <li>Download the <b>.dmg</b> from your purchase email or remixa.app.</li>
+          <li>Open it and <b>drag Remixa into Applications</b>.</li>
+          <li>Launch it — the app opens in your web browser, running locally.</li>
+        </ol>
+        <div class="note"><span class="t">First launch on Mac:</span>
+          <b>right-click the app and choose “Open”</b>, then confirm. macOS
+          Gatekeeper shows a warning the first time because Remixa is an
+          independent app that isn't notarized through Apple — the right-click →
+          Open route only has to be done once.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== ACTIVATE ============================== -->
+  <section id="activate">
+    <div class="kicker">Step 2</div>
+    <h2>Activate your license</h2>
+    <p>The first screen asks for your license key — it's in your purchase
+       receipt email. Paste it and hit <b>Activate</b>.</p>
+    <figure>
+      <img class="shot small" src="./images/license.png" alt="Remixa license activation screen">
+      <figcaption>The activation screen you'll see on first launch.</figcaption>
+    </figure>
+    <ul class="tips">
+      <li>One key works on <b>up to 2 devices</b> at the same time.</li>
+      <li>An internet connection is needed to verify the key. After that,
+          Remixa re-checks it periodically in the background.</li>
+      <li>Switching computers? Deactivate on the old device first (or contact
+          support to reset your activations).</li>
+    </ul>
+  </section>
+
+  <!-- ============================== CLIPS ============================== -->
+  <section id="clips">
+    <div class="kicker">Step 3</div>
+    <h2>Add your clips</h2>
+    <p>Drop your source videos into <b>1 · Source videos</b>. The ideal clip is
+       a <b>talking hook followed by a screen recording</b> — you on camera
+       saying the hook, then the screen/content you're showing. Remixa detects
+       where the talking ends and the screen part begins automatically.</p>
+    <p>Sounds are optional: drop music into <b>2 · Sounds</b> and Remixa fades
+       it down while you talk and brings it up when you're not talking. No
+       sounds means each output keeps its clip's original audio.</p>
+    <figure>
+      <img class="shot" src="./images/dashboard.png" alt="Remixa dashboard with source videos and sounds loaded">
+      <figcaption>The dashboard with three source clips and two sounds loaded.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================== MODES ============================== -->
+  <section id="modes">
+    <div class="kicker">Step 4</div>
+    <h2>Pick a mode</h2>
+    <p>Choose how many videos to make, then pick a <b>Mode</b>. Each mode shows
+       a one-line hint under the buttons so you always know what it does.</p>
+    <figure>
+      <img class="shot" src="./images/modes-mix.png" alt="Mode and Mix clips selectors with hints">
+      <figcaption>Videos count, Mode selector and Mix clips selector — hints appear under whichever option is active.</figcaption>
+    </figure>
+
+    <div class="tablewrap">
+    <table class="modes">
+      <tr><th>Basic</th>
+          <td><b>Your clip as-is</b> — talking hook, then showing screen. The
+              simplest mode and a great default.</td></tr>
+      <tr><th>Multi-clip</th>
+          <td>Mixes material across your clips but <b>keeps your order</b>:
+              hook + showing screen + talking + showing screen. Talking parts
+              stay in place; only the screen parts get swapped in.</td></tr>
+      <tr><th>Split Screen</th>
+          <td>Opens on your talking hook, then switches to a <b>reaction-over-screen
+              split</b>. Needs clips that actually have a reaction-over-screen part.</td></tr>
+    </table>
+    </div>
+
+    <h3>What each mode looks like</h3>
+    <p>Real outputs rendered by Remixa (tap to play, sound on):</p>
+    <div class="vidrow">
+      <div class="vid">
+        <video controls preload="metadata" src="./videos/basic.mp4"></video>
+        <div class="cap"><b>Basic</b> — hook, then screen, untouched structure.</div>
+      </div>
+      <div class="vid">
+        <video controls preload="metadata" src="./videos/multiclip.mp4"></video>
+        <div class="cap"><b>Multi-clip</b> — same order, screen parts pulled from other clips.</div>
+      </div>
+      <div class="vid">
+        <video controls preload="metadata" src="./videos/split.mp4"></video>
+        <div class="cap"><b>Split Screen</b> — talking hook, then reaction stacked over the screen.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== MIX ============================== -->
+  <section id="mix">
+    <div class="kicker">Step 5</div>
+    <h2>Mix clips</h2>
+    <p>The <b>Mix clips</b> selector controls how much your clips cross over
+       into each other's videos:</p>
+    <div class="tablewrap">
+    <table class="modes">
+      <tr><th>Off</th><td>Each video uses <b>one clip only</b>. Cleanest, least variety.</td></tr>
+      <tr><th>Hooks</th><td><b>Hooks rotate</b> across clips, bodies stay whole. Fresh openers on familiar content.</td></tr>
+      <tr><th>All</th><td><b>Everything mixes</b> across all your clips. Maximum variety per batch.</td></tr>
+    </table>
+    </div>
+  </section>
+
+  <!-- ============================== TEXT ============================== -->
+  <section id="text">
+    <div class="kicker">Step 6</div>
+    <h2>Text on your hook</h2>
+    <p>Flip the <b>Text</b> toggle on and you get a live editor on a real frame
+       of your video. Type a wording, <b>drag the box to move it</b>, and use
+       the corner dot to resize.</p>
+    <figure>
+      <img class="shot" src="./images/texteditor.png" alt="Text editor with a styled segment, wordings list, fonts and caption styles">
+      <figcaption>A text segment with three wordings, Snap font and the Snapchat caption style — exactly what renders on the video.</figcaption>
+    </figure>
+    <h3>How segments work</h3>
+    <ul class="tips">
+      <li><b>Segments</b> — each segment is one caption that shows during part
+          of your hook. Add more with <span class="pill">+ Add text segment</span>.</li>
+      <li><b>Timing</b> — “Show from X% to Y% of the hook” controls when it
+          appears. Drag the <b>bar under the preview</b> to scrub through the
+          hook and see exactly when each text shows. Segments touching at the
+          same % don't overlap: 0–50 and 50–100 is fine.</li>
+      <li><b>Wordings</b> — add several wordings to one segment and Remixa
+          <b>picks one per video</b>. With multiple segments, wordings
+          mix-and-match across the batch, so every output can read differently.</li>
+      <li><b>Styles</b> — five fonts (TikTok, Bold, Block, Snap, Arial), any
+          text color, and caption styles: None, Border, White bg, and a
+          <b>Snapchat-style bar</b>.</li>
+      <li><b>Orange bars</b> — width limits. They appear when two texts share a
+          line at the same time (each shrinks to fit), or turn them on manually
+          to control where text wraps.</li>
+      <li><b>Saved layouts</b> — save your text setup once and reuse it on
+          other videos.</li>
+    </ul>
+    <h3>The Snapchat style on a real output</h3>
+    <p>Two text segments, both with the Snapchat caption style — one placed at
+       the top of the frame, one at the bottom:</p>
+    <div class="vidrow">
+      <div class="vid">
+        <video controls preload="metadata" src="./videos/snapchat.mp4"></video>
+        <div class="cap"><b>Snapchat bars</b> — semi-transparent full-width
+            bars with white text, rendered exactly like the editor preview.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== OVERLAYS ============================== -->
+  <section id="overlays">
+    <div class="kicker">Step 7</div>
+    <h2>Image overlays</h2>
+    <p>Overlays put an image — a logo, sticker or screenshot — on your hook,
+       with the same timing controls as text. Click
+       <span class="pill">+ Add overlay</span>, upload an image, then drag and
+       resize it right on the preview. Text always renders above overlays.</p>
+    <figure>
+      <img class="shot" src="./images/overlay.png" alt="An overlay segment chip with background removed">
+      <figcaption>An overlay segment — this one has “Remove background” applied.</figcaption>
+    </figure>
+    <p><b>Remove background</b> cuts the subject out of the image automatically,
+       so a photo becomes a clean sticker. The first time you use it, Remixa
+       downloads the background-removal model — that one-time download takes a
+       moment, after that it's instant.</p>
+    <h3>An overlay on a real output</h3>
+    <div class="vidrow">
+      <div class="vid">
+        <video controls preload="metadata" src="./videos/overlay.mp4"></video>
+        <div class="cap"><b>Basic mode</b> with an image overlay timed to the
+            hook, and music from the Sounds panel.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SETTINGS ============================== -->
+  <section id="settings">
+    <div class="kicker">Step 8</div>
+    <h2>Auto-variation &amp; settings</h2>
+    <p>Open <b>⚙ Settings</b> (top right). The <b>Visual settings</b> tab
+       controls auto-variation: small random tweaks — zoom, brightness,
+       contrast, color temperature, speed, position shift — applied per copy so
+       no two videos look the same. Every effect has a toggle and a range, with
+       a <b>live preview</b> showing the strongest end of your ranges. “Reset to
+       defaults” puts everything back.</p>
+    <figure>
+      <img class="shot small" src="./images/settings-visual.png" alt="Visual settings with variation ranges and live preview">
+      <figcaption>Visual settings — each effect can be toggled off or tuned with a range.</figcaption>
+    </figure>
+    <p>The <b>Info</b> tab is a built-in cheat sheet: every mode, toggle and
+       editor concept explained in one place, so you never have to leave the
+       app to look something up.</p>
+    <figure>
+      <img class="shot small" src="./images/settings-info.png" alt="Info tab explaining every feature">
+      <figcaption>The Info tab — quick reference for everything in this guide.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================== GENERATE ============================== -->
+  <section id="generate">
+    <div class="kicker">Step 9</div>
+    <h2>Generate &amp; download</h2>
+    <p>Hit <b>Generate videos</b>. The progress log shows each video as it
+       renders — you can watch it work through the batch.</p>
+    <figure>
+      <img class="shot" src="./images/generate.png" alt="Generate videos button and progress log">
+      <figcaption>Generate button and the live progress log.</figcaption>
+    </figure>
+    <p>Finished videos appear at the bottom with a player for each — preview
+       them right there, download the ones you like, or grab the whole batch
+       with <b>⬇ Download all</b> (one zip).</p>
+    <figure>
+      <img class="shot" src="./images/downloadall.png" alt="Finished videos section with Download all button">
+      <figcaption>Finished videos with per-video Download buttons and Download all.</figcaption>
+    </figure>
+  </section>
+
+  <!-- ============================== TIPS ============================== -->
+  <section id="tips">
+    <div class="kicker">Get the most out of it</div>
+    <h2>Tips</h2>
+    <ul class="tips">
+      <li><b>More clips = more variety.</b> Multi-clip and Mix have more
+          material to work with, so every extra source clip multiplies how
+          different your outputs can be.</li>
+      <li><b>Split Screen needs the right footage</b> — clips that have a
+          reaction-over-screen part. If your clips are plain talking + screen,
+          use Basic or Multi-clip instead.</li>
+      <li><b>Tutorials and demos work great in Basic and Multi-clip</b> — the
+          talking stays in your order, so the walkthrough still makes sense
+          while the visuals vary.</li>
+      <li><b>Give one segment several wordings</b> instead of making several
+          near-identical segments — Remixa picks a different one per video for
+          free variety.</li>
+      <li><b>Scrub the bar under the preview</b> before generating — it's the
+          fastest way to sanity-check your text timing.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap frow">
+    <img src="./logo.png" alt="" width="26" height="26">
+    <span><a href="https://remixa.app">remixa.app</a></span>
+    <span><a href="#" title="Discord invite coming soon">Join the Discord</a></span>
+    <span style="margin-left:auto">Remixa runs locally — your clips stay on your machine.</span>
+  </div>
+</footer>
+
+</body>
+</html>

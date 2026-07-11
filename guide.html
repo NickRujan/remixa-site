@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Remixa — Full Guide</title>
+<title>Remixa — Getting Started Guide</title>
 <link rel="icon" href="./logo.png">
 
 <!-- Rich embeds (Discord / iMessage / Twitter / Slack). og:url and og:image
@@ -15,15 +15,15 @@
        twitter:image https://remixa.app/images/social-card.png -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Remixa">
-<meta property="og:title" content="Remixa — Full Guide">
-<meta property="og:description" content="Drop in your clips, get back a batch of ready-to-post videos. From install to your first batch in minutes.">
+<meta property="og:title" content="Remixa — Getting Started Guide">
+<meta property="og:description" content="Install, activate, drop in clips — Auto builds your batch. The whole flow in one page.">
 <meta property="og:url" content="https://nickrujan.github.io/remixa-site/guide.html">
 <meta property="og:image" content="https://nickrujan.github.io/remixa-site/images/social-card.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Remixa — Full Guide">
-<meta name="twitter:description" content="Drop in your clips, get back a batch of ready-to-post videos. From install to your first batch in minutes.">
+<meta name="twitter:title" content="Remixa — Getting Started Guide">
+<meta name="twitter:description" content="Install, activate, drop in clips — Auto builds your batch. The whole flow in one page.">
 <meta name="twitter:image" content="https://nickrujan.github.io/remixa-site/images/social-card.png">
 <meta name="theme-color" content="#D4A62A">
 
@@ -37,72 +37,113 @@
   html{scroll-behavior:smooth}
   body{background:var(--bg);color:var(--ink);
        font:17px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-       -webkit-font-smoothing:antialiased}
+       -webkit-font-smoothing:antialiased;overflow-x:hidden}
   a{color:var(--gold);text-decoration:none}
   a:hover{text-decoration:underline}
-  .wrap{max-width:680px;margin:0 auto;padding:0 18px}
+  .wrap{max-width:980px;margin:0 auto;padding:0 18px}
+  .narrow{max-width:640px;margin:0 auto}
 
-  header{border-bottom:1px solid var(--line);padding:16px 0;position:sticky;top:0;
+  /* ---- header (matches index.html) ---- */
+  header{border-bottom:1px solid var(--line);padding:14px 0;position:sticky;top:0;
          background:rgba(11,13,17,.94);backdrop-filter:blur(8px);z-index:10}
-  .hrow{display:flex;align-items:center;gap:12px}
-  .hrow img{width:34px;height:34px}
-  .hrow h1{font-size:1.15rem}
-  .hrow h1 b{color:var(--gold)}
+  .hrow{display:flex;align-items:center;gap:10px}
+  .hrow img{width:30px;height:30px}
+  .hrow .name{font-size:1.05rem;font-weight:700;color:var(--ink)}
+  .hrow .name b{color:var(--gold)}
+  .hrow a.brand{display:flex;align-items:center;gap:10px}
+  .hrow a.brand:hover{text-decoration:none}
+  .hrow .nav{margin-left:auto;display:none;align-items:center;gap:22px;font-size:.9rem;white-space:nowrap}
+  .hrow .nav a{color:var(--dim)}
+  .hrow .nav a:hover{color:var(--gold);text-decoration:none}
+  .hrow .nav a.cta{color:#1a1400;background:var(--gold);font-weight:700;
+       padding:8px 16px;border-radius:10px}
+  .hrow .nav a.cta:hover{filter:brightness(1.07)}
   .hrow .back{margin-left:auto;font-size:.85rem;color:var(--dim)}
 
-  .hero{padding:40px 0 6px}
-  .hero h2{font-size:1.9rem;line-height:1.25;margin-bottom:12px}
-  .hero h2 em{color:var(--gold);font-style:normal}
-  .hero p{color:var(--dim);font-size:1.05rem}
+  /* ---- intro ---- */
+  .ghero{position:relative;padding:48px 0 4px;text-align:center;
+        background:radial-gradient(680px 340px at 50% -12%,rgba(212,166,42,.12),transparent)}
+  .ghero .kicker{margin-bottom:10px}
+  .ghero h1{font-size:2rem;line-height:1.2;margin-bottom:12px;letter-spacing:-.01em}
+  .ghero h1 em{color:var(--gold);font-style:normal}
+  .ghero p{color:var(--dim);font-size:1.05rem;max-width:480px;margin:0 auto}
 
-  section{padding:38px 0 2px}
-  .kicker{color:var(--gold);font-size:.78rem;font-weight:700;letter-spacing:.16em;
-          text-transform:uppercase;margin-bottom:6px}
-  h3{font-size:1.45rem;margin-bottom:10px;line-height:1.3}
-  section p{color:var(--dim);margin-bottom:12px}
+  /* ---- steps: calm, airy, scannable ---- */
+  section{padding:56px 0 10px}
+  .kicker{display:inline-block;color:var(--gold);font-size:.72rem;font-weight:800;
+          letter-spacing:.16em;text-transform:uppercase;margin-bottom:14px;
+          background:rgba(212,166,42,.1);border:1px solid rgba(212,166,42,.35);
+          border-radius:20px;padding:5px 13px}
+  h2{font-size:1.5rem;margin-bottom:10px;line-height:1.3}
+  section p{color:var(--dim);margin-bottom:14px;max-width:560px}
   section p b, section li b{color:var(--ink);font-weight:600}
+  section + section{border-top:1px solid var(--line)}
 
-  .shot{display:block;width:100%;height:auto;border:1px solid var(--line);
-        border-radius:14px;margin:14px 0 6px;background:#000}
-  figcaption{font-size:.85rem;color:var(--dim);margin:4px 2px 14px}
-
-  /* 9:16 videos as phone-sized previews, never billboards: capped width,
-     centered, whole video visible without scrolling past it. */
-  video{width:100%;max-width:250px;border-radius:14px;border:1px solid var(--line);
-        background:#000;display:block;aspect-ratio:9/16;margin:14px auto 6px}
-  .vidrow{display:grid;grid-template-columns:1fr;gap:4px}
-  .vcap{font-size:.85rem;color:var(--dim);margin:0 auto 14px;max-width:280px;text-align:center}
-  .vcap b{color:var(--gold-soft)}
+  .duo{display:grid;grid-template-columns:1fr;gap:14px;margin:16px 0}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px}
+  .duo h3{color:var(--gold-soft);margin-bottom:8px;font-size:1.02rem}
+  .steps{margin:6px 0 4px 20px;color:var(--dim)}
+  .steps li{margin:8px 0}
+  ul.plain{margin:10px 0 14px 20px;color:var(--dim)}
+  ul.plain li{margin:9px 0}
 
   .note{background:var(--card2);border:1px solid var(--gold);border-radius:12px;
-        padding:13px 15px;margin:14px 0;font-size:.95rem}
+        padding:13px 15px;margin:16px 0;font-size:.95rem;color:var(--dim)}
   .note .t{color:var(--gold);font-weight:700;margin-right:6px}
+  .note b{color:var(--ink)}
 
-  .steps{margin:8px 0 6px 20px;color:var(--dim)}
-  .steps li{margin:8px 0}
-  ul.plain{margin:8px 0 6px 20px;color:var(--dim)}
-  ul.plain li{margin:8px 0}
+  /* ---- screenshots: captured at 2x device scale; the per-image caps below
+       are each file's 1x size, so they can never display upscaled ---- */
+  .shot{display:block;width:100%;height:auto;border:1px solid var(--line);
+        border-radius:14px;margin:18px auto 6px;background:#000}
+  .shot.s600{max-width:600px}
+  .shot.s530{max-width:530px}
+  .shot.s696{max-width:696px}
+  figcaption{font-size:.85rem;color:var(--dim);margin:6px auto 16px;
+        text-align:center;max-width:480px}
 
-  .duo{display:grid;grid-template-columns:1fr;gap:14px;margin:14px 0}
-  .duo .col{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
-  .duo h4{color:var(--gold-soft);margin-bottom:8px;font-size:1.05rem}
+  /* ---- 9:16 example videos: phone-sized, hover/tap to play ---- */
+  .vwrap{position:relative;width:100%;max-width:250px;margin:18px auto 8px}
+  video.demo{width:100%;border-radius:14px;border:1px solid var(--line);
+        background:#000;display:block;aspect-ratio:9/16;cursor:pointer}
+  .vbadge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+        width:54px;height:54px;border-radius:50%;background:rgba(11,13,17,.62);
+        border:1px solid var(--gold);color:var(--gold-soft);display:flex;
+        align-items:center;justify-content:center;font-size:1.25rem;
+        pointer-events:none;transition:opacity .25s ease}
+  .vbadge::before{content:"\25B6";margin-left:4px}
+  .vwrap.playing .vbadge{opacity:0}
+  .vcap{font-size:.85rem;color:var(--dim);margin:0 auto 18px;max-width:280px;text-align:center}
+  .vcap b{color:var(--gold-soft)}
+  .vidrow{display:grid;grid-template-columns:1fr;gap:8px;margin:8px 0 4px}
+  .vidrow figure{margin:0}
 
-  .modes{width:100%;border-collapse:collapse;margin:12px 0;font-size:.92rem}
-  .modes th,.modes td{border:1px solid var(--line);padding:10px 12px;text-align:left;vertical-align:top}
-  .modes th{color:var(--gold-soft);background:var(--card);font-weight:600;white-space:nowrap}
-  .modes td{color:var(--dim)}
-  .modes td b{color:var(--ink)}
-  .tablewrap{overflow-x:auto}
-
+  /* ---- footer (matches index.html) ---- */
   footer{border-top:1px solid var(--line);margin-top:56px;padding:28px 0 44px;
          color:var(--dim);font-size:.9rem}
-  footer .frow{display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center}
+  footer .frow{display:flex;flex-wrap:wrap;gap:10px 20px;align-items:center;justify-content:center}
+  footer .sep{color:var(--line)}
 
+  /* ---- subtle motion, matching index.html (reduced-motion users get none) ---- */
+  @media (prefers-reduced-motion: no-preference){
+    .reveal{opacity:0;transform:translateY(14px);
+            transition:opacity .55s ease,transform .55s ease}
+    .reveal.in{opacity:1;transform:none}
+    .card{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+    .card:hover{transform:translateY(-3px);border-color:rgba(212,166,42,.45);
+            box-shadow:0 10px 26px rgba(0,0,0,.35)}
+  }
+
+  /* ---- desktop ---- */
   @media (min-width:720px){
+    .hrow img{width:34px;height:34px}
+    .hrow .name{font-size:1.15rem}
+    .hrow .nav{display:flex}
+    .hrow .back{display:none}
+    .ghero{padding:64px 0 10px}
+    .ghero h1{font-size:2.5rem}
     .duo{grid-template-columns:1fr 1fr}
-    .vidrow{grid-template-columns:1fr 1fr 1fr;gap:14px}
-    .vidrow figure{margin:0}
-    .hero h2{font-size:2.2rem}
+    .vidrow{grid-template-columns:1fr 1fr 1fr;gap:16px}
   }
 </style>
 </head>
@@ -110,233 +151,219 @@
 
 <header>
   <div class="wrap hrow">
-    <img src="./logo.png" alt="Remixa logo">
-    <h1><b>Remixa</b> — Full Guide</h1>
-    <a class="back" href="https://remixa.app">remixa.app</a>
+    <a class="brand" href="./index.html">
+      <img src="./logo.png" alt="Remixa logo">
+      <span class="name"><b>Remixa</b></span>
+    </a>
+    <nav class="nav">
+      <a href="./index.html#why">Why Remixa</a>
+      <a href="./index.html#pricing">Pricing</a>
+      <a href="./guide.html">Guide</a>
+      <a class="cta" href="./index.html#pricing">Try Free</a>
+    </nav>
+    <a class="back" href="./index.html">← Home</a>
   </div>
 </header>
 
-<main class="wrap">
+<main>
 
-  <div class="hero">
-    <h2>Drop in your clips.<br>Get back <em>a batch of ready-to-post videos.</em></h2>
-    <p>Remixa runs on your own computer — nothing uploads, nothing queues,
-       nothing charges per render. Make as many videos as you want. Here's the
-       whole flow, start to finish.</p>
+  <!-- ============ INTRO ============ -->
+  <div class="ghero">
+    <div class="wrap">
+      <div class="kicker">Getting started</div>
+      <h1>Install to first batch, <em>in one page.</em></h1>
+      <p>Everything runs on your computer. No uploads, no queues,
+         no per-video fees.</p>
+    </div>
   </div>
 
   <!-- ============ INSTALL ============ -->
   <section id="install">
-    <div class="kicker">Setup · 2 minutes</div>
-    <h3>Install it like any app</h3>
-    <p>No editing software, no plugins, no accounts. Windows 10/11 or macOS —
-       that's the whole requirement list.</p>
-    <div class="duo">
-      <div class="col">
-        <h4>Windows</h4>
-        <ol class="steps">
-          <li>Download <b>Remixa-Setup.exe</b> (purchase email or remixa.app).</li>
-          <li>Double-click, click through. No admin password needed.</li>
-          <li>Open <b>Remixa</b> from the Start menu — it opens in your browser,
-              running 100% on your PC.</li>
-        </ol>
+    <div class="wrap narrow">
+      <div class="kicker">Setup · 2 minutes</div>
+      <h2>Install and activate</h2>
+      <div class="duo">
+        <div class="card">
+          <h3>Windows</h3>
+          <ol class="steps">
+            <li>Download <b>Remixa-Setup.exe</b>, double-click, click through.</li>
+            <li>Open <b>Remixa</b> from the Start menu.</li>
+          </ol>
+        </div>
+        <div class="card">
+          <h3>Mac</h3>
+          <ol class="steps">
+            <li>Drag Remixa into Applications.</li>
+            <li>First launch: <b>right-click → Open</b>, confirm once.</li>
+          </ol>
+        </div>
       </div>
-      <div class="col">
-        <h4>Mac</h4>
-        <ol class="steps">
-          <li>Download the <b>.dmg</b>, drag Remixa into Applications.</li>
-          <li>Launch it — it opens in your browser, running locally.</li>
-        </ol>
-        <div class="note"><span class="t">First launch:</span>
-          <b>right-click → Open</b>, then confirm. macOS warns once because
-          Remixa is an independent app, not notarized through Apple. One time,
-          then never again.</div>
-      </div>
+      <p>Paste the <b>license key</b> from your receipt email. One key,
+         <b>2 devices</b>.</p>
+      <figure>
+        <img class="shot s600" src="./images/license.png" alt="Remixa activation screen" loading="lazy">
+        <figcaption>Activation — paste the key from your receipt.</figcaption>
+      </figure>
+      <div class="note"><span class="t">No key yet?</span>
+         Start with the <b>free 1-day trial</b> — same key, same flow.</div>
     </div>
-    <p>First screen asks for your <b>license key</b> (it's in your receipt
-       email). Paste, hit Activate, done — one key works on
-       <b>2 devices</b>.</p>
-    <figure>
-      <img class="shot" src="./images/license.png" alt="Remixa activation screen" loading="lazy">
-      <figcaption>Activation — paste the key from your receipt.</figcaption>
-    </figure>
   </section>
 
-  <!-- ============ CLIPS ============ -->
+  <!-- ============ STEP 1 ============ -->
   <section id="clips">
-    <div class="kicker">Step 1</div>
-    <h3>Drop in whole clips — don't cut anything</h3>
-    <p>No pre-chopping, no separating hooks from bodies. Drop in your full
-       clips (you talking, then showing something) and <b>Remixa finds the
-       hook by itself</b> — it detects where the talking ends and the screen
-       part begins.</p>
-    <figure>
-      <img class="shot" src="./images/dashboard.png" alt="Sources and sounds loaded in Remixa" loading="lazy">
-      <figcaption>Three clips + two songs in. That's all the prep there is.</figcaption>
-    </figure>
-    <p><b>How many videos per batch?</b> Type any number up to <b>1,000</b> —
-       the more clips you add, the more different they come out.</p>
+    <div class="wrap narrow">
+      <div class="kicker">Step 1</div>
+      <h2>Drop in whole clips</h2>
+      <p>No cutting, no modes to pick — <b>Auto reads each clip's structure</b>
+         and builds the right videos. It handles all of these:</p>
+      <div class="vidrow">
+        <figure>
+          <div class="vwrap"><video class="demo" src="./videos/Basic.mp4" muted loop playsinline preload="metadata"></video><span class="vbadge" aria-hidden="true"></span></div>
+          <div class="vcap"><b>Talking → screen</b></div>
+        </figure>
+        <figure>
+          <div class="vwrap"><video class="demo" src="./videos/MultiClip.mp4" muted loop playsinline preload="metadata"></video><span class="vbadge" aria-hidden="true"></span></div>
+          <div class="vcap"><b>Multi-section</b></div>
+        </figure>
+        <figure>
+          <div class="vwrap"><video class="demo" src="./videos/Splitscreen.mp4" muted loop playsinline preload="metadata"></video><span class="vbadge" aria-hidden="true"></span></div>
+          <div class="vcap"><b>Split screen</b></div>
+        </figure>
+      </div>
+      <p><b>Mix clips</b>: Off = one clip per video · Hooks = openers rotate ·
+         All = mix everything. Up to <b>1,000 videos</b> per batch.</p>
+    </div>
   </section>
 
-  <!-- ============ TEXT ============ -->
+  <!-- ============ STEP 2 ============ -->
   <section id="text">
-    <div class="kicker">Step 2</div>
-    <h3>Text goes on your hook — just your hook</h3>
-    <p>One thing to know before you type: <b>captions and overlays show during
-       your hook only</b> (the talking opener), never over the rest of the
-       video. The editor says so right under the bar, and the bar itself only
-       covers the hook.</p>
-    <figure>
-      <img class="shot" src="./images/texteditor.png" alt="Text editor with real hook frame, wordings and styles" loading="lazy">
-      <figcaption>Drag the bar and the preview scrubs through your REAL hook
-        frames — what you place is exactly what renders.</figcaption>
-    </figure>
-    <ul class="plain">
-      <li><b>Wordings</b> — give one caption several wordings and each video
-          picks one. Ten wordings = ten different-feeling videos, free.</li>
-      <li><b>Timing</b> — "0% to 50%" = first half of the hook. Segments can
-          overlap, touch, or trade places.</li>
-      <li><b>Styles</b> — TikTok-style border, white box, clean text, or a
-          Snapchat bar. Five fonts, any color. Drag to place, corner dot to
-          resize.</li>
-    </ul>
-    <figure>
-      <video controls preload="metadata" src="./videos/snapchat.mp4"></video>
-      <div class="vcap"><b>Snapchat style</b> on a real output — two bars, top
-        and bottom, straight out of the generator.</div>
-    </figure>
-    <p style="margin-top:14px">Happy with your setup? <b>Save it as a layout</b> —
-       name it once and every position, style, timing window and wording comes
-       back with one click on any future batch. No redoing your text every
-       time. (Layouts store your text segments; overlays are per-project.)</p>
-    <figure>
-      <img class="shot" src="./images/layouts.png" alt="Saved layouts: name, save, load" loading="lazy">
-      <figcaption>Saved layouts — set up once, reuse forever.</figcaption>
-    </figure>
+    <div class="wrap narrow">
+      <div class="kicker">Step 2</div>
+      <h2>Add your text</h2>
+      <p>Captions show on your <b>hook</b> — the Snapchat style runs the whole
+         video. Give a caption several <b>wordings</b> and each video picks one.</p>
+      <figure>
+        <div class="vwrap"><video class="demo" src="./videos/Textsegments.mp4" muted loop playsinline preload="metadata"></video><span class="vbadge" aria-hidden="true"></span></div>
+        <div class="vcap"><b>Text segments</b> — own style, timing and wording each.</div>
+      </figure>
+      <p>Happy with it? <b>Save it as a layout</b> and reuse it on any batch.</p>
+    </div>
   </section>
 
-  <!-- ============ MODES ============ -->
-  <section id="modes">
-    <div class="kicker">Step 3</div>
-    <h3>Pick a mode — here's which one</h3>
-    <div class="tablewrap">
-    <table class="modes">
-      <tr><th>Basic</th><td><b>Start here.</b> Your clip's own structure, hook
-          then screen. Great for tutorials and demos.</td></tr>
-      <tr><th>Multi-clip</th><td>Keeps your order, but <b>swaps the screen
-          parts between clips</b>. Talking stays in place — the walkthrough
-          still makes sense, the visuals vary.</td></tr>
-      <tr><th>Split Screen</th><td>Talking hook, then <b>your reaction stacked
-          over the screen</b>. Needs clips that have a reaction-over-screen
-          part — if yours don't, stick to Basic or Multi-clip.</td></tr>
-    </table>
-    </div>
-    <figure>
-      <img class="shot" src="./images/modes-mix.png" alt="Mode and Mix selectors with hints" loading="lazy">
-      <figcaption>Every option explains itself right under the buttons.</figcaption>
-    </figure>
-    <div class="vidrow">
-      <figure><video controls preload="metadata" src="./videos/basic.mp4"></video>
-        <div class="vcap"><b>Basic</b> — hook, then screen.</div></figure>
-      <figure><video controls preload="metadata" src="./videos/multiclip.mp4"></video>
-        <div class="vcap"><b>Multi-clip</b> — same order, screens swapped in.</div></figure>
-      <figure><video controls preload="metadata" src="./videos/split.mp4"></video>
-        <div class="vcap"><b>Split Screen</b> — reaction over screen.</div></figure>
-    </div>
-    <p style="margin-top:10px"><b>Mix clips</b> sets how much your clips cross
-       over: <b>Off</b> = each video is one clip. <b>Hooks</b> = openers
-       rotate, bodies stay whole. <b>All</b> = stays in order, mixes and
-       matches face/screen clips across everything you added.</p>
-  </section>
-
-  <!-- ============ OVERLAYS ============ -->
+  <!-- ============ STEP 3 ============ -->
   <section id="overlays">
-    <div class="kicker">Step 4</div>
-    <h3>Your logo or stickers, background gone in one click</h3>
-    <p>Add any image as an overlay — logo, product shot, screenshot — drag it
-       into place, set when it shows. <b>"Remove background"</b> cuts the
-       subject out automatically, so a photo becomes a clean sticker. Text
-       always renders on top.</p>
-    <figure>
-      <img class="shot" src="./images/overlay.png" alt="Overlay sticker selected on the hook preview, with Change image, Remove background and Revert background controls" loading="lazy">
-      <figcaption>A background-removed sticker placed on the hook — drag it,
-        resize by the corner dot, set when it shows.</figcaption>
-    </figure>
-    <figure>
-      <video controls preload="metadata" src="./videos/overlay.mp4"></video>
-      <div class="vcap"><b>Overlay + music</b> on a real output — sticker timed
-        to the hook, music mixed under the talking.</div>
-    </figure>
+    <div class="wrap narrow">
+      <div class="kicker">Step 3</div>
+      <h2>Overlays</h2>
+      <p>Drop in a logo or sticker — <b>one click removes its background</b>.
+         Text always renders on top.</p>
+      <figure>
+        <div class="vwrap"><video class="demo" src="./videos/Overlay.mp4" muted loop playsinline preload="metadata"></video><span class="vbadge" aria-hidden="true"></span></div>
+        <div class="vcap"><b>Overlay</b> — timed to the hook.</div>
+      </figure>
+    </div>
   </section>
 
-  <!-- ============ SOUNDS ============ -->
+  <!-- ============ STEP 4 ============ -->
   <section id="sounds">
-    <div class="kicker">Step 5</div>
-    <h3>Music that starts exactly where you want</h3>
-    <p>Drop songs in and <b>slide each waveform</b> — TikTok-style — until the
-       part you want sits at the start marker. It plays out loud while you
-       slide, and the ▶ button previews your pick. In the final videos the
-       music <b>ducks under your voice</b> automatically: quieter while you
-       talk, up when you're not.</p>
-    <figure>
-      <img class="shot" src="./images/sounds.png" alt="Sound waveforms with start markers and play buttons" loading="lazy">
-      <figcaption>This song starts at 0:31 — the wave slid left to the drop.</figcaption>
-    </figure>
-    <p>No music? Skip it — outputs keep each clip's original audio.</p>
+    <div class="wrap narrow">
+      <div class="kicker">Step 4</div>
+      <h2>Music</h2>
+      <p><b>Slide the wave</b> to pick where each song starts. Both modes
+         auto-duck under your voice:</p>
+      <ul class="plain">
+        <li><b>Play over whole video</b> (default) — from the first frame.</li>
+        <li><b>Fade in during hook</b> — swells in partway through the hook.</li>
+      </ul>
+      <figure>
+        <img class="shot s530" src="./images/sounds.png" alt="Sound waveforms with start markers and playback modes" loading="lazy">
+        <figcaption>The first track starts at 0:15 and plays over the whole
+          video; the second fades in during the hook.</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <!-- ============ VARIATION ============ -->
+  <!-- ============ STEP 5 ============ -->
   <section id="variation">
-    <div class="kicker">Step 6</div>
-    <h3>Every video comes out different — automatically</h3>
-    <p>Each copy gets its own small tweaks: zoom, brightness, contrast, color
-       temperature, speed, position. Combined with wording mix-and-match and
-       clip mixing, <b>no two videos in a batch look or read the same</b>.
-       Every effect has a toggle and a range in Settings if you want it
-       stronger or off.</p>
-    <figure>
-      <img class="shot" src="./images/settings-visual.png" alt="Auto-variation settings with live preview" loading="lazy">
-      <figcaption>Auto-variation — live preview shows the strongest end of your ranges.</figcaption>
-    </figure>
+    <div class="wrap narrow">
+      <div class="kicker">Step 5</div>
+      <h2>Auto-variation</h2>
+      <p>Every copy gets small zoom, color and speed tweaks — <b>no two videos
+         look the same</b>. Adjust or switch off in Settings.</p>
+      <figure>
+        <img class="shot s696" src="./images/settings-visual.png" alt="Auto-variation settings with live preview" loading="lazy">
+        <figcaption>Auto-variation — live preview shows the strongest end of your ranges.</figcaption>
+      </figure>
+    </div>
   </section>
 
-  <!-- ============ GENERATE ============ -->
+  <!-- ============ STEP 6 ============ -->
   <section id="generate">
-    <div class="kicker">Step 7</div>
-    <h3>Generate, watch, download</h3>
-    <p>Hit the gold button. The log shows each video as it renders — on a
-       normal laptop a video takes roughly 20–30 seconds. Preview them right
-       in the app, download the keepers, or grab the whole batch as one zip
-       with <b>Download all</b>.</p>
-    <figure>
-      <img class="shot" src="./images/generate.png" alt="Generate button and progress log" loading="lazy">
-      <figcaption>One button. The log narrates everything it does.</figcaption>
-    </figure>
+    <div class="wrap narrow">
+      <div class="kicker">Step 6</div>
+      <h2>Generate &amp; download</h2>
+      <p>One button. Outputs land as <b>remixa1, remixa2, …</b> — grab them all
+         with <b>Download all</b>.</p>
+      <figure>
+        <img class="shot" src="./images/downloads.png" alt="Finished videos with Download all and per-video Download buttons" loading="lazy">
+        <figcaption>Download each video, or everything in one zip.</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- ============ HELP ============ -->
   <section id="help">
-    <div class="kicker">Stuck?</div>
-    <h3>The answers live inside the app</h3>
-    <p>Settings → <b>Info</b> is a one-screen cheat sheet: every mode, toggle
-       and editor concept in a sentence each. You'll rarely need this guide
-       twice.</p>
-    <figure>
-      <img class="shot" src="./images/settings-info.png" alt="Info tab explaining every feature" loading="lazy">
-      <figcaption>The built-in Info tab.</figcaption>
-    </figure>
+    <div class="wrap narrow">
+      <div class="kicker">Stuck?</div>
+      <h2>Answers live in the app</h2>
+      <p>Settings → <b>Info</b> explains every option in a sentence. Or
+         <a href="https://discord.gg/XFpapzP2HC">ask in the Discord</a>.</p>
+      <figure>
+        <img class="shot s696" src="./images/settings-info.png" alt="Info tab explaining every feature" loading="lazy">
+        <figcaption>The built-in Info tab.</figcaption>
+      </figure>
+    </div>
   </section>
 
 </main>
 
 <footer>
   <div class="wrap frow">
-    <img src="./logo.png" alt="" width="24" height="24">
-    <span><a href="https://remixa.app">remixa.app</a></span>
-    <span><a href="#" title="Discord invite coming soon">Join the Discord</a></span>
-    <span style="margin-left:auto">Runs locally — your clips never leave your machine.</span>
+    <span>Works on Windows + Mac</span>
+    <span class="sep">•</span>
+    <span><a href="./index.html">remixa home</a></span>
+    <span class="sep">•</span>
+    <span><a href="https://discord.gg/XFpapzP2HC">Join the Discord</a></span>
+    <span class="sep">•</span>
+    <span>© Remixa</span>
   </div>
 </footer>
 
+<script>
+  // Guide examples don't autoplay: hover plays on desktop, tap toggles on
+  // touch (touch has no hover). Muted + playsinline keeps mobile happy.
+  document.querySelectorAll('.vwrap').forEach(w => {
+    const v = w.querySelector('video');
+    if (!v) return;
+    v.addEventListener('play',  () => w.classList.add('playing'));
+    v.addEventListener('pause', () => w.classList.remove('playing'));
+    w.addEventListener('pointerenter', e => { if (e.pointerType === 'mouse') v.play().catch(()=>{}); });
+    w.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse') v.pause(); });
+    w.addEventListener('click', () => { v.paused ? v.play().catch(()=>{}) : v.pause(); });
+  });
+
+  // Gentle fade/slide-in on scroll, same rules as index.html: content is
+  // visible by default and the effect only engages when motion is allowed.
+  (function(){
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    if (!('IntersectionObserver' in window)) return;
+    const io = new IntersectionObserver(es => es.forEach(e => {
+      if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+    }), {rootMargin: '0px 0px -8% 0px'});
+    document.querySelectorAll('section .wrap > *').forEach(el => {
+      el.classList.add('reveal'); io.observe(el);
+    });
+  })();
+</script>
 </body>
 </html>

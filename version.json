@@ -1,0 +1,6 @@
+{
+  "version": "2.8",
+  "notes": "Performance improvements and bug fixes.",
+  "windows": { "url": "PLACEHOLDER_WIN_URL" },
+  "mac":     { "url": "PLACEHOLDER_MAC_URL" }
+}

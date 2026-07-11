@@ -7,8 +7,7 @@ The public site for Remixa, served from GitHub Pages as one unit:
 - `version.json` — feed the RepurposeStudio auto-updater reads to offer updates
 - `images/`, `videos/`, `logo.png` — assets
 
-**Live URL (temporary):** https://nickrujan.github.io/remixa-site/
-**Target URL (once DNS cuts over):** https://remixa.app/
+**Live URL:** https://remixa.app/
 
 ---
 

@@ -22,9 +22,6 @@
 <meta name="twitter:image" content="https://remixa.app/images/social-card-home.png">
 <meta name="theme-color" content="#D4A62A">
 
-<!-- Gumroad overlay checkout — turns .gumroad-button links into on-site overlays -->
-<script src="https://gumroad.com/js/gumroad.js"></script>
-
 <style>
   :root{
     --gold:#D4A62A; --gold-soft:#F0DFA8;
@@ -62,13 +59,6 @@
   .btn:active{transform:translateY(1px)}
   .btn.ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--line)}
   .btn.ghost:hover{border-color:var(--gold);filter:none}
-  /* Gumroad injects its own button styles; force our look on the overlay buttons */
-  a.gumroad-button{background:var(--gold)!important;color:#1a1400!important;
-       border:1px solid var(--gold)!important;border-radius:12px!important;
-       font-weight:700!important;font-size:1.05rem!important;padding:14px 26px!important;
-       box-shadow:none!important;text-shadow:none!important;line-height:normal!important;
-       display:inline-block!important}
-  .price .btn.gumroad-button{width:100%!important}
 
   /* ---- hero ---- */
   .hero{position:relative;padding:52px 0 40px;
@@ -402,16 +392,16 @@
         <div class="price">
           <div class="amt">$99<span>/mo</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <!-- Gumroad overlay checkout — monthly/yearly choice is inside checkout -->
-          <a class="btn gumroad-button" href="https://remixa.gumroad.com/l/Remixa">Buy monthly</a>
+          <!-- Checkout disabled until launch — button funnels interest to the Discord -->
+          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Launching soon · Join the Discord</a>
           <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
           <div class="amt">$990<span>/yr</span></div>
           <div class="sub">Unlimited — first 2 months free</div>
-          <!-- Gumroad overlay checkout — monthly/yearly choice is inside checkout -->
-          <a class="btn gumroad-button" href="https://remixa.gumroad.com/l/Remixa">Buy yearly</a>
+          <!-- Checkout disabled until launch — button funnels interest to the Discord -->
+          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Launching soon · Join the Discord</a>
           <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
         </div>
       </div>

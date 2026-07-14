@@ -15,13 +15,14 @@ The public site for Remixa, served from GitHub Pages as one unit:
 
 Search-and-replace these exact tokens. Nothing else in the files needs editing.
 
-### Checkout URLs — done (Gumroad overlay)
-Both Buy buttons ($99/mo monthly card, $990/yr yearly card) now point at
-`https://remixa.gumroad.com/l/Remixa` and carry the `gumroad-button` class, so
-checkout opens as an overlay on remixa.app instead of navigating away. The
-monthly/yearly choice lives inside the Gumroad checkout (tier "Remixa",
-$99/mo · $990/yr), so both buttons share the one URL. `gumroad.js` is loaded in
-the `<head>`. Nothing to fill in here.
+### Checkout — DISABLED until launch (processor undecided)
+Both pricing-card buttons ($99/mo monthly card, $990/yr yearly card) currently
+read **"Launching soon · Join the Discord"** and link to the Discord invite —
+no checkout opens anywhere, and the repo deliberately contains zero references
+to any payment processor. When the processor is decided and the build is
+uploaded: point both buttons at the real checkout URL(s), relabel them
+"Buy monthly" / "Buy yearly", and re-add whatever overlay/checkout script the
+processor needs to the `<head>` of `index.html`.
 
 ### Installer URLs (2× each in TWO files = 4 spots)
 The Windows `.exe` and Mac `.dmg`. **These must be Lemon Squeezy download URLs,

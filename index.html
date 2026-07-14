@@ -22,6 +22,9 @@
 <meta name="twitter:image" content="https://remixa.app/images/social-card-home.png">
 <meta name="theme-color" content="#D4A62A">
 
+<!-- Gumroad overlay checkout — turns .gumroad-button links into on-site overlays -->
+<script src="https://gumroad.com/js/gumroad.js"></script>
+
 <style>
   :root{
     --gold:#D4A62A; --gold-soft:#F0DFA8;
@@ -59,6 +62,13 @@
   .btn:active{transform:translateY(1px)}
   .btn.ghost{background:transparent;color:var(--gold-soft);border:1px solid var(--line)}
   .btn.ghost:hover{border-color:var(--gold);filter:none}
+  /* Gumroad injects its own button styles; force our look on the overlay buttons */
+  a.gumroad-button{background:var(--gold)!important;color:#1a1400!important;
+       border:1px solid var(--gold)!important;border-radius:12px!important;
+       font-weight:700!important;font-size:1.05rem!important;padding:14px 26px!important;
+       box-shadow:none!important;text-shadow:none!important;line-height:normal!important;
+       display:inline-block!important}
+  .price .btn.gumroad-button{width:100%!important}
 
   /* ---- hero ---- */
   .hero{position:relative;padding:52px 0 40px;
@@ -176,7 +186,8 @@
   .includes li b{color:var(--ink);font-weight:600}
   .includes li svg{width:17px;height:17px;flex:0 0 auto;margin-top:3px;
         stroke:var(--gold);fill:none;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
-  .mini-trial{margin-top:10px;font-size:.84rem;color:var(--gold-soft)}
+  .mini-note{margin-top:10px;font-size:.84rem;color:var(--gold-soft)}
+  .mini-note a{color:var(--gold-soft);text-decoration:underline}
 
   /* ---- faq ---- */
   .faq{max-width:720px;margin:0 auto}
@@ -245,7 +256,7 @@
       <a href="#why">Why Remixa</a>
       <a href="#pricing">Pricing</a>
       <a href="./guide.html">Guide</a>
-      <a class="cta" href="#pricing">Try Free</a>
+      <a class="cta" href="#pricing">Get Remixa</a>
     </nav>
   </div>
 </header>
@@ -261,7 +272,7 @@
         <p class="sub">Turn every clip you film into a batch of unique,
            ready-to-post videos. Minutes, not hours — right on your own computer.</p>
         <div class="cta-row">
-          <a class="btn" href="#pricing">Try Free</a>
+          <a class="btn" href="#pricing">Get Remixa</a>
           <a class="btn ghost" href="#how">See how it works</a>
         </div>
       </div>
@@ -391,17 +402,17 @@
         <div class="price">
           <div class="amt">$99<span>/mo</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <!-- PLACEHOLDER_CHECKOUT_URL — monthly plan checkout link -->
-          <a class="btn" href="PLACEHOLDER_CHECKOUT_URL">Buy monthly</a>
-          <div class="mini-trial">Free 1-day trial included</div>
+          <!-- Gumroad overlay checkout — monthly/yearly choice is inside checkout -->
+          <a class="btn gumroad-button" href="https://remixa.gumroad.com/l/Remixa">Buy monthly</a>
+          <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
-          <div class="amt">$999<span>/yr</span></div>
+          <div class="amt">$990<span>/yr</span></div>
           <div class="sub">Unlimited — first 2 months free</div>
-          <!-- PLACEHOLDER_CHECKOUT_URL — yearly plan checkout link -->
-          <a class="btn" href="PLACEHOLDER_CHECKOUT_URL">Buy yearly</a>
-          <div class="mini-trial">Free 1-day trial included</div>
+          <!-- Gumroad overlay checkout — monthly/yearly choice is inside checkout -->
+          <a class="btn gumroad-button" href="https://remixa.gumroad.com/l/Remixa">Buy yearly</a>
+          <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
         </div>
       </div>
       <div class="includes">
@@ -473,9 +484,9 @@
       <div class="dl">
         <h3>Already bought? Grab the latest:</h3>
         <div class="row">
-          <!-- PLACEHOLDER_WIN_URL — Windows installer (.exe), hosted on Lemon Squeezy -->
+          <!-- PLACEHOLDER_WIN_URL — Windows installer (.exe), hosted by our payment processor -->
           <a class="btn" href="PLACEHOLDER_WIN_URL">Download for Windows</a>
-          <!-- PLACEHOLDER_MAC_URL — Mac installer (.dmg), hosted on Lemon Squeezy -->
+          <!-- PLACEHOLDER_MAC_URL — Mac installer (.dmg), hosted by our payment processor -->
           <a class="btn ghost" href="PLACEHOLDER_MAC_URL">Download for Mac</a>
         </div>
       </div>
@@ -487,6 +498,14 @@
 <footer>
   <div class="wrap frow">
     <span>Works on Windows + Mac</span>
+    <span class="sep">•</span>
+    <span><a href="./terms.html">Terms</a></span>
+    <span class="sep">·</span>
+    <span><a href="./privacy.html">Privacy</a></span>
+    <span class="sep">·</span>
+    <span><a href="./refunds.html">Refunds</a></span>
+    <span class="sep">•</span>
+    <span><a href="mailto:NicholasRujan@yahoo.com">NicholasRujan@yahoo.com</a></span>
     <span class="sep">•</span>
     <span><a href="https://discord.gg/XFpapzP2HC">Join the Discord</a></span>
     <span class="sep">•</span>

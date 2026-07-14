@@ -15,17 +15,13 @@ The public site for Remixa, served from GitHub Pages as one unit:
 
 Search-and-replace these exact tokens. Nothing else in the files needs editing.
 
-### Checkout URLs (2× — same file)
-Your Lemon Squeezy / payment checkout links.
-
-| What | File | Line | Token |
-|------|------|------|-------|
-| Monthly ($99/mo) Buy button | `index.html` | ~386 | `PLACEHOLDER_CHECKOUT_URL` |
-| Yearly ($999/yr) Buy button | `index.html` | ~393 | `PLACEHOLDER_CHECKOUT_URL` |
-
-> Both tokens are identical text but are **two different links** — the monthly
-> one goes on the monthly card, the yearly one on the yearly card. Replace each
-> in place (don't use replace-all with one URL).
+### Checkout URLs — done (Gumroad overlay)
+Both Buy buttons ($99/mo monthly card, $990/yr yearly card) now point at
+`https://remixa.gumroad.com/l/Remixa` and carry the `gumroad-button` class, so
+checkout opens as an overlay on remixa.app instead of navigating away. The
+monthly/yearly choice lives inside the Gumroad checkout (tier "Remixa",
+$99/mo · $990/yr), so both buttons share the one URL. `gumroad.js` is loaded in
+the `<head>`. Nothing to fill in here.
 
 ### Installer URLs (2× each in TWO files = 4 spots)
 The Windows `.exe` and Mac `.dmg`. **These must be Lemon Squeezy download URLs,

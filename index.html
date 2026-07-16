@@ -3,21 +3,21 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Remixa — 10x the videos, 10x the reach</title>
+<title>Remixa — batch videos from one recording, rendered on your own computer</title>
 <link rel="icon" href="./logo.png">
 
 <!-- Rich embeds (Discord / iMessage / Twitter / Slack). og:url and og:image
      must stay ABSOLUTE urls — update them if the site moves. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Remixa">
-<meta property="og:title" content="Remixa — 10x the videos, 10x the reach">
+<meta property="og:title" content="Remixa — batch videos from one recording, rendered on your own computer">
 <meta property="og:description" content="Turn every clip you film into a batch of unique, ready-to-post videos. Minutes, not hours. Runs on your own computer.">
 <meta property="og:url" content="https://remixa.app/">
 <meta property="og:image" content="https://remixa.app/images/social-card-home.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Remixa — 10x the videos, 10x the reach">
+<meta name="twitter:title" content="Remixa — batch videos from one recording, rendered on your own computer">
 <meta name="twitter:description" content="Turn every clip you film into a batch of unique, ready-to-post videos. Minutes, not hours. Runs on your own computer.">
 <meta name="twitter:image" content="https://remixa.app/images/social-card-home.png">
 <meta name="theme-color" content="#D4A62A">
@@ -99,30 +99,23 @@
         stroke-linecap:round;stroke-linejoin:round}
   .wcard h3{font-size:1rem;letter-spacing:.14em;color:var(--gold);margin-bottom:8px;font-weight:800}
   .wcard p{color:var(--dim);font-size:.9rem;margin:0;line-height:1.55}
+  .why-adv{text-align:center;color:var(--dim);max-width:560px;margin:26px auto 0;font-size:1rem;line-height:1.6}
+  .why-adv b{color:var(--ink);font-weight:600}
 
-  /* ---- money slider: slim strip right under the hero ---- */
+  /* ---- "one recording becomes many" section ---- */
   #multiply{padding:44px 0 10px}
   .money{max-width:620px;margin:0 auto;text-align:center}
   .money h2{font-size:1.55rem;margin-bottom:26px;line-height:1.25}
   .money h2 em{color:var(--gold);font-style:normal}
-  .mrow{display:flex;align-items:flex-end;justify-content:center;gap:18px 30px;
-        flex-wrap:wrap;margin-bottom:24px}
-  .mfield{display:flex;flex-direction:column;gap:9px;text-align:left}
-  .mfield .lab{font-size:.84rem;color:var(--dim)}
-  .mfield .lab b{color:var(--ink);font-variant-numeric:tabular-nums}
-  .mfield.grow{flex:1 1 250px;max-width:360px}
-  input[type=range].ms{width:100%;accent-color:var(--gold);height:26px;
-        background:transparent;cursor:pointer;margin:0}
-  .mcash{display:flex;align-items:center;gap:6px;background:var(--card);
-        border:1px solid var(--line);border-radius:10px;padding:8px 12px;width:118px}
-  .mcash:focus-within{border-color:rgba(212,166,42,.55)}
-  .mcash span{color:var(--gold);font-weight:700}
-  .mcash input{width:100%;background:none;border:none;outline:none;color:var(--ink);
-        font:inherit;font-weight:700;min-width:0}
   .meq{color:var(--dim);font-size:.9rem;margin-bottom:2px;font-variant-numeric:tabular-nums}
   .mtotal{font-size:clamp(2.7rem,11vw,3.8rem);font-weight:800;color:var(--gold);
         line-height:1.15;letter-spacing:-.01em;font-variant-numeric:tabular-nums}
   .mnote{color:var(--ink);font-size:.95rem;margin-top:10px}
+  .plain-mech{list-style:none;text-align:left;max-width:520px;margin:0 auto 22px;
+        display:grid;gap:10px}
+  .plain-mech li{color:var(--dim);font-size:.95rem;line-height:1.55;background:var(--card);
+        border:1px solid var(--line);border-radius:12px;padding:13px 16px}
+  .plain-mech li b{color:var(--gold)}
 
   /* ---- how it works ---- */
   .steps{display:grid;grid-template-columns:1fr;gap:12px;max-width:640px;margin:0 auto 22px}
@@ -136,26 +129,14 @@
   .how-more{text-align:center;color:var(--dim)}
 
 
-  /* ---- Remixa vs Them ---- */
-  .vs{max-width:720px;margin:0 auto;border:1px solid var(--line);border-radius:16px;
-      overflow:hidden;background:var(--card)}
-  .vs-row{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--line)}
-  .vs-row:first-child{border-top:none}
-  .vs-head{background:var(--card2);font-weight:700}
-  .vs-head .vs-cell.us{color:var(--gold)}
-  .vs-head .vs-cell.them{color:var(--dim)}
-  .vs-cell{padding:14px 16px;font-size:.93rem;display:flex;gap:9px;align-items:flex-start}
-  .vs-cell.us{color:var(--ink);border-right:1px solid var(--line)}
-  .vs-cell.them{color:var(--dim)}
-  .vs-cell .mk{flex:0 0 auto;margin-top:2px;font-weight:700}
-  .vs-cell.us .mk{color:var(--gold)}
-  .vs-cell.them .mk{color:#8a5a5a}
-
   /* ---- pricing ---- */
   .price-lead{text-align:center;max-width:600px;margin:0 auto 30px}
   .price-lead .big{font-size:1.35rem;color:var(--ink);font-weight:600;margin-bottom:6px}
   .price-lead .big b{color:var(--gold)}
   .price-lead p{color:var(--dim);margin:0}
+  .prelaunch{margin:16px auto 0;max-width:520px;background:rgba(212,166,42,.08);
+        border:1px solid rgba(212,166,42,.35);border-radius:12px;padding:12px 16px;
+        color:var(--gold-soft);font-size:.92rem;line-height:1.55}
   .prices{display:grid;grid-template-columns:1fr;gap:16px;max-width:640px;margin:0 auto}
   .price{background:var(--card);border:1px solid var(--line);border-radius:16px;
          padding:26px 24px;text-align:center;position:relative}
@@ -209,7 +190,7 @@
     .reveal{opacity:0;transform:translateY(14px);
             transition:opacity .55s ease,transform .55s ease}
     .reveal.in{opacity:1;transform:none}
-    .wcard,.price,.step,.vs{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+    .wcard,.price,.step{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
     .wcard:hover,.price:hover,.step:hover{transform:translateY(-3px);
             border-color:rgba(212,166,42,.45);box-shadow:0 10px 26px rgba(0,0,0,.35)}
     .btn{transition:transform .12s ease,filter .15s ease,box-shadow .18s ease}
@@ -243,7 +224,7 @@
     <img src="./logo.png" alt="Remixa logo">
     <span class="name"><b>Remixa</b></span>
     <nav class="nav">
-      <a href="#why">Why Remixa</a>
+      <a href="#why">What's inside</a>
       <a href="#pricing">Pricing</a>
       <a href="./guide.html">Guide</a>
       <a href="./walkthrough.html">Walkthrough</a>
@@ -259,9 +240,10 @@
     <div class="wrap hero-grid">
       <div class="htext">
         <div class="brand"><img src="./logo.png" alt="">Remixa</div>
-        <h1>10x The Videos. <em>10x The Reach.</em></h1>
-        <p class="sub">Turn every clip you film into a batch of unique,
-           ready-to-post videos. Minutes, not hours — right on your own computer.</p>
+        <h1>Turn one recording into a batch of unique videos — <em>on your own computer</em>.</h1>
+        <p class="sub">No upload. No render queue. Nobody else holding your footage.
+           Remixa builds a full batch of ready-to-post videos from clips you already
+           filmed, and renders them right on your machine.</p>
         <div class="cta-row">
           <a class="btn" href="#pricing">Get Remixa</a>
           <a class="btn ghost" href="#how">See how it works</a>
@@ -277,54 +259,53 @@
     </div>
   </section>
 
-  <!-- ============ MONEY SLIDER ============ -->
+  <!-- ============ HOW ONE BECOMES MANY ============ -->
   <section id="multiply">
     <div class="wrap">
       <div class="money">
-        <h2>Turn one clip into <em>a hundred</em>.</h2>
-        <div class="mrow">
-          <div class="mfield grow">
-            <span class="lab"><b id="mn">100</b> videos from one clip</span>
-            <input type="range" class="ms" id="mv" min="1" max="100" value="100" aria-label="Number of videos">
-          </div>
-          <div class="mfield">
-            <span class="lab">If a video makes you</span>
-            <div class="mcash"><span>$</span><input id="md" type="number" inputmode="decimal" min="0" value="10" aria-label="Dollars per video"></div>
-          </div>
-        </div>
-        <div class="meq" id="meq">100 videos × $10</div>
-        <div class="mtotal" id="mt">$1,000</div>
-        <p class="mnote">Example of what's possible — your results depend on your content.</p>
+        <h2>One recording becomes <em>many</em> videos.</h2>
+        <p class="mnote" style="margin-bottom:20px">Three things happen automatically — and they multiply:</p>
+        <ul class="plain-mech">
+          <li><b>Auto-detection</b> splits each recording into its parts — talking, screen, split-screen — so it can be recombined.</li>
+          <li><b>Ordinal swapping</b> trades matching parts between your clips: clip A's screen section can play under clip B's opener, and back.</li>
+          <li><b>Text blocks</b> each hold several wordings, and Remixa picks one per video — so the same footage ships with different hooks.</li>
+        </ul>
+        <div class="meq" id="meq">3 clips &times; 4 wordings</div>
+        <div class="mtotal" id="mt">12 unique videos</div>
+        <p class="mnote">A hook that rotates across 3 clips and one text block with 4 wordings is 3 &times; 4 = 12 distinct combinations — before the automatic colour, zoom and speed variation on top. Up to 1,000 per batch.</p>
       </div>
     </div>
   </section>
 
-  <!-- ============ WHY REMIXA ============ -->
+  <!-- ============ WHAT'S INSIDE (the machine) ============ -->
   <section id="why">
     <div class="wrap">
-      <div class="kicker">Why Remixa</div>
+      <div class="kicker">What's inside</div>
+      <h2 class="sec">Drop in recordings, get a batch out.</h2>
+      <p class="sec-sub">The whole pipeline, in four steps — nothing to pre-cut, nothing to upload.</p>
       <div class="why">
         <div class="wcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M13 3L5 13h5l-1 8 8-11h-5l1-7z"/></svg></div>
-          <h3>FAST</h3>
-          <p>No upload, no waiting in line. Starts the moment you hit go.</p>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M7 10l5 5 5-5"/><rect x="4" y="17" width="16" height="4" rx="1.5"/></svg></div>
+          <h3>DROP IN</h3>
+          <p>Add whole recordings — talking, screen capture, split-screen. No trimming, no upload; they stay on your machine.</p>
         </div>
         <div class="wcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 12c0-2 1.6-3.5 3.5-3.5S11 10.4 12 12s2.6 3.5 4.5 3.5S20 14 20 12s-1.6-3.5-3.5-3.5S13 10.4 12 12s-2.6-3.5-4.5-3.5S4 10 4 12z"/></svg></div>
-          <h3>UNLIMITED</h3>
-          <p>Make as many videos as you want. No credits, no limits.</p>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h10"/><path d="M4 12h16"/><path d="M4 18h7"/><circle cx="18" cy="6" r="2.2"/><circle cx="15" cy="18" r="2.2"/></svg></div>
+          <h3>AUTO-DETECT</h3>
+          <p>Remixa finds each recording's structure — where talking ends, where the screen or split-screen begins — on its own. Nothing else does this.</p>
         </div>
         <div class="wcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="5" y="11" width="14" height="9" rx="2"/><path d="M8 11V8a4 4 0 0 1 8 0v3"/></svg></div>
-          <h3>PRIVATE</h3>
-          <p>Everything runs on your computer. Your clips never leave it.</p>
+          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M7 4v3"/><path d="M6 12h8"/><path d="M6 16h5"/></svg></div>
+          <h3>TEXT BLOCKS</h3>
+          <p>Set a hook once. Each block holds several wordings, and one is picked per video — so the same footage ships with different openers.</p>
         </div>
         <div class="wcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M20.6 13.4 11 3.8H4v7l9.6 9.6a2 2 0 0 0 2.8 0l4.2-4.2a2 2 0 0 0 0-2.8z"/><circle cx="7.5" cy="7.3" r="1.2"/></svg></div>
-          <h3>CHEAPER</h3>
-          <p>One flat price for unlimited videos — not per-video.</p>
+          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="16" rx="1.5"/><rect x="8" y="7" width="12" height="13" rx="1.5"/></svg></div>
+          <h3>BATCH OUT</h3>
+          <p>Every output is a different combination, each with automatic variation, exported vertical 1080&times;1920. Download and post.</p>
         </div>
       </div>
+      <p class="why-adv">All of it runs on your own computer — <b>no upload, no render queue, no per-video fees</b>. One flat price, unlimited videos.</p>
     </div>
   </section>
 
@@ -344,66 +325,40 @@
   </section>
 
 
-  <!-- ============ REMIXA VS THEM ============ -->
-  <section id="compare">
-    <div class="wrap">
-      <div class="kicker">The difference</div>
-      <h2 class="sec">Remixa vs. them.</h2>
-      <p class="sec-sub">Other tools charge you per video. Remixa doesn't.</p>
-      <div class="vs">
-        <div class="vs-row vs-head">
-          <div class="vs-cell us">Remixa</div>
-          <div class="vs-cell them">Them</div>
-        </div>
-        <div class="vs-row">
-          <div class="vs-cell us"><span class="mk">✓</span>Unlimited videos</div>
-          <div class="vs-cell them"><span class="mk">✕</span>Limited — you pay per video</div>
-        </div>
-        <div class="vs-row">
-          <div class="vs-cell us"><span class="mk">✓</span>$99/month, make as many as you want</div>
-          <div class="vs-cell them"><span class="mk">✕</span>$99.99/month for about 500 videos, then you pay for more</div>
-        </div>
-        <div class="vs-row">
-          <div class="vs-cell us"><span class="mk">✓</span>Fast — no upload, no queue</div>
-          <div class="vs-cell them"><span class="mk">✕</span>Upload and wait in the render queue</div>
-        </div>
-        <div class="vs-row">
-          <div class="vs-cell us"><span class="mk">✓</span>Private — stays on your computer</div>
-          <div class="vs-cell them"><span class="mk">✕</span>Sits on their servers</div>
-        </div>
-        <div class="vs-row">
-          <div class="vs-cell us"><span class="mk">✓</span>One price, no limits</div>
-          <div class="vs-cell them"><span class="mk">✕</span>Buy more when you run out</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- ============ PRICING ============ -->
   <section id="pricing">
     <div class="wrap">
       <div class="kicker">Pricing</div>
       <h2 class="sec">Unlimited generations. One flat price.</h2>
       <div class="price-lead">
-        <div class="big"><b>$99/mo</b> — make as many videos as you want.</div>
+        <div class="big"><b>$99/mo USD</b> — make as many videos as you want.</div>
         <p>No credits. No per-video fees. No render queue. The price doesn't
-           change no matter how much you generate.</p>
+           change no matter how much you generate. Available worldwide.</p>
+        <div class="prelaunch">Checkout opens at launch. Join the Discord and you'll get
+           the purchase link — and a heads-up the moment it goes live.</div>
       </div>
+      <!-- ==================================================================
+           PRE-LAUNCH ⇄ LIVE CHECKOUT — single switch.
+           To go live: set CHECKOUT_MONTHLY / CHECKOUT_YEARLY below to the
+           Lemon Squeezy checkout URLs, then in BOTH .price cards swap the
+           button's href to those URLs and its text to "Get Remixa". Nothing
+           else needs to change.
+             CHECKOUT_MONTHLY = (set at launch)
+             CHECKOUT_YEARLY  = (set at launch)
+           =================================================================== -->
       <div class="prices">
         <div class="price">
-          <div class="amt">$99<span>/mo</span></div>
+          <div class="amt">$99<span>/mo USD</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <!-- Checkout disabled until launch — button funnels interest to the Discord -->
-          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Launching soon · Join the Discord</a>
-          <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
+          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Get the launch link →</a>
+          <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
-          <div class="amt">$990<span>/yr</span></div>
-          <div class="sub">Unlimited — first 2 months free</div>
-          <!-- Checkout disabled until launch — button funnels interest to the Discord -->
-          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Launching soon · Join the Discord</a>
-          <div class="mini-note">US customers only · All sales final · See <a href="./refunds.html">Refund Policy</a></div>
+          <div class="amt">$990<span>/yr USD</span></div>
+          <div class="sub">Unlimited — 2 months free vs. monthly</div>
+          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Get the launch link →</a>
+          <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
       </div>
       <div class="includes">
@@ -469,20 +424,25 @@
     </div>
   </section>
 
-  <!-- ============ DOWNLOADS ============ -->
+  <!-- ============ DOWNLOADS — HIDDEN UNTIL LAUNCH ============
+       No customer downloads exist yet, so this "Already bought?" block is
+       hidden rather than shipping dead placeholder links. To re-enable at
+       launch: delete this comment wrapper and paste the two real Lemon
+       Squeezy installer URLs (Windows .exe, Mac .dmg) into the hrefs. Also
+       set the same two URLs in version.json (the in-app updater feed).
+
   <section id="downloads">
     <div class="wrap">
       <div class="dl">
         <h3>Already bought? Grab the latest:</h3>
         <div class="row">
-          <!-- PLACEHOLDER_WIN_URL — Windows installer (.exe), hosted by our payment processor -->
-          <a class="btn" href="PLACEHOLDER_WIN_URL">Download for Windows</a>
-          <!-- PLACEHOLDER_MAC_URL — Mac installer (.dmg), hosted by our payment processor -->
-          <a class="btn ghost" href="PLACEHOLDER_MAC_URL">Download for Mac</a>
+          <a class="btn" href="SET_WINDOWS_INSTALLER_URL_AT_LAUNCH">Download for Windows</a>
+          <a class="btn ghost" href="SET_MAC_INSTALLER_URL_AT_LAUNCH">Download for Mac</a>
         </div>
       </div>
     </div>
   </section>
+       ======================================================== -->
 
 </main>
 
@@ -496,48 +456,15 @@
     <span class="sep">·</span>
     <span><a href="./refunds.html">Refunds</a></span>
     <span class="sep">•</span>
-    <span><a href="mailto:NicholasRujan@yahoo.com">NicholasRujan@yahoo.com</a></span>
+    <span><a href="mailto:support@remixa.app">support@remixa.app</a></span>
     <span class="sep">•</span>
-    <span><a href="https://discord.gg/XFpapzP2HC">Join the Discord</a></span>
+    <span><a href="https://discord.gg/sd3PyBAkKV">Join the Discord</a></span>
     <span class="sep">•</span>
     <span>© Remixa</span>
   </div>
 </footer>
 
 <script>
-  // Hero money slider - videos x $/video with a smooth count-up total.
-  // Reduced-motion users get instant numbers instead of the tween.
-  (function(){
-    const mv = document.getElementById('mv'), md = document.getElementById('md');
-    if (!mv || !md) return;
-    const mt = document.getElementById('mt'), meq = document.getElementById('meq'),
-          mn = document.getElementById('mn');
-    const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const fmt = v => '$' + Math.round(v).toLocaleString('en-US');
-    let shown = 0, raf = 0;
-    function setTotal(target){
-      cancelAnimationFrame(raf);
-      if (reduce){ shown = target; mt.textContent = fmt(target); return; }
-      const from = shown, dur = 320, t0 = performance.now();
-      raf = requestAnimationFrame(function tick(now){
-        const p = Math.min(1, (now - t0) / dur), e = 1 - Math.pow(1 - p, 3);
-        shown = from + (target - from) * e;
-        mt.textContent = fmt(shown);
-        if (p < 1) raf = requestAnimationFrame(tick);
-      });
-    }
-    function update(){
-      const vids = +mv.value, per = Math.max(0, +md.value || 0);
-      mn.textContent = vids;
-      const perTxt = '$' + (per % 1 ? per.toFixed(2) : per);
-      meq.textContent = vids + (vids === 1 ? ' video' : ' videos') + ' × ' + perTxt;
-      setTotal(vids * per);
-    }
-    mv.addEventListener('input', update);
-    md.addEventListener('input', update);
-    update();   // shown starts at 0, so the total counts up once on load
-  })();
-
   // Gentle fade/slide-in on scroll. Content is visible by default; the
   // effect only engages when motion is allowed AND IntersectionObserver
   // exists - it can never hide or delay content otherwise.

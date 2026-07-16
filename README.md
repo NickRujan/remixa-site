@@ -28,19 +28,22 @@ processor needs to the `<head>` of `index.html`.
 The Windows `.exe` and Mac `.dmg`. **These must be Lemon Squeezy download URLs,
 not github.io or remixa.app** — see the warning in section 4.
 
-| What | File | Line | Token |
+| What | File | Where | Token |
 |------|------|------|-------|
-| Windows button | `index.html` | ~466 | `PLACEHOLDER_WIN_URL` |
-| Mac button | `index.html` | ~468 | `PLACEHOLDER_MAC_URL` |
+| Download buttons | `index.html` | in the **commented-out** `DOWNLOADS — HIDDEN UNTIL LAUNCH` block | `SET_WINDOWS_INSTALLER_URL_AT_LAUNCH` / `SET_MAC_INSTALLER_URL_AT_LAUNCH` |
 | Windows updater feed | `version.json` | 4 | `PLACEHOLDER_WIN_URL` |
 | Mac updater feed | `version.json` | 5 | `PLACEHOLDER_MAC_URL` |
 
-> Keep the two `PLACEHOLDER_WIN_URL` spots pointing at the **same** file, and
-> likewise for Mac. The download button and the auto-updater must serve the
-> identical installer.
+> **Pre-launch state:** the "Already bought?" download section on the home page
+> is intentionally **commented out** so no dead links ship. At launch, delete the
+> comment wrapper around that block and paste the real Lemon Squeezy installer
+> URLs into the two hrefs, then set the **same** two URLs in `version.json`.
+> Keep the Windows button and the Windows updater feed pointing at the **same**
+> file (likewise Mac) — the download and the auto-updater must serve the identical
+> installer.
 
 ### Discord invite
-Already filled in — both footers link to https://discord.gg/XFpapzP2HC
+Already filled in — both footers link to https://discord.gg/sd3PyBAkKV
 (`index.html` and `guide.html`). Nothing to do unless the invite changes.
 
 *(Line numbers above are approximate — search the token if the file has shifted.)*

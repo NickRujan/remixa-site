@@ -134,9 +134,6 @@
   .price-lead .big{font-size:1.35rem;color:var(--ink);font-weight:600;margin-bottom:6px}
   .price-lead .big b{color:var(--gold)}
   .price-lead p{color:var(--dim);margin:0}
-  .prelaunch{margin:16px auto 0;max-width:520px;background:rgba(212,166,42,.08);
-        border:1px solid rgba(212,166,42,.35);border-radius:12px;padding:12px 16px;
-        color:var(--gold-soft);font-size:.92rem;line-height:1.55}
   .prices{display:grid;grid-template-columns:1fr;gap:16px;max-width:640px;margin:0 auto}
   .price{background:var(--card);border:1px solid var(--line);border-radius:16px;
          padding:26px 24px;text-align:center;position:relative}
@@ -177,6 +174,7 @@
       padding:26px 24px;text-align:center;max-width:640px;margin:0 auto}
   .dl h3{font-size:1.15rem;margin-bottom:16px;color:var(--ink)}
   .dl .row{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  .dl .dl-note{margin:14px auto 0;max-width:460px;color:var(--dim);font-size:.88rem;line-height:1.55}
 
   /* ---- footer ---- */
   footer{border-top:1px solid var(--line);margin-top:24px;padding:28px 0 44px;
@@ -334,30 +332,30 @@
         <div class="big"><b>$99/mo USD</b> — make as many videos as you want.</div>
         <p>No credits. No per-video fees. No render queue. The price doesn't
            change no matter how much you generate. Available worldwide.</p>
-        <div class="prelaunch">Checkout opens at launch. Join the Discord and you'll get
-           the purchase link — and a heads-up the moment it goes live.</div>
       </div>
       <!-- ==================================================================
-           PRE-LAUNCH ⇄ LIVE CHECKOUT — single switch.
-           To go live: set CHECKOUT_MONTHLY / CHECKOUT_YEARLY below to the
-           Lemon Squeezy checkout URLs, then in BOTH .price cards swap the
-           button's href to those URLs and its text to "Get Remixa". Nothing
-           else needs to change.
-             CHECKOUT_MONTHLY = (set at launch)
-             CHECKOUT_YEARLY  = (set at launch)
+           LIVE CHECKOUT (Lemon Squeezy overlay).
+           Both buttons share ONE product checkout link; ?enabled=<variant id>
+           limits each card to its own variant (1914469 monthly / 1914446
+           yearly) and ?embed=1 + class="lemonsqueezy-button" + lemon.js
+           (loaded at the bottom of this file) open it as an overlay on this
+           page. LS_CHECKOUT_UUID = the product's share-link UUID from the LS
+           dashboard: Store → Products → Remixa → Share → copy link
+           (https://remixa.lemonsqueezy.com/buy/<uuid>). Replace it in BOTH
+           hrefs below before pushing.
            =================================================================== -->
       <div class="prices">
         <div class="price">
           <div class="amt">$99<span>/mo USD</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Get the launch link →</a>
+          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/buy/LS_CHECKOUT_UUID?enabled=1914469&embed=1">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
           <div class="amt">$990<span>/yr USD</span></div>
           <div class="sub">Unlimited — 2 months free vs. monthly</div>
-          <a class="btn" href="https://discord.gg/sd3PyBAkKV">Get the launch link →</a>
+          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/buy/LS_CHECKOUT_UUID?enabled=1914446&embed=1">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
       </div>
@@ -424,27 +422,29 @@
     </div>
   </section>
 
-  <!-- ============ DOWNLOADS — HIDDEN UNTIL LAUNCH ============
-       No customer downloads exist yet, so this "Already bought?" block is
-       hidden rather than shipping dead placeholder links. To re-enable at
-       launch: delete this comment wrapper and paste the two real Lemon
-       Squeezy installer URLs (Windows .exe, Mac .dmg) into the hrefs. Also
-       set the same two URLs in version.json (the in-app updater feed).
-
+  <!-- ============ DOWNLOADS ============
+       Lemon Squeezy hosts the installers; download links are per-customer
+       (signed / magic-link login), so there is no public direct URL to put
+       here. My Orders is the stable page every buyer can always reach, and
+       it always serves the newest files uploaded to the product. -->
   <section id="downloads">
     <div class="wrap">
       <div class="dl">
         <h3>Already bought? Grab the latest:</h3>
         <div class="row">
-          <a class="btn" href="SET_WINDOWS_INSTALLER_URL_AT_LAUNCH">Download for Windows</a>
-          <a class="btn ghost" href="SET_MAC_INSTALLER_URL_AT_LAUNCH">Download for Mac</a>
+          <a class="btn" href="https://app.lemonsqueezy.com/my-orders">Open your downloads →</a>
         </div>
+        <p class="dl-note">Your Windows and Mac installers live on your Lemon Squeezy
+           order page — log in with the email you bought with (they'll send a
+           magic link) and the latest version is always there.</p>
       </div>
     </div>
   </section>
-       ======================================================== -->
 
 </main>
+
+<!-- Lemon Squeezy overlay checkout (see pricing buttons above) -->
+<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 
 <footer>
   <div class="wrap frow">

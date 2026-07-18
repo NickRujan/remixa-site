@@ -11,42 +11,32 @@ The public site for Remixa, served from GitHub Pages as one unit:
 
 ---
 
-## 1. Placeholders to fill in
+## 1. Checkout + downloads — LIVE state
 
-Search-and-replace these exact tokens. Nothing else in the files needs editing.
+### Checkout (Lemon Squeezy overlay)
+Both pricing-card buttons ($99/mo monthly card, $990/yr yearly card) are wired
+to the Lemon Squeezy overlay: `lemon.js` is loaded at the bottom of
+`index.html`, the buttons carry `class="lemonsqueezy-button"` and share ONE
+product checkout link — `?enabled=1914469` limits the monthly card to the
+monthly variant, `?enabled=1914446` the yearly card to the yearly variant, and
+`?embed=1` keeps the buyer on remixa.app.
 
-### Checkout — DISABLED until launch (processor undecided)
-Both pricing-card buttons ($99/mo monthly card, $990/yr yearly card) currently
-read **"Launching soon · Join the Discord"** and link to the Discord invite —
-no checkout opens anywhere, and the repo deliberately contains zero references
-to any payment processor. When the processor is decided and the build is
-uploaded: point both buttons at the real checkout URL(s), relabel them
-"Buy monthly" / "Buy yearly", and re-add whatever overlay/checkout script the
-processor needs to the `<head>` of `index.html`.
+**One token left: `LS_CHECKOUT_UUID`** (2× in `index.html`). It is the
+product's share-link UUID — LS dashboard (live mode) → Store → Products →
+Remixa → **Share** → copy link; the UUID is the last path segment of
+`https://remixa.lemonsqueezy.com/buy/<uuid>`. Replace both occurrences, push,
+then click both buttons on the live page and confirm the overlay shows $99/mo
+on the monthly card and $990/yr on the yearly card.
 
-### Installer URLs (2× each in TWO files = 4 spots)
-The Windows `.exe` and Mac `.dmg`. **These must be Lemon Squeezy download URLs,
-not github.io or remixa.app** — see the warning in section 4.
-
-| What | File | Where | Token |
-|------|------|------|-------|
-| Download buttons | `index.html` | in the **commented-out** `DOWNLOADS — HIDDEN UNTIL LAUNCH` block | `SET_WINDOWS_INSTALLER_URL_AT_LAUNCH` / `SET_MAC_INSTALLER_URL_AT_LAUNCH` |
-| Windows updater feed | `version.json` | 4 | `PLACEHOLDER_WIN_URL` |
-| Mac updater feed | `version.json` | 5 | `PLACEHOLDER_MAC_URL` |
-
-> **Pre-launch state:** the "Already bought?" download section on the home page
-> is intentionally **commented out** so no dead links ship. At launch, delete the
-> comment wrapper around that block and paste the real Lemon Squeezy installer
-> URLs into the two hrefs, then set the **same** two URLs in `version.json`.
-> Keep the Windows button and the Windows updater feed pointing at the **same**
-> file (likewise Mac) — the download and the auto-updater must serve the identical
-> installer.
+### Downloads ("Already bought?" section)
+Points at **https://app.lemonsqueezy.com/my-orders** — the stable page where
+every buyer logs in with their purchase email (magic link) and always gets the
+newest installers. Lemon Squeezy file URLs are per-customer and signed, so
+there is no public direct installer URL to link.
 
 ### Discord invite
-Already filled in — both footers link to https://discord.gg/sd3PyBAkKV
-(`index.html` and `guide.html`). Nothing to do unless the invite changes.
-
-*(Line numbers above are approximate — search the token if the file has shifted.)*
+Both footers link to https://discord.gg/sd3PyBAkKV (`index.html` and
+`guide.html`). Nothing to do unless the invite changes.
 
 ---
 
@@ -54,31 +44,38 @@ Already filled in — both footers link to https://discord.gg/sd3PyBAkKV
 
 When you build a new installer:
 
-1. Upload the new Windows `.exe` and Mac `.dmg` to Lemon Squeezy. Copy their
-   download URLs.
-2. Edit **`version.json`**:
-   - Bump `"version"` (e.g. `"2.8"` → `"2.9"`). This is what triggers the
-     in-app "update available" prompt, so it must go **up**.
-   - Write one line in `"notes"` — shown to users in the update prompt.
-   - Paste the new `windows.url` and `mac.url` (only changes if the download
-     URL changed; if the URL is stable you only touch version + notes).
-3. If the download URLs changed, also update the two buttons in
-   **`index.html`** (`PLACEHOLDER_WIN_URL` / `PLACEHOLDER_MAC_URL` spots).
-4. Commit + push. GitHub Pages redeploys in ~1 min. The app polls `version.json`
-   and offers the update.
+1. Upload the new Windows `.exe` and Mac `.zip` to **both variants** of the
+   Lemon Squeezy product (replace the old files). Existing customers
+   automatically get the new files on their My Orders page — that is the
+   download path; nothing on the site needs touching for it.
+2. Edit **`version.json`** — bump `"version"` (must go **up**, e.g. `"2.9.7"`
+   → `"2.9.8"`) and write one line in `"notes"`.
+3. Commit + push. GitHub Pages redeploys in ~1 min.
 
-Validate before pushing: paste `version.json` into <https://jsonlint.com> or run
-`python -m json.tool version.json` — it must parse clean (no trailing commas).
+**Updater caveat (as of 2.9.7):** `windows.url` / `mac.url` in `version.json`
+are intentionally **empty**, so the in-app update banner never appears and
+customers update by re-downloading from My Orders. The app's updater only
+accepts a stable, public, direct `.exe`/`.dmg`/`.pkg` URL (anything else errors
+at download time), and Lemon Squeezy doesn't provide one — its download links
+are per-customer and signed. To turn the in-app banner on for a future
+release: host the installers at a stable direct URL (e.g. a GitHub Release —
+see section 3) and put those URLs in `version.json`.
+
+Validate before pushing: `python -m json.tool version.json` — it must parse
+clean (no trailing commas).
 
 ---
 
 ## 3. Important: installers are NOT hosted here
 
 The installers are ~156 MB. **GitHub Pages rejects any file over 100 MB**, so
-they cannot live in this repo or at remixa.app. Host them on **Lemon Squeezy**
-and point `PLACEHOLDER_WIN_URL` / `PLACEHOLDER_MAC_URL` (in both `index.html`
-and `version.json`) at those Lemon Squeezy URLs. remixa.app only serves the
-HTML, images, and `version.json`.
+they cannot live in this repo or at remixa.app. They are uploaded to the Lemon
+Squeezy product (both variants) and delivered through checkout receipts and My
+Orders. If a stable public installer URL is ever wanted (to make the in-app
+update banner work), use a GitHub Release on this repo — assets up to 2 GB,
+stable direct URLs — but note that makes the raw installer publicly
+downloadable (the app still requires a license key to run), which is an owner
+call. remixa.app only serves the HTML, images, and `version.json`.
 
 ---
 

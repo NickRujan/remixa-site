@@ -1,6 +1,7 @@
 {
-  "version": "2.9",
-  "notes": "Auto mode, split-screen hooks, image overlays with background removal, faster generation, FLAC/OGG sound support.",
-  "windows": { "url": "PLACEHOLDER_WIN_URL" },
-  "mac":     { "url": "PLACEHOLDER_MAC_URL" }
+  "version": "2.9.7",
+  "notes": "Auto mode, split-screen hooks, image overlays with background removal, sectioned-clip hooks, sharper split detection, FLAC/OGG sound support.",
+  "windows": { "url": "" },
+  "mac":     { "url": "" },
+  "_urls": "Lemon Squeezy download links are signed/login-gated, so they can't feed the in-app updater (it only auto-downloads stable direct .exe/.dmg/.pkg URLs and errors on anything else). Empty url = updater stays silent (fail-soft). Customers always get the newest installers from app.lemonsqueezy.com/my-orders. Before shipping 2.9.8: host installers at a stable direct URL (e.g. a GitHub Release) and put those URLs here, or the in-app update banner can never work."
 }

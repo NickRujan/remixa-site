@@ -71,6 +71,11 @@
   .hero h1 em{color:var(--gold);font-style:normal}
   .hero .sub{color:var(--dim);font-size:1.15rem;margin-bottom:26px}
   .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .hero .cred{margin-top:18px;font-size:.76rem;font-weight:700;letter-spacing:.14em;
+       text-transform:uppercase;color:var(--gold-soft);display:inline-flex;
+       align-items:center;gap:10px}
+  .hero .cred::before,.hero .cred::after{content:"";width:20px;height:1px;
+       background:var(--gold);opacity:.55}
   .htext{text-align:center}
 
   /* ---- hero video: a real 9:16 output, phone-sized, never a billboard ---- */
@@ -246,6 +251,7 @@
           <a class="btn" href="#pricing">Get Remixa</a>
           <a class="btn ghost" href="#how">See how it works</a>
         </div>
+        <div class="cred">Built with a 6-figure UGC creator</div>
       </div>
 
       <!-- A real Remixa output, straight out of the generator -->

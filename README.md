@@ -21,12 +21,10 @@ product checkout link — `?enabled=1914469` limits the monthly card to the
 monthly variant, `?enabled=1914446` the yearly card to the yearly variant, and
 `?embed=1` keeps the buyer on remixa.app.
 
-**One token left: `LS_CHECKOUT_UUID`** (2× in `index.html`). It is the
-product's share-link UUID — LS dashboard (live mode) → Store → Products →
-Remixa → **Share** → copy link; the UUID is the last path segment of
-`https://remixa.lemonsqueezy.com/buy/<uuid>`. Replace both occurrences, push,
-then click both buttons on the live page and confirm the overlay shows $99/mo
-on the monthly card and $990/yr on the yearly card.
+The checkout link UUID (`2d78f483-acf3-4ed9-a77a-d0dfa5ab383e`) is the
+product's share-link UUID from the LS dashboard (live mode) → Store →
+Products → Remixa → **Share**. If the product is ever re-created, copy the
+new share link and update both hrefs in `index.html`.
 
 ### Downloads ("Already bought?" section)
 Points at **https://app.lemonsqueezy.com/my-orders** — the stable page where

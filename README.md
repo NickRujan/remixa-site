@@ -16,15 +16,20 @@ The public site for Remixa, served from GitHub Pages as one unit:
 ### Checkout (Lemon Squeezy overlay)
 Both pricing-card buttons ($99/mo monthly card, $990/yr yearly card) are wired
 to the Lemon Squeezy overlay: `lemon.js` is loaded at the bottom of
-`index.html`, the buttons carry `class="lemonsqueezy-button"` and share ONE
-product checkout link — `?enabled=1914469` limits the monthly card to the
-monthly variant, `?enabled=1914446` the yearly card to the yearly variant, and
-`?embed=1` keeps the buyer on remixa.app.
+`index.html`, the buttons carry `class="lemonsqueezy-button"`, and `?embed=1`
+keeps the buyer on remixa.app.
 
-The checkout link UUID (`2d78f483-acf3-4ed9-a77a-d0dfa5ab383e`) is the
-product's share-link UUID from the LS dashboard (live mode) → Store →
-Products → Remixa → **Share**. If the product is ever re-created, copy the
-new share link and update both hrefs in `index.html`.
+**Each button uses its variant's OWN buy-link UUID** — a `/checkout/buy/`
+UUID is per-variant and the cart is created with that variant. (Do NOT reuse
+one UUID with `?enabled=…`: that only filters the variant picker, the cart
+still charges the UUID's variant — the monthly button would charge $990.)
+
+- Monthly `6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43` → variant 1914469, $99/mo
+- Annual `2d78f483-acf3-4ed9-a77a-d0dfa5ab383e` → variant 1914446, $990/yr
+
+If a variant is ever re-created, copy its own share/buy link from the LS
+dashboard (live mode → Store → Products → Remixa → Share, per variant) and
+update that button's href in `index.html`.
 
 ### Downloads ("Already bought?" section)
 Points at **https://app.lemonsqueezy.com/my-orders** — the stable page where

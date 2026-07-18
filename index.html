@@ -335,25 +335,27 @@
       </div>
       <!-- ==================================================================
            LIVE CHECKOUT (Lemon Squeezy overlay).
-           Both buttons share ONE product checkout link; ?enabled=<variant id>
-           limits each card to its own variant (1914469 monthly / 1914446
-           yearly) and ?embed=1 + class="lemonsqueezy-button" + lemon.js
-           (loaded at the bottom of this file) open it as an overlay on this
-           page. The UUID is the product's share-link UUID from the LS
-           dashboard (Store → Products → Remixa → Share).
+           Each button uses ITS VARIANT'S OWN buy slug — the UUID in a
+           /checkout/buy/ link is per-variant, and the cart is created with
+           that variant (an ?enabled= filter does NOT change the cart, only
+           the picker — using one shared UUID mischarges). Slugs verified
+           from live cart JSON: Monthly 6b75aa7e-… = variant 1914469 $99/mo,
+           Annual 2d78f483-… = variant 1914446 $990/yr. ?embed=1 +
+           class="lemonsqueezy-button" + lemon.js (bottom of this file) open
+           the overlay on this page.
            =================================================================== -->
       <div class="prices">
         <div class="price">
           <div class="amt">$99<span>/mo USD</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?enabled=1914469&embed=1">Get Remixa →</a>
+          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43?embed=1">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
           <div class="amt">$990<span>/yr USD</span></div>
           <div class="sub">Unlimited — 2 months free vs. monthly</div>
-          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?enabled=1914446&embed=1">Get Remixa →</a>
+          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?embed=1">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
       </div>

@@ -1,7 +1,10 @@
 {
-  "version": "2.9.7",
-  "notes": "Auto mode, split-screen hooks, image overlays with background removal, sectioned-clip hooks, sharper split detection, FLAC/OGG sound support.",
-  "windows": { "url": "" },
-  "mac":     { "url": "" },
-  "_urls": "Lemon Squeezy download links are signed/login-gated, so they can't feed the in-app updater (it only auto-downloads stable direct .exe/.dmg/.pkg URLs and errors on anything else). Empty url = updater stays silent (fail-soft). Customers always get the newest installers from app.lemonsqueezy.com/my-orders. Before shipping 2.9.8: host installers at a stable direct URL (e.g. a GitHub Release) and put those URLs here, or the in-app update banner can never work."
+  "version": "2.9.8",
+  "notes": "Speech-keyed ducking with three per-sound modes, per-wording caption boxes, sharper split detection, verified auto-update.",
+  "windows": {
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.8/Remixa-Setup-2.9.8.exe",
+    "sha256": "00387f979651cd15d00da73b8caa7be7f6d91d0744b42e68802107c93d783c57"
+  },
+  "mac": {},
+  "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."
 }

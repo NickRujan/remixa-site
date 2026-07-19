@@ -105,6 +105,12 @@
   .wcard p{color:var(--dim);font-size:.9rem;margin:0;line-height:1.55}
   .why-adv{text-align:center;color:var(--dim);max-width:560px;margin:26px auto 0;font-size:1rem;line-height:1.6}
   .why-adv b{color:var(--ink);font-weight:600}
+  /* payoff band (3 clips x 4 wordings = 12) */
+  .payoff{max-width:520px;margin:34px auto 0;text-align:center;
+        background:linear-gradient(180deg,var(--card2),var(--card));
+        border:1px solid var(--line);border-radius:16px;padding:24px 20px}
+  .payoff .meq{margin-bottom:2px}
+  .payoff .mnote{margin-top:12px}
 
   /* ---- "one recording becomes many" section ---- */
   #multiply{padding:44px 0 10px}
@@ -231,7 +237,7 @@
     <img src="./logo.png" alt="Remixa logo">
     <span class="name"><b>Remixa</b></span>
     <nav class="nav">
-      <a href="#why">What's inside</a>
+      <a href="#how">How it works</a>
       <a href="#pricing">Pricing</a>
       <a href="./guide.html">Guide</a>
       <a href="./walkthrough.html">Walkthrough</a>
@@ -268,30 +274,13 @@
     </div>
   </section>
 
-  <!-- ============ HOW ONE BECOMES MANY ============ -->
-  <section id="multiply">
+  <!-- ============ HOW IT WORKS (what it does + payoff, one section) ============ -->
+  <section id="how">
     <div class="wrap">
-      <div class="money">
-        <h2>One recording becomes <em>many</em> videos.</h2>
-        <p class="mnote" style="margin-bottom:20px">Three multipliers, all automatic:</p>
-        <ul class="plain-mech">
-          <li><b>Auto-detection</b> finds the parts of each recording: talking, screen, split-screen.</li>
-          <li><b>Ordinal swapping</b> trades matching parts between your clips.</li>
-          <li><b>Text blocks</b> rotate your hook wordings, one per video.</li>
-        </ul>
-        <div class="meq" id="meq">3 clips &times; 4 wordings</div>
-        <div class="mtotal" id="mt">12 unique videos</div>
-        <p class="mnote">Plus automatic colour, zoom and speed variation on every one. Up to 1,000 per batch.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ WHAT'S INSIDE (the machine) ============ -->
-  <section id="why">
-    <div class="wrap">
-      <div class="kicker">What's inside</div>
-      <h2 class="sec">Drop in recordings, get a batch out.</h2>
-      <p class="sec-sub">Four steps. Nothing to pre-cut, nothing to upload.</p>
+      <div class="kicker">How it works</div>
+      <h2 class="sec">One recording becomes many videos.</h2>
+      <p class="sec-sub">Remixa auto-detects each clip's parts, swaps matching sections
+         between your clips, and rotates your text hooks. A little footage goes a long way.</p>
       <div class="why">
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M7 10l5 5 5-5"/><rect x="4" y="17" width="16" height="4" rx="1.5"/></svg></div>
@@ -301,7 +290,7 @@
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h10"/><path d="M4 12h16"/><path d="M4 18h7"/><circle cx="18" cy="6" r="2.2"/><circle cx="15" cy="18" r="2.2"/></svg></div>
           <h3>AUTO-DETECT</h3>
-          <p>Remixa finds where talking ends and screen begins, on its own. Nothing else does this.</p>
+          <p>Remixa finds where talking ends and screen begins, then swaps matching parts between clips. Nothing else does this.</p>
         </div>
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M7 4v3"/><path d="M6 12h8"/><path d="M6 16h5"/></svg></div>
@@ -314,22 +303,12 @@
           <p>Every output is a unique combination, exported vertical 1080&times;1920. Download and post.</p>
         </div>
       </div>
-      <p class="why-adv">All of it runs on your own computer. <b>No upload, no render queue, no per-video fees.</b> One flat price, unlimited videos.</p>
-    </div>
-  </section>
-
-  <!-- ============ HOW IT WORKS ============ -->
-  <section id="how">
-    <div class="wrap">
-      <div class="kicker">How it works</div>
-      <h2 class="sec">From buy to posted in four steps.</h2>
-      <div class="steps">
-        <div class="step"><div class="n">1</div><p>Buy. <span>Pick monthly or yearly.</span></p></div>
-        <div class="step"><div class="n">2</div><p>Get your key + download. <span>Sent to your email. Install on Windows or Mac.</span></p></div>
-        <div class="step"><div class="n">3</div><p>Drop in your clips. <span>Whole recordings, no pre-cutting.</span></p></div>
-        <div class="step"><div class="n">4</div><p>Generate &amp; post. <span>A full batch of unique videos, ready to go.</span></p></div>
+      <div class="payoff">
+        <div class="meq">3 clips &times; 4 wordings</div>
+        <div class="mtotal">12 unique videos</div>
+        <p class="mnote">Plus automatic colour, zoom and speed variation on every one. Up to 1,000 per batch.</p>
       </div>
-      <p class="how-more">Want the full walkthrough? <a href="./guide.html">Read the guide →</a></p>
+      <p class="why-adv">All of it runs on your own computer. <b>No upload, no render queue, no per-video fees.</b> One simple price, unlimited videos.</p>
     </div>
   </section>
 
@@ -424,6 +403,21 @@
 
       <div class="price-foot">Prices in USD · available worldwide · <a href="./refunds.html">See refund policy</a></div>
 
+    </div>
+  </section>
+
+  <!-- ============ GETTING STARTED (buy flow) ============ -->
+  <section id="start">
+    <div class="wrap">
+      <div class="kicker">Getting started</div>
+      <h2 class="sec">From checkout to posted in four steps.</h2>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><p>Buy. <span>Pick monthly, quarterly, or yearly.</span></p></div>
+        <div class="step"><div class="n">2</div><p>Get your key + download. <span>Sent to your email. Install on Windows or Mac.</span></p></div>
+        <div class="step"><div class="n">3</div><p>Drop in your clips. <span>Whole recordings, no pre-cutting.</span></p></div>
+        <div class="step"><div class="n">4</div><p>Generate &amp; post. <span>A full batch of unique videos, ready to go.</span></p></div>
+      </div>
+      <p class="how-more">Want the full walkthrough? <a href="./guide.html">Read the guide →</a></p>
     </div>
   </section>
 

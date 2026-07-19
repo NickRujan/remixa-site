@@ -1,9 +1,9 @@
 {
-  "version": "2.9.8",
-  "notes": "Speech-keyed ducking with three per-sound modes, per-wording caption boxes, sharper split detection, verified auto-update.",
+  "version": "2.9.9",
+  "notes": "Independent sound controls: ducking on/off, whole-video or fade-in-after-hook playback, per-sound volume. Per-section recording on by default for new clips, faster dashboard, cleaner settings.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.8/Remixa-Setup-2.9.8.exe",
-    "sha256": "00387f979651cd15d00da73b8caa7be7f6d91d0744b42e68802107c93d783c57"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.9/Remixa-Setup-2.9.9.exe",
+    "sha256": "a5a7945d7a53be910a42d9ff000e295f436e6f522ca63dede06fa2e794bf1dbe"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

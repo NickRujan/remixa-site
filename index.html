@@ -346,22 +346,21 @@
            that variant (an ?enabled= filter does NOT change the cart, only
            the picker — using one shared UUID mischarges). Slugs verified
            from live cart JSON: Monthly 6b75aa7e-… = variant 1914469 $99/mo,
-           Annual 2d78f483-… = variant 1914446 $990/yr. ?embed=1 +
-           class="lemonsqueezy-button" + lemon.js (bottom of this file) open
-           the overlay on this page.
+           Annual 2d78f483-… = variant 1914446 $990/yr. Links go straight to
+           the hosted checkout page on every device (no overlay, no lemon.js).
            =================================================================== -->
       <div class="prices">
         <div class="price">
           <div class="amt">$99<span>/mo USD</span></div>
           <div class="sub">Unlimited, billed monthly</div>
-          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43?embed=1">Get Remixa →</a>
+          <a class="btn" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
         <div class="price feature">
           <div class="tag">Best value</div>
           <div class="amt">$990<span>/yr USD</span></div>
           <div class="sub">Unlimited, 2 months free vs. monthly</div>
-          <a class="btn lemonsqueezy-button" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?embed=1">Get Remixa →</a>
+          <a class="btn" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e">Get Remixa →</a>
           <div class="mini-note">Prices in USD · <a href="./refunds.html">Refund &amp; withdrawal policy</a></div>
         </div>
       </div>
@@ -449,21 +448,11 @@
 
 </main>
 
-<!-- Lemon Squeezy checkout. The ?embed=1 overlay renders LS's checkout in a
-     fixed narrow card that looks cramped on desktop, and its width lives
-     inside their iframe (not styleable from here). So: phones keep the
-     overlay (full-screen there, looks right); desktop strips embed=1 and
-     the lemonsqueezy-button class BEFORE lemon.js loads, so the buttons
-     navigate to the same variant's full hosted checkout page instead. -->
-<script>
-  if (window.matchMedia('(min-width: 900px)').matches) {
-    document.querySelectorAll('a.lemonsqueezy-button').forEach(function (a) {
-      a.classList.remove('lemonsqueezy-button');
-      a.href = a.href.replace('?embed=1', '').replace('&embed=1', '');
-    });
-  }
-</script>
-<script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
+<!-- Checkout links go straight to each variant's full hosted Lemon Squeezy
+     page on every device (owner's call; the ?embed=1 overlay card was too
+     narrow on desktop and its width lives inside LS's iframe, not
+     styleable). lemon.js is gone on purpose. -->
+
 
 <footer>
   <div class="wrap frow">

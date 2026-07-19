@@ -193,6 +193,8 @@
   .price .feats li b{color:var(--ink);font-weight:600}
   .price .feats svg{width:16px;height:16px;flex:0 0 auto;margin-top:3px;
        stroke:var(--gold);fill:none;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  /* mobile-only collapsible feature list (desktop: always shown) */
+  .feats-head{display:none}
   .price-foot{text-align:center;margin:26px auto 0;font-size:.88rem;color:var(--gold-soft)}
   .price-foot a{color:var(--gold-soft);text-decoration:underline}
 
@@ -257,6 +259,14 @@
     .repo{padding:20px}
     .faq summary{font-size:.98rem;padding:15px 0}
     .btn{padding:13px 24px;font-size:1rem}
+    /* collapse each plan's feature list; tap the header to expand */
+    .feats-head{display:flex;align-items:center;justify-content:space-between;width:100%;
+       background:transparent;border:0;border-top:1px solid var(--line);color:var(--gold-soft);
+       font:inherit;font-weight:600;font-size:.92rem;cursor:pointer;padding:13px 0 2px;margin-top:14px}
+    .feats-head .fx{color:var(--gold);font-size:1.35rem;line-height:1;transition:transform .18s ease}
+    .price.open .feats-head .fx{transform:rotate(45deg)}
+    .price .feats{display:none;border-top:0;margin-top:6px;padding-top:2px}
+    .price.open .feats{display:grid}
   }
 
   /* ---- tablet / desktop ---- */
@@ -323,14 +333,13 @@
         <div class="fcol">
           <div class="fkick">What's inside</div>
           <div class="ftitle">One recording becomes many videos.</div>
-          <p class="fdesc">Record once. Remixa remixes your clips into dozens of different
-             videos, and varies each one so no two are the same.</p>
-          <ul class="fbul">
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Record a few clips: talking hook, screen recording, whatever you'd film</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Remixa mixes them, so every video is a different combination</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>A light touch-up on each: colour, zoom and speed, so it reads as original</span></li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Up to <b>1,000 unique videos</b> per batch</span></li>
-          </ul>
+          <p class="fdesc">Record once. Remixa remixes your clips into dozens of different videos.</p>
+          <ol class="fsteps">
+            <li><b>Record a few clips.</b> Your talking hook, a screen recording, whatever you'd film anyway.</li>
+            <li><b>Remixa mixes them.</b> Every video is a different combination of your clips.</li>
+            <li><b>Each one gets a light touch-up.</b> A small shift in colour, zoom and speed, so it reads as original.</li>
+          </ol>
+          <p class="fnote">3 clips and 4 wordings already make <b>12 unique videos</b>. Up to 1,000 per batch.</p>
         </div>
         <div class="fvis">
           <div class="repo">
@@ -420,6 +429,7 @@
           <div class="amt">$99<span>/mo</span></div>
           <div class="sub">Billed monthly · cancel anytime</div>
           <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43?enabled=1914469">Get Remixa</a>
+          <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, splits &amp; talking-head videos</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>
@@ -439,6 +449,7 @@
           <div class="amt">$269<span>/3 months</span></div>
           <div class="sub">Billed every 3 months</div>
           <a class="btn" href="https://remixa.lemonsqueezy.com/checkout/buy/46f2be47-9d42-49c4-bddd-17a9c3cce338?enabled=1914491">Get Remixa</a>
+          <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, splits &amp; talking-head videos</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>
@@ -458,6 +469,7 @@
           <div class="amt">$990<span>/year</span></div>
           <div class="sub">Billed yearly · 2 months free</div>
           <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?enabled=1914446">Get Remixa</a>
+          <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, splits &amp; talking-head videos</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>
@@ -590,6 +602,12 @@
       el.classList.add('reveal'); io.observe(el);
     });
   })();
+
+  // Mobile pricing: tap a plan's "What's included" to expand its feature list.
+  // The header only shows on phones (CSS); on desktop the list is always open.
+  document.querySelectorAll('#pricing .price .feats-head').forEach(function(b){
+    b.addEventListener('click', function(){ b.closest('.price').classList.toggle('open'); });
+  });
 </script>
 </body>
 </html>

@@ -362,12 +362,15 @@
            </body>). The Monthly plan has no annual form, so it stays /mo in
            both views (gains "no commitment").
            Checkout hrefs are per-variant Lemon Squeezy hosted-checkout URLs
-           (/checkout/buy/<share-UUID>). Monthly + Annual are wired to their
-           real, verified slugs. QUARTERLY is still the LS_QUARTERLY
-           placeholder: the numeric variant id 1914491 is NOT a checkout path
-           (/checkout/buy/1914491 → 404); it needs the variant's share/buy
-           UUID from the LS dashboard. Never put the numeric id in ?enabled=
-           (that is the launch mischarge trap).
+           (/checkout/buy/<share-UUID>?enabled=<same-variant-numeric-id>). The
+           ?enabled= LOCKS the checkout to that one variant (no re-picker), and
+           here each enabled id MATCHES its own UUID's variant, so the cart is
+           always that variant. Verified live 2026-07-19 (read-only):
+             Monthly   6b75aa7e-… ?enabled=1914469 -> Remixa (Monthly) $99/mo
+             Quarterly 46f2be47-… ?enabled=1914491 -> Remixa (Quarterly) $269
+             Annual    2d78f483-… ?enabled=1914446 -> Remixa (Annual) $990/yr
+           NEVER pair a UUID with a DIFFERENT variant's ?enabled= id -> that is
+           the launch mischarge trap (shows one price, charges another).
            =================================================================== -->
       <div class="bill-toggle">
         <div class="bill-switch" role="group" aria-label="Billing view">
@@ -386,7 +389,7 @@
           <div class="plan">Monthly</div>
           <div class="amt">$99<span>/mo</span></div>
           <div class="sub">Billed monthly · cancel anytime</div>
-          <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43">Get Remixa</a>
+          <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43?enabled=1914469">Get Remixa</a>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, captions, splits &amp; talking-head</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>
@@ -407,7 +410,7 @@
           <div class="plan">Quarterly</div>
           <div class="amt">$89.67<span>/mo</span></div>
           <div class="sub">$269 billed every 3 months</div>
-          <a class="btn" href="LS_QUARTERLY">Get Remixa</a>
+          <a class="btn" href="https://remixa.lemonsqueezy.com/checkout/buy/46f2be47-9d42-49c4-bddd-17a9c3cce338?enabled=1914491">Get Remixa</a>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, captions, splits &amp; talking-head</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>
@@ -428,7 +431,7 @@
           <div class="plan">Annual</div>
           <div class="amt">$82.50<span>/mo</span></div>
           <div class="sub">$990 billed yearly · 2 months free</div>
-          <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e">Get Remixa</a>
+          <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?enabled=1914446">Get Remixa</a>
           <ul class="feats">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span><b>Unlimited</b> repurposing, captions, splits &amp; talking-head</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Auto-detects talking, screen, split &amp; hybrid</span></li>

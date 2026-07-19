@@ -121,6 +121,50 @@
         font-size:1rem;line-height:1.6}
   .why-adv b{color:var(--ink);font-weight:600}
 
+  /* ---- two-column feature blocks (UGCDock-style deep dives) ---- */
+  .featrow{display:grid;grid-template-columns:1fr;gap:30px;align-items:center;margin-top:8px}
+  .fcol .fkick{color:var(--gold);font-size:.75rem;font-weight:800;letter-spacing:.22em;
+       text-transform:uppercase;margin-bottom:12px}
+  .fcol .ftitle{font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;letter-spacing:-.02em;
+       line-height:1.14;margin-bottom:14px}
+  .fdesc{color:var(--dim);font-size:1.05rem;line-height:1.6;margin-bottom:22px}
+  .fsteps{list-style:none;counter-reset:s;display:grid;gap:16px}
+  .fsteps li{position:relative;padding-left:46px;color:var(--dim);line-height:1.55}
+  .fsteps li b{color:var(--ink)}
+  .fsteps li::before{counter-increment:s;content:counter(s);position:absolute;left:0;top:-2px;
+       width:32px;height:32px;border-radius:10px;background:rgba(212,166,42,.12);
+       border:1px solid rgba(212,166,42,.4);color:var(--gold);font-weight:800;
+       display:flex;align-items:center;justify-content:center;font-size:1rem}
+  .fnote{margin-top:22px;color:var(--ink);font-size:.98rem;line-height:1.6;
+       background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .fnote b{color:var(--gold)}
+  .fbul{list-style:none;display:grid;gap:13px}
+  .fbul li{display:flex;gap:11px;align-items:flex-start;color:var(--dim);line-height:1.5}
+  .fbul svg{width:18px;height:18px;flex:0 0 auto;margin-top:2px;stroke:var(--gold);fill:none;
+       stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+  .fvis{display:flex;justify-content:center}
+  /* repurposer combination card */
+  .repo{width:100%;max-width:360px;background:linear-gradient(180deg,var(--card2),var(--card));
+       border:1px solid var(--line);border-radius:18px;padding:24px;text-align:center}
+  .repo-h{color:var(--dim);font-size:.92rem;margin-bottom:16px;font-variant-numeric:tabular-nums}
+  .repo-clips{display:flex;gap:10px;justify-content:center;margin-bottom:16px}
+  .rc{width:62px;aspect-ratio:9/16;border-radius:10px;border:1px solid var(--line);
+       background-size:cover;background-position:center;overflow:hidden;
+       display:flex;align-items:flex-end;justify-content:center}
+  .rc span{font-size:.64rem;font-weight:700;color:#fff;background:rgba(0,0,0,.55);width:100%;padding:3px 0}
+  .repo-words{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:18px}
+  .repo-words span{font-size:.8rem;color:var(--gold-soft);background:rgba(212,166,42,.1);
+       border:1px solid rgba(212,166,42,.35);border-radius:999px;padding:5px 12px}
+  .repo-total{font-size:1.7rem;font-weight:800;color:var(--gold);letter-spacing:-.01em}
+  /* vertical-first phone mock */
+  .vf-phone{width:210px;aspect-ratio:9/16;border-radius:22px;border:1px solid var(--line);
+       background-size:cover;background-position:center;box-shadow:0 22px 54px rgba(0,0,0,.55);
+       position:relative;overflow:hidden}
+  .vf-tag{position:absolute;top:12px;right:12px;font-size:.72rem;font-weight:800;color:#1a1400;
+       background:var(--gold);border-radius:8px;padding:3px 9px}
+  .vf-cap{position:absolute;left:12px;right:12px;bottom:18px;font-size:.92rem;font-weight:800;
+       color:#fff;text-align:center;text-shadow:0 2px 10px rgba(0,0,0,.95)}
+
   /* ---- stats band ---- */
   .stats{display:grid;grid-template-columns:1fr 1fr;gap:14px;max-width:900px;margin:0 auto}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:16px;
@@ -210,6 +254,9 @@
     .stats{grid-template-columns:repeat(4,1fr)}
     .prices{grid-template-columns:repeat(3,1fr);max-width:1000px;align-items:stretch}
     .bsteps{grid-template-columns:1fr 1fr}
+    .featrow{grid-template-columns:1.05fr .95fr;gap:48px}
+    .featrow.reverse .fcol{order:2}
+    .featrow.reverse .fvis{order:1}
   }
   @media (min-width:1000px){
     .feat{grid-template-columns:repeat(4,1fr)}
@@ -268,37 +315,61 @@
   <section id="what">
     <div class="wrap">
       <div class="kicker">What's inside</div>
-      <h2 class="sec">One recording becomes <em>many</em> videos.</h2>
-      <p class="sec-sub">Remixa auto-detects each clip's parts, swaps matching sections
-         between your clips, and rotates your text hooks. A little footage goes a long way.</p>
-      <div class="feat">
-        <div class="fcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M7 10l5 5 5-5"/><rect x="4" y="17" width="16" height="4" rx="1.5"/></svg></div>
-          <h3>Drop in</h3>
-          <p>Add whole recordings: talking, screen capture, split-screen. They never leave your machine.</p>
+      <h2 class="sec">Turn a few recordings into <em>dozens of unique videos</em>.</h2>
+      <p class="sec-sub">Record once. Remixa splits your clips, remixes them into different
+         videos, and varies each one so no two are the same.</p>
+
+      <div class="featrow">
+        <div class="fcol">
+          <ol class="fsteps">
+            <li><b>Record a few clips</b> of each part: your talking hook, a screen recording, whatever you'd film anyway.</li>
+            <li><b>Remixa mixes them.</b> It auto-detects each clip's parts and swaps matching sections between clips, so every video is a different combination.</li>
+            <li><b>Each export gets an invisible touch-up:</b> a tiny shift in colour, zoom and speed, so every one reads as original.</li>
+          </ol>
+          <p class="fnote">3 clips and a text block with 4 wordings already gives you
+             <b>12 unique videos</b>. Add more and it multiplies, up to 1,000 per batch.</p>
         </div>
-        <div class="fcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h10"/><path d="M4 12h16"/><path d="M4 18h7"/><circle cx="18" cy="6" r="2.2"/><circle cx="15" cy="18" r="2.2"/></svg></div>
-          <h3>Auto-detect</h3>
-          <p>Remixa finds where talking ends and screen begins, then swaps matching parts between clips. Nothing else does this.</p>
-        </div>
-        <div class="fcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M7 4v3"/><path d="M6 12h8"/><path d="M6 16h5"/></svg></div>
-          <h3>Text blocks</h3>
-          <p>Set a hook once. Every video ships with a different wording.</p>
-        </div>
-        <div class="fcard">
-          <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="16" rx="1.5"/><rect x="8" y="7" width="12" height="13" rx="1.5"/></svg></div>
-          <h3>Batch out</h3>
-          <p>Every output is a unique combination, exported vertical 1080&times;1920. Download and post.</p>
+        <div class="fvis">
+          <div class="repo">
+            <div class="repo-h">3 clips &times; 4 wordings</div>
+            <div class="repo-clips">
+              <div class="rc" style="background-image:url('./videos/poster-Splitscreen.jpg')"><span>Clip 1</span></div>
+              <div class="rc" style="background-image:url('./videos/poster-Overlay.jpg')"><span>Clip 2</span></div>
+              <div class="rc" style="background-image:url('./videos/poster-Basic.jpg')"><span>Clip 3</span></div>
+            </div>
+            <div class="repo-words"><span>Hook A</span><span>Hook B</span><span>Hook C</span><span>Hook D</span></div>
+            <div class="repo-total">= 12 unique videos</div>
+          </div>
         </div>
       </div>
-      <div class="payoff">
-        <div class="meq">3 clips &times; 4 wordings</div>
-        <div class="mtotal">12 unique videos</div>
-        <p class="mnote">Plus automatic colour, zoom and speed variation on every one. Up to 1,000 per batch.</p>
-      </div>
+
       <p class="why-adv">All of it runs on your own computer. <b>No upload, no render queue, no per-video fees.</b> One simple price, unlimited videos.</p>
+    </div>
+  </section>
+
+  <!-- ============ VERTICAL-FIRST (feature deep-dive) ============ -->
+  <section id="vertical">
+    <div class="wrap">
+      <div class="featrow reverse">
+        <div class="fcol">
+          <div class="fkick">Vertical-first</div>
+          <div class="ftitle">Made for Reels, TikTok and Shorts.</div>
+          <p class="fdesc">Every output is 1080&times;1920 with clean captions and balanced
+             audio. Pick split-screen, full-frame, or talking-head layouts.</p>
+          <ul class="fbul">
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Vertical 1080&times;1920 output, every time</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Bold captions with TikTok &amp; CapCut fonts and outlines</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Music balanced under your voice, automatically</span></li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Split-screen, full-frame, or talking-head layouts</span></li>
+          </ul>
+        </div>
+        <div class="fvis">
+          <div class="vf-phone" style="background-image:url('./videos/poster-Overlay.jpg')">
+            <span class="vf-tag">9:16</span>
+            <span class="vf-cap">Bold, readable captions</span>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 

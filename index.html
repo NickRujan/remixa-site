@@ -449,7 +449,20 @@
 
 </main>
 
-<!-- Lemon Squeezy overlay checkout (see pricing buttons above) -->
+<!-- Lemon Squeezy checkout. The ?embed=1 overlay renders LS's checkout in a
+     fixed narrow card that looks cramped on desktop, and its width lives
+     inside their iframe (not styleable from here). So: phones keep the
+     overlay (full-screen there, looks right); desktop strips embed=1 and
+     the lemonsqueezy-button class BEFORE lemon.js loads, so the buttons
+     navigate to the same variant's full hosted checkout page instead. -->
+<script>
+  if (window.matchMedia('(min-width: 900px)').matches) {
+    document.querySelectorAll('a.lemonsqueezy-button').forEach(function (a) {
+      a.classList.remove('lemonsqueezy-button');
+      a.href = a.href.replace('?embed=1', '').replace('&embed=1', '');
+    });
+  }
+</script>
 <script src="https://assets.lemonsqueezy.com/lemon.js" defer></script>
 
 <footer>

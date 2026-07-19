@@ -70,12 +70,15 @@
   .hero h1{font-size:2.5rem;line-height:1.12;margin-bottom:16px;letter-spacing:-.01em}
   .hero h1 em{color:var(--gold);font-style:normal}
   .hero .sub{color:var(--dim);font-size:1.15rem;margin-bottom:26px}
-  .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px}
-  .hero .cred{margin-top:18px;font-size:.76rem;font-weight:700;letter-spacing:.14em;
-       text-transform:uppercase;color:var(--gold-soft);display:inline-flex;
-       align-items:center;gap:10px}
-  .hero .cred::before,.hero .cred::after{content:"";width:20px;height:1px;
-       background:var(--gold);opacity:.55}
+  .hero .cta-row{display:flex;flex-wrap:wrap;gap:12px;justify-content:center}
+  .hero .cred{margin:0 0 16px;font-size:.8rem;font-weight:700;letter-spacing:.13em;
+       text-transform:uppercase;color:var(--gold);display:inline-flex;
+       align-items:center;gap:9px;padding:8px 15px;border:1px solid rgba(212,166,42,.55);
+       border-radius:999px;background:rgba(212,166,42,.09)}
+  .hero .cred::before{content:"";width:7px;height:7px;border-radius:50%;
+       background:var(--gold);box-shadow:0 0 8px rgba(212,166,42,.8)}
+  .hero .trust{margin-top:16px;font-size:.82rem;color:var(--dim)}
+  .hero .trust b{color:var(--gold-soft);font-weight:600}
   .htext{text-align:center}
 
   /* ---- hero video: a real 9:16 output, phone-sized, never a billboard ---- */
@@ -243,6 +246,7 @@
     <div class="wrap hero-grid">
       <div class="htext">
         <div class="brand"><img src="./logo.png" alt="">Remixa</div>
+        <div class="cred">Built with a 6-figure UGC creator</div>
         <h1>Turn one recording into a batch of unique videos — <em>on your own computer</em>.</h1>
         <p class="sub">No upload. No render queue. Nobody else holding your footage.
            Remixa builds a full batch of ready-to-post videos from clips you already
@@ -251,7 +255,7 @@
           <a class="btn" href="#pricing">Get Remixa</a>
           <a class="btn ghost" href="#how">See how it works</a>
         </div>
-        <div class="cred">Built with a 6-figure UGC creator</div>
+        <p class="trust"><b>Runs 100% on your computer</b> &middot; Secure checkout via Lemon&nbsp;Squeezy &middot; 14-day first-purchase refund window</p>
       </div>
 
       <!-- A real Remixa output, straight out of the generator -->
@@ -268,15 +272,15 @@
     <div class="wrap">
       <div class="money">
         <h2>One recording becomes <em>many</em> videos.</h2>
-        <p class="mnote" style="margin-bottom:20px">Three things happen automatically — and they multiply:</p>
+        <p class="mnote" style="margin-bottom:20px">Three multipliers, all automatic:</p>
         <ul class="plain-mech">
-          <li><b>Auto-detection</b> splits each recording into its parts — talking, screen, split-screen — so it can be recombined.</li>
-          <li><b>Ordinal swapping</b> trades matching parts between your clips: clip A's screen section can play under clip B's opener, and back.</li>
-          <li><b>Text blocks</b> each hold several wordings, and Remixa picks one per video — so the same footage ships with different hooks.</li>
+          <li><b>Auto-detection</b> finds each recording's parts — talking, screen, split-screen.</li>
+          <li><b>Ordinal swapping</b> trades matching parts between your clips.</li>
+          <li><b>Text blocks</b> rotate your hook wordings — one per video.</li>
         </ul>
         <div class="meq" id="meq">3 clips &times; 4 wordings</div>
         <div class="mtotal" id="mt">12 unique videos</div>
-        <p class="mnote">A hook that rotates across 3 clips and one text block with 4 wordings is 3 &times; 4 = 12 distinct combinations — before the automatic colour, zoom and speed variation on top. Up to 1,000 per batch.</p>
+        <p class="mnote">Plus automatic colour, zoom and speed variation on every one. Up to 1,000 per batch.</p>
       </div>
     </div>
   </section>
@@ -286,27 +290,27 @@
     <div class="wrap">
       <div class="kicker">What's inside</div>
       <h2 class="sec">Drop in recordings, get a batch out.</h2>
-      <p class="sec-sub">The whole pipeline, in four steps — nothing to pre-cut, nothing to upload.</p>
+      <p class="sec-sub">Four steps. Nothing to pre-cut, nothing to upload.</p>
       <div class="why">
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M12 15V3"/><path d="M7 10l5 5 5-5"/><rect x="4" y="17" width="16" height="4" rx="1.5"/></svg></div>
           <h3>DROP IN</h3>
-          <p>Add whole recordings — talking, screen capture, split-screen. No trimming, no upload; they stay on your machine.</p>
+          <p>Add whole recordings — talking, screen capture, split-screen. They never leave your machine.</p>
         </div>
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 6h10"/><path d="M4 12h16"/><path d="M4 18h7"/><circle cx="18" cy="6" r="2.2"/><circle cx="15" cy="18" r="2.2"/></svg></div>
           <h3>AUTO-DETECT</h3>
-          <p>Remixa finds each recording's structure — where talking ends, where the screen or split-screen begins — on its own. Nothing else does this.</p>
+          <p>Remixa finds where talking ends and screen begins — on its own. Nothing else does this.</p>
         </div>
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><path d="M4 7h16"/><path d="M7 4v3"/><path d="M6 12h8"/><path d="M6 16h5"/></svg></div>
           <h3>TEXT BLOCKS</h3>
-          <p>Set a hook once. Each block holds several wordings, and one is picked per video — so the same footage ships with different openers.</p>
+          <p>Set a hook once. Every video ships with a different wording.</p>
         </div>
         <div class="wcard">
           <div class="ico"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="12" height="16" rx="1.5"/><rect x="8" y="7" width="12" height="13" rx="1.5"/></svg></div>
           <h3>BATCH OUT</h3>
-          <p>Every output is a different combination, each with automatic variation, exported vertical 1080&times;1920. Download and post.</p>
+          <p>Every output is a unique combination, exported vertical 1080&times;1920. Download and post.</p>
         </div>
       </div>
       <p class="why-adv">All of it runs on your own computer — <b>no upload, no render queue, no per-video fees</b>. One flat price, unlimited videos.</p>

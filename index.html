@@ -137,18 +137,9 @@
   .price-lead{text-align:center;max-width:620px;margin:0 auto 22px}
   .price-lead p{color:var(--dim);margin:0;font-size:1.05rem}
   .price-lead p b{color:var(--gold-soft);font-weight:600}
-  /* billing toggle */
-  .bill-toggle{display:flex;justify-content:center;align-items:center;
-       flex-wrap:wrap;gap:12px;margin:0 auto 30px}
-  .bill-switch{display:inline-flex;background:var(--card2);border:1px solid var(--line);
-       border-radius:999px;padding:4px}
-  .bill-switch button{appearance:none;background:transparent;border:0;color:var(--dim);
-       font:inherit;font-size:.92rem;font-weight:600;cursor:pointer;padding:8px 20px;
-       border-radius:999px;transition:color .15s ease,background .15s ease}
-  .bill-switch button.on{background:var(--gold);color:#1a1400}
-  .bill-save{font-size:.78rem;font-weight:700;letter-spacing:.03em;color:var(--gold);
-       background:rgba(212,166,42,.12);border:1px solid rgba(212,166,42,.4);
-       padding:5px 11px;border-radius:999px;white-space:nowrap}
+  /* plans label (replaces the old billing toggle) */
+  .plans-label{text-align:center;margin:0 auto 26px;font-size:1rem;font-weight:600;
+       letter-spacing:.02em;color:var(--gold-soft)}
   /* card grid */
   .prices{display:grid;grid-template-columns:1fr;gap:16px;max-width:340px;margin:0 auto}
   .price{background:var(--card);border:1px solid var(--line);border-radius:18px;
@@ -356,11 +347,9 @@
       <!-- ==================================================================
            PRICING (commitment-length tiers, NOT feature/account tiers).
            All three plans are the identical unlimited product; they differ
-           only in billing term. The Monthly/Yearly toggle switches each
-           card's headline between its per-month rate and its full billed
-           amount (data-mo-* / data-yr-* below, swapped by the script near
-           </body>). The Monthly plan has no annual form, so it stays /mo in
-           both views (gains "no commitment").
+           only in billing term. Each card shows its per-month rate as the
+           headline and its real billing total in the subline (static; no
+           toggle).
            Checkout hrefs are per-variant Lemon Squeezy hosted-checkout URLs
            (/checkout/buy/<share-UUID>?enabled=<same-variant-numeric-id>). The
            ?enabled= LOCKS the checkout to that one variant (no re-picker), and
@@ -372,19 +361,11 @@
            NEVER pair a UUID with a DIFFERENT variant's ?enabled= id -> that is
            the launch mischarge trap (shows one price, charges another).
            =================================================================== -->
-      <div class="bill-toggle">
-        <div class="bill-switch" role="group" aria-label="Billing view">
-          <button id="billMo" class="on" type="button" aria-pressed="true">Monthly</button>
-          <button id="billYr" type="button" aria-pressed="false">Yearly</button>
-        </div>
-        <span class="bill-save">2 months free on annual</span>
-      </div>
+      <div class="plans-label">Choose your plan</div>
 
       <div class="prices">
         <!-- Monthly -->
-        <div class="price"
-             data-mo-amt="$99"    data-mo-unit="/mo"      data-mo-sub="Billed monthly · cancel anytime"
-             data-yr-amt="$99"    data-yr-unit="/mo"      data-yr-sub="No commitment · cancel anytime">
+        <div class="price">
           <div class="kick">&nbsp;</div>
           <div class="plan">Monthly</div>
           <div class="amt">$99<span>/mo</span></div>
@@ -403,9 +384,7 @@
         </div>
 
         <!-- Quarterly · Most popular (elevated) -->
-        <div class="price feature"
-             data-mo-amt="$89.67" data-mo-unit="/mo"      data-mo-sub="$269 billed every 3 months"
-             data-yr-amt="$269"   data-yr-unit="/quarter" data-yr-sub="$89.67/mo · billed quarterly">
+        <div class="price feature">
           <div class="kick">Most popular</div>
           <div class="plan">Quarterly</div>
           <div class="amt">$89.67<span>/mo</span></div>
@@ -424,9 +403,7 @@
         </div>
 
         <!-- Annual · Best value -->
-        <div class="price best"
-             data-mo-amt="$82.50" data-mo-unit="/mo"      data-mo-sub="$990 billed yearly · 2 months free"
-             data-yr-amt="$990"   data-yr-unit="/year"    data-yr-sub="$82.50/mo · 2 months free">
+        <div class="price best">
           <div class="kick">Best value</div>
           <div class="plan">Annual</div>
           <div class="amt">$82.50<span>/mo</span></div>
@@ -556,28 +533,6 @@
     document.querySelectorAll('section .wrap > *').forEach(el => {
       el.classList.add('reveal'); io.observe(el);
     });
-  })();
-
-  // Pricing Monthly/Yearly toggle. Each card carries data-mo-* (per-month
-  // rate) and data-yr-* (full billed amount for its term); the button swaps
-  // the headline + subline. The checkout href is untouched, so what a card
-  // shows always matches what it charges. No dependency, degrades to the
-  // default Monthly view if JS is off.
-  (function(){
-    var mo = document.getElementById('billMo'), yr = document.getElementById('billYr');
-    if (!mo || !yr) return;
-    function apply(mode){
-      document.querySelectorAll('#pricing .price').forEach(function(c){
-        c.querySelector('.amt').innerHTML =
-          c.getAttribute('data-'+mode+'-amt') +
-          '<span>' + c.getAttribute('data-'+mode+'-unit') + '</span>';
-        c.querySelector('.sub').textContent = c.getAttribute('data-'+mode+'-sub');
-      });
-      mo.classList.toggle('on', mode === 'mo'); mo.setAttribute('aria-pressed', mode === 'mo');
-      yr.classList.toggle('on', mode === 'yr'); yr.setAttribute('aria-pressed', mode === 'yr');
-    }
-    mo.addEventListener('click', function(){ apply('mo'); });
-    yr.addEventListener('click', function(){ apply('yr'); });
   })();
 </script>
 </body>

@@ -235,8 +235,8 @@
 
   /* ---- subtle motion (reduced-motion users get none of it) ---- */
   @media (prefers-reduced-motion: no-preference){
-    .reveal{opacity:0;transform:translateY(16px);
-            transition:opacity .55s ease,transform .55s ease}
+    .reveal{opacity:0;transform:translateY(14px);
+            transition:opacity .8s ease,transform .8s cubic-bezier(.22,.61,.36,1)}
     .reveal.in{opacity:1;transform:none}
     .fcard,.price,.bstep,.stat{transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
     .fcard:hover,.price:hover,.bstep:hover,.stat:hover{transform:translateY(-3px);
@@ -308,7 +308,6 @@
   <!-- ============ HERO ============ -->
   <section class="hero">
     <div class="wrap">
-      <div class="pill">Developed around a 6-figure UGC creator</div>
       <h1>Turn one recording into <em>many unique videos</em>.</h1>
       <div class="cta-row">
         <a class="btn" href="#pricing">Get Remixa →</a>
@@ -351,8 +350,6 @@
           </div>
         </div>
       </div>
-
-      <p class="why-adv">All of it runs on your own computer. <b>No upload, no render queue, no per-video fees.</b> One simple price, unlimited videos.</p>
     </div>
   </section>
 
@@ -362,9 +359,9 @@
       <div class="featrow reverse">
         <div class="fcol">
           <div class="fkick">Proven formats</div>
-          <div class="ftitle">Built for the formats winning right now.</div>
-          <p class="fdesc">Reaction splits, talking heads and screen recordings: the styles
-             creators are winning with today, all vertical and ready for Reels, TikTok and Shorts.</p>
+          <div class="ftitle">Developed around a 6-figure UGC creator.</div>
+          <p class="fdesc">The formats winning right now, baked in: reaction splits, talking
+             heads and screen recordings, all vertical for Reels, TikTok and Shorts.</p>
           <ul class="fbul">
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Split-screen reaction, full-frame &amp; talking-head layouts</span></li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg><span>Vertical 1080&times;1920, the shape every platform wants</span></li>
@@ -594,10 +591,17 @@
     if (!('IntersectionObserver' in window)) return;
     const io = new IntersectionObserver(es => es.forEach(e => {
       if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
-    }), {rootMargin: '0px 0px -8% 0px'});
-    document.querySelectorAll('section .wrap > *').forEach(el => {
+    }), {rootMargin: '0px 0px -12% 0px'});
+    document.querySelectorAll('main section:not(.hero)').forEach(el => {
       el.classList.add('reveal'); io.observe(el);
     });
+    // Safety net: if the observer's first callback is ever missed, still show
+    // whatever is already on-screen so content can never be stuck hidden.
+    setTimeout(function(){
+      document.querySelectorAll('main section.reveal:not(.in)').forEach(function(el){
+        if (el.getBoundingClientRect().top < innerHeight) el.classList.add('in');
+      });
+    }, 800);
   })();
 
   // Mobile pricing: tap a plan's "What's included" to expand its feature list.

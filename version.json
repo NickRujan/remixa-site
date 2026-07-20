@@ -1,9 +1,9 @@
 {
-  "version": "2.9.10",
-  "notes": "Editor accuracy: the hook text preview now ends exactly where your rendered text ends (the hook's first scene cut), so what you see in the editor is what renders.",
+  "version": "2.9.11",
+  "notes": "Reliability: an output can never be just a hook - single-piece clips always keep their own footage in every mix. Editor: the hook text preview ends exactly where your rendered text ends.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.10/Remixa-Setup-2.9.10.exe",
-    "sha256": "4339484a4a9100823fdb4ba8a977007aa14004491e3d193d54f57ec9b4d19f0f"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.11/Remixa-Setup-2.9.11.exe",
+    "sha256": "f7ec8c0e5feab00b0c0a39849ef3deb4b24442f7cd53f65b67a21b3105fff462"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

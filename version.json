@@ -1,9 +1,9 @@
 {
-  "version": "2.9.13",
-  "notes": "Split-screen clips now truly mix: the reaction half trades between clips (your screen content and layout stay yours, another clip's reaction rides along - any direction, opposite layouts included), with the sound following the reaction unless the reacted-to video is someone talking. Plus a live, snappier progress log while rendering.",
+  "version": "2.9.14",
+  "notes": "Hooks never cut off mid-action: fast movement inside one continuous shot no longer counts as a scene cut, so hooks run to the real content change and donate whole. Split sections start seamlessly - halves play at exact source scale with a clean seam bar instead of being stretched, so nothing pops bigger at the boundary. Plus the reaction-half mixing and live progress log from 2.9.13.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.13/Remixa-Setup-2.9.13.exe",
-    "sha256": "98d8f01cc7ee6aebfea982e256b2cc6c98354456c555e73c523a14962be5c8de"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.14/Remixa-Setup-2.9.14.exe",
+    "sha256": "409ca5136ff9d910d3906dc31019b38578336152addb8c75b449011bad0268ef"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

@@ -1,9 +1,9 @@
 {
-  "version": "2.9.14",
-  "notes": "Hooks never cut off mid-action: fast movement inside one continuous shot no longer counts as a scene cut, so hooks run to the real content change and donate whole. Split sections start seamlessly - halves play at exact source scale with a clean seam bar instead of being stretched, so nothing pops bigger at the boundary. Plus the reaction-half mixing and live progress log from 2.9.13.",
+  "version": "2.9.15",
+  "notes": "Split sections now begin exactly on the source's own cut - the seam bar can never appear a frame early. A smarter render countdown that updates live and learns your machine's real speeds. Plus 2.9.14's fixes: hooks never cut off mid-action, and split halves play at exact source scale with no boundary pop.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.14/Remixa-Setup-2.9.14.exe",
-    "sha256": "409ca5136ff9d910d3906dc31019b38578336152addb8c75b449011bad0268ef"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.15/Remixa-Setup-2.9.15.exe",
+    "sha256": "2c0d397df212696f7417f7bbef5bde3dcf7922c1cdcafddc118155e3786c18d7"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

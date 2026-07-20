@@ -1,9 +1,9 @@
 {
-  "version": "2.9.12",
-  "notes": "Real mixing for every clip shape: hooks now trade across your whole batch (even single-take clips) while every body stays intact, and each output gets its own guaranteed-different look - pace, framing, and color character.",
+  "version": "2.9.13",
+  "notes": "Split-screen clips now truly mix: the reaction half trades between clips (your screen content and layout stay yours, another clip's reaction rides along - any direction, opposite layouts included), with the sound following the reaction unless the reacted-to video is someone talking. Plus a live, snappier progress log while rendering.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.12/Remixa-Setup-2.9.12.exe",
-    "sha256": "b833630e327b5c1581ee1a2044e09a19f25d552e80c24aa06133323a8e9c6c5d"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.13/Remixa-Setup-2.9.13.exe",
+    "sha256": "98d8f01cc7ee6aebfea982e256b2cc6c98354456c555e73c523a14962be5c8de"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

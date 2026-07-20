@@ -1,9 +1,9 @@
 {
-  "version": "2.9.9",
-  "notes": "Independent sound controls: ducking on/off, whole-video or fade-in-after-hook playback, per-sound volume. Per-section recording on by default for new clips, faster dashboard, cleaner settings.",
+  "version": "2.9.10",
+  "notes": "Editor accuracy: the hook text preview now ends exactly where your rendered text ends (the hook's first scene cut), so what you see in the editor is what renders.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.9/Remixa-Setup-2.9.9.exe",
-    "sha256": "a5a7945d7a53be910a42d9ff000e295f436e6f522ca63dede06fa2e794bf1dbe"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.10/Remixa-Setup-2.9.10.exe",
+    "sha256": "4339484a4a9100823fdb4ba8a977007aa14004491e3d193d54f57ec9b4d19f0f"
   },
   "mac": {},
   "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."

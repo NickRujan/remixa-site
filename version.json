@@ -5,6 +5,9 @@
     "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.17/Remixa-Setup-2.9.17.exe",
     "sha256": "b220dcf988d19bce9b7ea7e7e6015de5aa4ff29e9bc6c24e84b8cf0438a8cb44"
   },
-  "mac": {},
-  "_urls": "windows.url is the GitHub Release asset (stable, public, direct .exe) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. mac stays EMPTY on purpose: the Mac build ships as a .zip, which the in-app updater does not run; Mac customers always get the newest build from app.lemonsqueezy.com/my-orders."
+  "mac": {
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.17/Remixa-2.9.17.dmg",
+    "sha256": "253e26b4c4158fe58fbed7b16e5c0155674f4a5c1416613cf7aa98f5f97f53cf"
+  },
+  "_urls": "Both urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Mac ships as a .dmg since 2.9.17: the updater downloads it, verifies the sha, opens the disk image and asks the user to drag Remixa to Applications. Every future ship must upload BOTH assets and update BOTH blocks."
 }

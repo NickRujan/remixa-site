@@ -1,13 +1,13 @@
 {
-  "version": "2.9.17",
-  "notes": "No more frozen frames at the end of borrowed hooks - a hook slightly shorter than its window now plays imperceptibly slower to land exactly on the beat, video and voice stretched together with lip-sync intact. Plus 2.9.16's cleaner split seams (bar-tucked or invisible) and all recent hook and split fixes.",
+  "version": "2.9.18",
+  "notes": "A brand-new Remixa - your own app window, home screen, render queue with live progress, and faster rendering. Clips you've used before now start instantly.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.17/Remixa-Setup-2.9.17.exe",
-    "sha256": "b220dcf988d19bce9b7ea7e7e6015de5aa4ff29e9bc6c24e84b8cf0438a8cb44"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.18/Remixa-Windows.exe",
+    "sha256": "4de00b850530b0d298e841fdf275aec8323284b6ae476590236286938f5a9d2f"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.17/Remixa-2.9.17.dmg",
-    "sha256": "253e26b4c4158fe58fbed7b16e5c0155674f4a5c1416613cf7aa98f5f97f53cf"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.18/Remixa-Mac.dmg",
+    "sha256": "4cbde15bf5c07ca952bb14ac62aba87cc7f4c35ab6a22de2925c7f55377607ec"
   },
-  "_urls": "Both urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Mac ships as a .dmg since 2.9.17: the updater downloads it, verifies the sha, opens the disk image and asks the user to drag Remixa to Applications. Every future ship must upload BOTH assets and update BOTH blocks."
+  "_urls": "Both urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg) since v2.9.18; the release TAG carries the version. Every ship must upload BOTH assets and update BOTH blocks."
 }

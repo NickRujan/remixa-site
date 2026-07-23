@@ -1,13 +1,10 @@
 {
-  "version": "2.9.18",
-  "notes": "A brand-new Remixa - your own app window, home screen, render queue with live progress, and faster rendering. Clips you've used before now start instantly.",
+  "version": "2.9.19",
+  "notes": "Downloads always land in your Downloads folder and open right up, batches download in one click, and mixing keeps your story in the right order.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.18/Remixa-Windows.exe",
-    "sha256": "4de00b850530b0d298e841fdf275aec8323284b6ae476590236286938f5a9d2f"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.19/Remixa-Windows.exe",
+    "sha256": "a34676451d9aa10a6e2a49e05d0a056af6d0574bd90f329e229aa3abe3a886bd"
   },
-  "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.18/Remixa-Mac.dmg",
-    "sha256": "4cbde15bf5c07ca952bb14ac62aba87cc7f4c35ab6a22de2925c7f55377607ec"
-  },
-  "_urls": "Both urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg) since v2.9.18; the release TAG carries the version. Every ship must upload BOTH assets and update BOTH blocks."
+  "mac": {},
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. mac is EMPTY this round (no new dmg was built) so Mac users see no update banner; when the owner builds the 2.9.19 dmg on the Mac, upload it to the same v2.9.19 release and fill this block."
 }

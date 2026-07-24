@@ -1,9 +1,9 @@
 {
-  "version": "2.9.21",
-  "notes": "Emojis in captions now sit at the same size as the text, just like native captions.",
+  "version": "2.9.22",
+  "notes": "Renders upgrade: batch times, browse old batches as video tiles, a clean built-in player with instant playback and sharp previews, and caption emojis sized like native captions.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.21/Remixa-Windows.exe",
-    "sha256": "b8a2757f7c430228c7df725626994fda70477b2bb84e41766e011bd4610c5be2"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.22/Remixa-Windows.exe",
+    "sha256": "0ff01dc05cd25c62a41f6b47c88e0bc73650b933b1606fc21686231b8eee7320"
   },
   "mac": {},
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. mac is EMPTY until the notarized 2.9.20 dmg lands from the cloud-Mac CI - upload it to the same v2.9.20 release and fill this block with its url+sha256."

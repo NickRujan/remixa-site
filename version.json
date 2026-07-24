@@ -5,6 +5,9 @@
     "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.22/Remixa-Windows.exe",
     "sha256": "0ff01dc05cd25c62a41f6b47c88e0bc73650b933b1606fc21686231b8eee7320"
   },
-  "mac": {},
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. mac is EMPTY until the notarized 2.9.20 dmg lands from the cloud-Mac CI - upload it to the same v2.9.20 release and fill this block with its url+sha256."
+  "mac": {
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.22/Remixa-Mac.dmg",
+    "sha256": "e39525327c96e0ef63452f00eb91dd5ca067621f89bd00209e7ca46c5a1606e9"
+  },
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. 2.9.22 is the FIRST notarized Mac dmg (signed, stapled - no Gatekeeper warning) from the cloud-Mac CI."
 }

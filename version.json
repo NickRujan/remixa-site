@@ -1,10 +1,10 @@
 {
-  "version": "2.9.20",
-  "notes": "Split screen fixes: your reaction now shows from the very first frame of every step, and swapped reactions start and end clean with no stray frame from another clip.",
+  "version": "2.9.19",
+  "notes": "Downloads always land in your Downloads folder and open right up, batches download in one click, and mixing keeps your story in the right order.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.20/Remixa-Windows.exe",
-    "sha256": "1b5370d17717e7ea61aa0ed207522bca373ee591e43c6d38bcee19821809a46d"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.19/Remixa-Windows.exe",
+    "sha256": "a34676451d9aa10a6e2a49e05d0a056af6d0574bd90f329e229aa3abe3a886bd"
   },
   "mac": {},
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. mac is EMPTY this round (the notarized dmg is still building in the cloud-Mac CI) so Mac users see no update banner; when that dmg lands, upload it to the v2.9.20 release and fill this block."
+  "_urls": "HELD BACK: 2.9.20 is built and on its release, but the manifest stays on 2.9.19 until the frozen installer is verified end-to-end (BUILD_INSTALLER.md step 4). Flip version/windows to 2.9.20 once green."
 }

@@ -1,13 +1,13 @@
 {
-  "version": "2.9.22",
-  "notes": "Renders upgrade: batch times, browse old batches as video tiles, a clean built-in player with instant playback and sharp previews, and caption emojis sized like native captions.",
+  "version": "2.9.23",
+  "notes": "Every video that shares a hook now opens on a different moment of it, so on your profile they each look unique instead of like reposts — automatic, with nothing else in the video changed. Plus smoother preview playback through cuts and cleaner audio at every join.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.22/Remixa-Windows.exe",
-    "sha256": "0ff01dc05cd25c62a41f6b47c88e0bc73650b933b1606fc21686231b8eee7320"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.23/Remixa-Windows.exe",
+    "sha256": "4c5e9282cb2da50708ddcf860d96c914a1f0467aecc7e42a10b44c851e8f53f2"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.22/Remixa-Mac.dmg",
-    "sha256": "e39525327c96e0ef63452f00eb91dd5ca067621f89bd00209e7ca46c5a1606e9"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.23/Remixa-Mac.dmg",
+    "sha256": "9fad1e64b6555ee20a6e4a9dfe931df7f3f7adfdc74d4635ac09408a44b72070"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. 2.9.22 is the FIRST notarized Mac dmg (signed, stapled - no Gatekeeper warning) from the cloud-Mac CI."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

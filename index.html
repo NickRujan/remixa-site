@@ -301,20 +301,38 @@
   @media (min-width:1000px){
     .feat{grid-template-columns:repeat(4,1fr)}
   }
+  /* ---- Limited-time 50% sale ---- */
+  .promo-bar{background:linear-gradient(90deg,#D4A62A,#f0cf6b);color:#1a1400;
+    text-align:center;font-weight:800;font-size:.92rem;letter-spacing:.01em;
+    padding:10px 14px;z-index:60}
+  .promo-bar a{color:#1a1400;text-decoration:underline;font-weight:800}
+  .promo-bar .tag{display:inline-block;background:#1a1400;color:var(--gold);
+    font-size:.7rem;font-weight:800;letter-spacing:.12em;padding:2px 8px;
+    border-radius:999px;margin-right:8px;vertical-align:middle}
+  .saletag{display:inline-block;background:var(--gold);color:#1a1400;
+    font-weight:800;font-size:.66rem;letter-spacing:.12em;padding:3px 10px;
+    border-radius:999px;margin-bottom:9px}
+  .price .was{font-size:1.15rem;color:var(--dim);text-decoration:line-through;
+    line-height:1;margin-bottom:3px}
+  .hero .sale-badge{display:inline-flex;align-items:center;gap:8px;margin-top:18px;
+    background:rgba(212,166,42,.12);border:1px solid var(--gold);color:var(--gold-soft);
+    font-weight:700;font-size:.92rem;padding:8px 14px;border-radius:999px}
+  .hero .sale-badge b{color:var(--gold)}
 </style>
 </head>
 <body spellcheck="false" autocorrect="off" autocapitalize="off">
+
+<div class="promo-bar"><span class="tag">LIMITED TIME</span>50% off every plan — your first term at half price. <a href="#pricing">Grab the deal →</a></div>
 
 <header>
   <div class="wrap hrow">
     <img src="./logo.png" alt="Remixa logo">
     <span class="name"><b>Remixa</b></span>
     <nav class="nav">
-      <a href="#what">How it works</a>
+      <a href="#features">Features</a>
       <a href="#pricing">Pricing</a>
       <a href="./guide.html">Guide</a>
-      <a href="./walkthrough.html">Walkthrough</a>
-      <a class="cta" href="#pricing">Get Remixa</a>
+      <a class="cta" href="#pricing">Get 50% off</a>
     </nav>
   </div>
 </header>
@@ -338,7 +356,7 @@
         <span class="chip"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg>Footage never leaves your PC</span>
         <span class="chip"><svg viewBox="0 0 24 24"><path d="M5 12l5 5L20 6"/></svg>Cancel anytime</span>
       </div>
-
+      <div class="sale-badge">🔥 <span>Launch sale — <b>50% off</b> every plan for a limited time</span></div>
     </div>
   </section>
 
@@ -402,6 +420,33 @@
           </div>
         </div>
       </div>
+
+      <!-- NEW: unique cover per video -->
+      <div class="featrow" style="margin-top:56px">
+        <div class="fvis">
+          <div class="repo">
+            <div class="repo-h">Same hook · 3 different covers</div>
+            <div class="repo-clips">
+              <div class="rc" style="background-image:url('./videos/poster-Basic.jpg')"><span>Cover 1</span></div>
+              <div class="rc" style="background-image:url('./videos/poster-Textsegments.jpg')"><span>Cover 2</span></div>
+              <div class="rc" style="background-image:url('./videos/poster-MultiClip.jpg')"><span>Cover 3</span></div>
+            </div>
+            <div class="repo-total">Looks unique on your grid</div>
+          </div>
+        </div>
+        <div class="fcol">
+          <div class="fkick">New</div>
+          <div class="ftitle">A <em>different cover</em> on every video.</div>
+          <p class="fdesc">Post a few videos with the same hook and they used to look like copies of each
+             other on your profile. Now Remixa opens each one on a different moment of your hook, so every
+             thumbnail looks unique — automatically, with nothing else in the video changed.</p>
+          <ol class="fsteps">
+            <li><b>No work for you.</b> It happens on its own when you generate a batch.</li>
+            <li><b>Nothing else changes.</b> Same video, same audio — only the cover frame differs.</li>
+            <li><b>Your grid looks fresh.</b> No more wall of identical thumbnails.</li>
+          </ol>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -449,10 +494,11 @@
   <!-- ============ PRICING ============ -->
   <section id="pricing">
     <div class="wrap">
-      <div class="kicker">Pricing</div>
-      <h2 class="sec">One unlimited product. Pick your commitment.</h2>
-      <p class="sec-sub">Every plan is the same full Remixa. The only difference is how
-         long you commit. Longer commitment, lower price per month.</p>
+      <div class="kicker">Pricing · 50% off</div>
+      <h2 class="sec">Half price, for a <em>limited time</em>.</h2>
+      <p class="sec-sub">Every plan is the same full Remixa — the only difference is how long
+         you commit. All three are <b>50% off</b> right now, so there's never been a
+         cheaper time to start.</p>
 
       <!-- ==================================================================
            PRICING (commitment-length tiers, NOT feature/account tiers).
@@ -474,9 +520,10 @@
       <div class="prices">
         <!-- Monthly -->
         <div class="price">
-          <div class="kick">&nbsp;</div>
+          <div class="saletag">50% OFF</div>
           <div class="plan">Monthly</div>
-          <div class="amt">$99<span>/mo</span></div>
+          <div class="was">$99/mo</div>
+          <div class="amt">$49<span>/mo</span></div>
           <div class="sub">Billed monthly · cancel anytime</div>
           <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/6b75aa7e-9b68-4f2f-af64-8f9ad64e4c43?enabled=1914469">Get Remixa</a>
           <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
@@ -495,8 +542,10 @@
         <!-- Quarterly · Most popular (elevated) -->
         <div class="price feature">
           <div class="kick">Most popular</div>
+          <div class="saletag">50% OFF</div>
           <div class="plan">Quarterly</div>
-          <div class="amt">$269<span>/3 months</span></div>
+          <div class="was">$269/3 months</div>
+          <div class="amt">$135<span>/3 months</span></div>
           <div class="sub">Billed every 3 months</div>
           <a class="btn" href="https://remixa.lemonsqueezy.com/checkout/buy/46f2be47-9d42-49c4-bddd-17a9c3cce338?enabled=1914491">Get Remixa</a>
           <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
@@ -515,8 +564,10 @@
         <!-- Annual · Best value -->
         <div class="price best">
           <div class="kick">Best value</div>
+          <div class="saletag">50% OFF</div>
           <div class="plan">Annually</div>
-          <div class="amt">$990<span>/year</span></div>
+          <div class="was">$990/year</div>
+          <div class="amt">$495<span>/year</span></div>
           <div class="sub">Billed yearly · 2 months free</div>
           <a class="btn ghost" href="https://remixa.lemonsqueezy.com/checkout/buy/2d78f483-acf3-4ed9-a77a-d0dfa5ab383e?enabled=1914446">Get Remixa</a>
           <button class="feats-head" type="button">What's included <span class="fx">+</span></button>
@@ -533,7 +584,7 @@
         </div>
       </div>
 
-      <div class="price-foot">Prices in USD · available worldwide · <a href="./refunds.html">See refund policy</a></div>
+      <div class="price-foot">Sale prices shown · 50% off for a limited time · in USD, available worldwide · <a href="./refunds.html">See refund policy</a></div>
     </div>
   </section>
 
@@ -548,7 +599,7 @@
         <div class="bstep"><div class="num">03</div><div><h4>Drop in your clips</h4><p>Whole recordings, no pre-cutting.</p></div></div>
         <div class="bstep"><div class="num">04</div><div><h4>Generate &amp; post</h4><p>A full batch of unique videos, ready to go.</p></div></div>
       </div>
-      <p class="how-more">Want the full walkthrough? <a href="./guide.html">Read the guide →</a></p>
+      <p class="how-more">New here? <a href="./guide.html">Read the quick guide →</a></p>
     </div>
   </section>
 
@@ -579,6 +630,12 @@
           <div class="ans">Every output is a different combination of your clips and
             wordings, plus automatic variation in colour, zoom and speed, so each one
             reads as original. You control how strong that variation is.</div>
+        </details>
+        <details>
+          <summary>Do videos with the same hook look the same on my profile?<span class="mk">+</span></summary>
+          <div class="ans">No. Remixa gives each one a different cover automatically — it opens
+            every video on a different moment of your hook, so the thumbnails on your grid look
+            unique instead of like reposts. Nothing else in the video changes.</div>
         </details>
         <details>
           <summary>How many can I make?<span class="mk">+</span></summary>

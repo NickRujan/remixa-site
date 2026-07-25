@@ -1,13 +1,13 @@
 {
-  "version": "2.9.24",
-  "notes": "Scheduling, Calendar, Analytics, AutoSubmitter and Accounts are now built in — schedule your batch out, submit to campaigns, and track what's working without leaving Remixa. Includes the different-cover-per-video and cleaner-audio improvements too.",
+  "version": "2.9.26",
+  "notes": "Fixes Mac video output — Mac renders are back to a rock-solid encoder that always produces valid, playable files, and slow renders now finish instead of stopping early. Windows is unchanged. Still includes everything: Scheduling, Calendar, Analytics, AutoSubmitter and Accounts built in, plus a different cover on every video and cleaner audio.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.24/Remixa-Windows.exe",
-    "sha256": "ceb307cfaeae3a8ef81457f6f18274d201c573f82e0fd12e7a8119ce30f7aa71"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.26/Remixa-Windows.exe",
+    "sha256": "7de513f8fcfa1c5fea30612a287564fa64e62fe4bbafc9a413db8dbdc8b05831"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.24/Remixa-Mac.dmg",
-    "sha256": "973037207d572cfabc7c31ab8cb2f3d54ef97162190d9b0a45d80f44ae94e2c3"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.26/Remixa-Mac.dmg",
+    "sha256": "b58e408181696d2e55bf0f19f9c0d1d8d0989fd1b8dcf7864c3c22efb055b1d4"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

@@ -1,13 +1,13 @@
 {
-  "version": "2.9.30",
-  "notes": "Color any word in your text — tap a word and pick any color; only that word changes and it stays inline. AutoSubmitter now lets you pick a use case per campaign (or none) and lists your accounts in order: Instagram, TikTok, YouTube. Includes the faster, reliable Mac rendering from recent updates. Still has Scheduling, Calendar, Analytics and Accounts built in, plus a different cover on every video and cleaner audio.",
+  "version": "2.9.31",
+  "notes": "Scheduling is fixed — you can plan and post your videos again. The submit tool now always pulls from your currently connected accounts, so it never grabs an old one you've disconnected. In split-screen videos the reaction now stays on one clip the whole way through. Includes the recent Mac speed and reliability updates.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.30/Remixa-Windows.exe",
-    "sha256": "1b60b1552c4c7343249cb37b87a7788f8e255cd44c072940a6a2853e267d4f97"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.31/Remixa-Windows.exe",
+    "sha256": "7653f943afd7c5725318b98027100679ebc9ae8425381e36b498dd1de84a839a"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.30/Remixa-Mac.dmg",
-    "sha256": "45b282743e2a5d75eaa9d564cd09ff32cce1485de4a5e288b801ea998315334c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.31/Remixa-Mac.dmg",
+    "sha256": "71224f4da2010ab964899ae14efc5fd02797b656426bf4e1e83b947eca46ff70"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

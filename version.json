@@ -1,13 +1,13 @@
 {
-  "version": "2.9.31",
-  "notes": "Scheduling is fixed — you can plan and post your videos again. The submit tool now always pulls from your currently connected accounts, so it never grabs an old one you've disconnected. In split-screen videos the reaction now stays on one clip the whole way through. Includes the recent Mac speed and reliability updates.",
+  "version": "2.9.32",
+  "notes": "When you tap a word to color it, the color now stays put. Split-screen reactions stay on one clip for the whole video. You can add an Instagram first comment that auto-posts right after each video, and it picks one from your list. The submit use-case menu now matches the rest of the app, and you can save your hashtags and captions as a set and load it on any account.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.31/Remixa-Windows.exe",
-    "sha256": "7653f943afd7c5725318b98027100679ebc9ae8425381e36b498dd1de84a839a"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.32/Remixa-Windows.exe",
+    "sha256": "b8e1872b33486131103c830c07c902a3462ca08dd50f3bcf461c43b05d739db7"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.31/Remixa-Mac.dmg",
-    "sha256": "71224f4da2010ab964899ae14efc5fd02797b656426bf4e1e83b947eca46ff70"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.32/Remixa-Mac.dmg",
+    "sha256": "af839519bab34325f7598c9120589d4e9b4a6395fe689ed8271019a86de507ce"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

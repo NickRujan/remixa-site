@@ -1,13 +1,13 @@
 {
-  "version": "2.9.32",
-  "notes": "When you tap a word to color it, the color now stays put. Split-screen reactions stay on one clip for the whole video. You can add an Instagram first comment that auto-posts right after each video, and it picks one from your list. The submit use-case menu now matches the rest of the app, and you can save your hashtags and captions as a set and load it on any account.",
+  "version": "2.9.33",
+  "notes": "When a recorded-per-section clip has two different reaction takes in it, the reaction now stays one person the whole way through the video - it no longer flashes the old take for a second or two before the real one. Everything else from 2.9.32 (caption word colors that stick, Instagram first comment, loadable caption sets) is included.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.32/Remixa-Windows.exe",
-    "sha256": "b8e1872b33486131103c830c07c902a3462ca08dd50f3bcf461c43b05d739db7"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.33/Remixa-Windows.exe",
+    "sha256": "59cc8260daa90434c64b77f0c388aaba8e501bfe8ffa663a8aab43726750c098"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.32/Remixa-Mac.dmg",
-    "sha256": "af839519bab34325f7598c9120589d4e9b4a6395fe689ed8271019a86de507ce"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.33/Remixa-Mac.dmg",
+    "sha256": "98c7f83d148dc73d7b494f531783427240572e5ddba1fe0840adc49e478a641d"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

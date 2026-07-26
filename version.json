@@ -1,13 +1,13 @@
 {
-  "version": "2.9.29",
-  "notes": "Much faster, reliable rendering on Mac — removed a speech-analysis step that could make renders take many minutes, and capped render duration so a render can never stall. Videos render quickly and always play. Stop now cancels the current render instantly, and the time-remaining countdown is accurate. Windows is unchanged. Still includes Scheduling, Calendar, Analytics, AutoSubmitter and Accounts, plus a different cover on every video and cleaner audio.",
+  "version": "2.9.30",
+  "notes": "Color any word in your text — tap a word and pick any color; only that word changes and it stays inline. AutoSubmitter now lets you pick a use case per campaign (or none) and lists your accounts in order: Instagram, TikTok, YouTube. Includes the faster, reliable Mac rendering from recent updates. Still has Scheduling, Calendar, Analytics and Accounts built in, plus a different cover on every video and cleaner audio.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.29/Remixa-Windows.exe",
-    "sha256": "f3902091f3df7acf5395904e8c12667d23973e03829164c2624809069dcde79c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.30/Remixa-Windows.exe",
+    "sha256": "1b60b1552c4c7343249cb37b87a7788f8e255cd44c072940a6a2853e267d4f97"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.29/Remixa-Mac.dmg",
-    "sha256": "8e0525f375aeeee91f367420548184c6a252c2f2c0dc73c5d35b31b44b2e8b43"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.30/Remixa-Mac.dmg",
+    "sha256": "45b282743e2a5d75eaa9d564cd09ff32cce1485de4a5e288b801ea998315334c"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

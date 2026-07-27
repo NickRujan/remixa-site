@@ -1,9 +1,9 @@
 {
-  "version": "2.9.38",
-  "notes": "Launch fixes: the app can no longer be frozen by a stalled connection, and brand-new installs go straight to the license screen instead of being wrongly told their PC was blocking Remixa.",
+  "version": "2.9.39",
+  "notes": "Launch fixes: the app window now ignores broken proxy settings, brand-new installs go straight to the license screen, and a stalled connection can no longer freeze the app.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.38/Remixa-Windows.exe",
-    "sha256": "24baf8497423a038b21076790902431ce36042f943440249bf40079cbed98981"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.39/Remixa-Windows.exe",
+    "sha256": "dabe98820c95b09c6dfe667036ec2a84c0e6826329c55f11351fa844acb80264"
   },
   "mac": {},
   "_mac_note": "EMPTY ON PURPOSE (2.9.35): this release is a Windows-only launch fix and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists.",

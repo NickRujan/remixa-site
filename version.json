@@ -1,11 +1,11 @@
 {
-  "version": "2.9.40",
-  "notes": "Small fix: when you split a hook wording into blocks, it no longer shows the raw color codes as text. Includes the recent launch/connection fixes.",
+  "version": "2.9.41",
+  "notes": "Scheduling fixes: saved caption sets now keep your random hashtags, switching Buffer accounts no longer shows the old account's channels, cross-posting to a second account now uses your captions, and choosing 'none' clears everything so you can start a fresh set.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.40/Remixa-Windows.exe",
-    "sha256": "d830bf3fd81865517b4e14cb00e770bafb64933769d4772ccbdc3a04e1b38214"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.41/Remixa-Windows.exe",
+    "sha256": "e06cc36fd6ff4e1861e20bca4683e14bb589f213243c7c974ab69fa281183e99"
   },
   "mac": {},
-  "_mac_note": "EMPTY ON PURPOSE (2.9.35): recent releases are Windows-only launch/UI fixes and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists (remixa-build synced to 2.9.40, workflow ready to run).",
+  "_mac_note": "EMPTY ON PURPOSE (2.9.35): recent releases are Windows-only launch/UI fixes and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists (remixa-build synced to 2.9.41, workflow ready to run).",
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

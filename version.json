@@ -1,13 +1,11 @@
 {
-  "version": "2.9.33",
-  "notes": "When a recorded-per-section clip has two different reaction takes in it, the reaction now stays one person the whole way through the video - it no longer flashes the old take for a second or two before the real one. Everything else from 2.9.32 (caption word colors that stick, Instagram first comment, loadable caption sets) is included.",
+  "version": "2.9.35",
+  "notes": "Fixes Remixa not opening on some PCs. It now finds a port your computer allows, opens in your browser if the app window cannot draw, and tells you what is blocking it instead of showing an empty window.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.33/Remixa-Windows.exe",
-    "sha256": "59cc8260daa90434c64b77f0c388aaba8e501bfe8ffa663a8aab43726750c098"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.35/Remixa-Windows.exe",
+    "sha256": "11098956abfe2d0b476e15cededd7997674ce6b9c8e9a5a29836f4593c56e3d5"
   },
-  "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.33/Remixa-Mac.dmg",
-    "sha256": "98c7f83d148dc73d7b494f531783427240572e5ddba1fe0840adc49e478a641d"
-  },
+  "mac": {},
+  "_mac_note": "EMPTY ON PURPOSE (2.9.35): this release is a Windows-only launch fix and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists.",
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

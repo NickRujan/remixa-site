@@ -1,9 +1,9 @@
 {
-  "version": "2.9.35",
-  "notes": "Fixes Remixa not opening on some PCs. It now finds a port your computer allows, opens in your browser if the app window cannot draw, and tells you what is blocking it instead of showing an empty window.",
+  "version": "2.9.36",
+  "notes": "Fixes Remixa never finishing loading on some PCs (endless spinner in the window or browser). One stalled connection can no longer freeze the whole app; it also finds a port your PC allows and explains what is wrong instead of showing an empty window.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.35/Remixa-Windows.exe",
-    "sha256": "11098956abfe2d0b476e15cededd7997674ce6b9c8e9a5a29836f4593c56e3d5"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.36/Remixa-Windows.exe",
+    "sha256": "2b4f178905024fae732d030508553af8bc13391f652e16bd59030dd51e8d7854"
   },
   "mac": {},
   "_mac_note": "EMPTY ON PURPOSE (2.9.35): this release is a Windows-only launch fix and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists.",

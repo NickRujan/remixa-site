@@ -1,11 +1,11 @@
 {
-  "version": "2.9.39",
-  "notes": "Launch fixes: the app window now ignores broken proxy settings, brand-new installs go straight to the license screen, and a stalled connection can no longer freeze the app.",
+  "version": "2.9.40",
+  "notes": "Small fix: when you split a hook wording into blocks, it no longer shows the raw color codes as text. Includes the recent launch/connection fixes.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.39/Remixa-Windows.exe",
-    "sha256": "dabe98820c95b09c6dfe667036ec2a84c0e6826329c55f11351fa844acb80264"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.40/Remixa-Windows.exe",
+    "sha256": "d830bf3fd81865517b4e14cb00e770bafb64933769d4772ccbdc3a04e1b38214"
   },
   "mac": {},
-  "_mac_note": "EMPTY ON PURPOSE (2.9.35): this release is a Windows-only launch fix and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists.",
+  "_mac_note": "EMPTY ON PURPOSE (2.9.35): recent releases are Windows-only launch/UI fixes and there is no matching Mac dmg. The updater only offers an update when the platform url starts with https, so an empty mac block offers Mac users nothing at all - instead of sending them an older dmg they already have, which would leave the update banner stuck forever. Restore the mac url (release asset + sha256) as soon as a Mac build of this version exists (remixa-build synced to 2.9.40, workflow ready to run).",
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI."
 }

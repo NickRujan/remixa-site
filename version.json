@@ -1,13 +1,13 @@
 {
-  "version": "2.9.45",
-  "notes": "Quarterly plan license keys now activate — they were being rejected as the wrong product. Also includes the TikTok scheduling fix and all recent scheduling and clip improvements.",
+  "version": "2.9.46",
+  "notes": "Scheduling is more reliable: if a post can't be scheduled you now see exactly why, videos only get their scheduled badge when the post really lands, a second Schedule click can't double-post, refreshing mid-run picks the progress back up, uploads retry once on a network blip, and the app checks for updates every few hours instead of only at launch.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.45/Remixa-Windows.exe",
-    "sha256": "9cd7cb21b582f8fa315246b46b843a71b906194ddfc9c0a7afaf84d3fd089eaa"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.46/Remixa-Windows.exe",
+    "sha256": "8f1a4aa363b5ec65761aed20438ee75352f4b64a25d5848aa94c570111fc3857"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.45/Remixa-Mac.dmg",
-    "sha256": "ca5f051dd565120b35af2658ebd0a281a6df79b3800cafa25673c2debc888534"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.46/Remixa-Mac.dmg",
+    "sha256": "6dbb8102c8a08c90aa668fed7c7e600960fb4a81d4ca7f04bf647e29c005e60a"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.45."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.46."
 }

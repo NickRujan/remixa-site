@@ -1,13 +1,13 @@
 {
-  "version": "2.9.46",
-  "notes": "Scheduling is more reliable: if a post can't be scheduled you now see exactly why, videos only get their scheduled badge when the post really lands, a second Schedule click can't double-post, refreshing mid-run picks the progress back up, uploads retry once on a network blip, and the app checks for updates every few hours instead of only at launch.",
+  "version": "2.9.47",
+  "notes": "Music can now land its beat drop exactly on the hook cut, one-take talking pitches split into hook, body, and ending by the words so batches mix without repeats, covers pull different moments of the hook, and scheduling posts at natural-looking times, spaces new batches around what's already scheduled, retries instead of skipping, and never posts without your caption. Plus clearer progress, safer deletes, and many small fixes.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.46/Remixa-Windows.exe",
-    "sha256": "8f1a4aa363b5ec65761aed20438ee75352f4b64a25d5848aa94c570111fc3857"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.47/Remixa-Windows.exe",
+    "sha256": "9b54624e198d89ae5e6b127ec960b41d80ff69c0555375d22b1debe9109bc96f"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.46/Remixa-Mac.dmg",
-    "sha256": "6dbb8102c8a08c90aa668fed7c7e600960fb4a81d4ca7f04bf647e29c005e60a"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.47/Remixa-Mac.dmg",
+    "sha256": "6314e609d1572863a1979d5bdb0f7966a5ab4fca3746e7fe7622f192c40232a0"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.46."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.47."
 }

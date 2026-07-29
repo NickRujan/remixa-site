@@ -1,13 +1,13 @@
 {
-  "version": "2.9.50",
-  "notes": "New Media tab: make folders of clips and pick one straight from Create - your saved clip sets became folders automatically. Video previews always show something useful now (the caption when no preview exists), the update bar got a cleaner look with a real progress bar, and everything loads faster.",
+  "version": "2.9.51",
+  "notes": "Your videos now render at 60fps whenever your footage is 60fps - gameplay and screen recordings keep all their smoothness. And with 'fade in after hook', the music now starts from the beginning of the track the moment it fades in, instead of dropping in partway through the song.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.50/Remixa-Windows.exe",
-    "sha256": "ed2e70cee7d0f9fd1f7dea88ed1e7137fd2fd3212df1f5dfcbef8178ec472faa"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.51/Remixa-Windows.exe",
+    "sha256": "cff4e50a0541ba7edfd781fc4aea72d1a95f72ee55b40b8d1b7e040dcd8c6953"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.50/Remixa-Mac.dmg",
-    "sha256": "7960ca4dbe603995f7f61a4e3f2201687204647ccd1a3208df6a8e76a117f499"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.51/Remixa-Mac.dmg",
+    "sha256": "47234541b582c46075caa20f15ae906517f792d1fd71deea7d5b2f929fa3b4b5"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.50."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.51."
 }

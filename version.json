@@ -1,13 +1,13 @@
 {
-  "version": "2.9.54",
-  "notes": "Remixa now comes with a phone app: open the new Phone page, scan the code, and schedule, submit and watch your renders from anywhere - even with your computer off. Your videos sync up by themselves after every batch. The whole app works right on a phone browser now too. And the brightness variation setting does exactly what it says - your number is the whole brightness, and off means off.",
+  "version": "2.9.55",
+  "notes": "Remixa is on your phone now: open the Phone page, scan the code, and schedule, submit and watch your renders from anywhere - even with your computer off. Everything syncs by itself. This build also fixes 2.9.54 not opening on some PCs, and the brightness variation setting now does exactly what it says.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.54/Remixa-Windows.exe",
-    "sha256": "fab0dc98d18692aa29c87d800a07af63b0581dcb05551ba6646929b05d8494d8"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.55/Remixa-Windows.exe",
+    "sha256": "9c0e5823bc082761df5305c7689d5e44ab469d1677bcb918663d28eca18d24f4"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.54/Remixa-Mac.dmg",
-    "sha256": "b030368117445a91ee4893078765ce95eff378d27f89a74d26617ef8fb2f566c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.55/Remixa-Mac.dmg",
+    "sha256": "3b6b77744a5cdb42d5ac212ef34f578febca2111f4fa586945ee3f1334c3f6e6"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.54."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.55."
 }

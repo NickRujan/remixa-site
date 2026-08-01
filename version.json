@@ -1,13 +1,13 @@
 {
-  "version": "2.9.74",
-  "notes": "Stop button for a posting run, and scheduling pauses instead of dropping posts when Buffer is out of room.",
+  "version": "2.9.77",
+  "notes": "Scheduling stops spending your Buffer allowance on retries while Buffer is resting.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.74/Remixa-Windows.exe",
-    "sha256": "59f65b3e95ebc2c32c80a1fb8d2107b3f4849431408086b00637d3b87871694b"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.77/Remixa-Windows.exe",
+    "sha256": "1c8af2c9d781e0f67ea6b3679d69782217439c8725c8d3a94b3f610bc5ec192f"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.74/Remixa-Mac.dmg",
-    "sha256": "7e19efb4e2c9576b793e5f956fe34a6f38b9ca9af484278a5d1b12c72414fba0"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.77/Remixa-Mac.dmg",
+    "sha256": "6391daf89446a0f673c172fc0db59816075638baabcb4bceafbd0a90ea379fd5"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

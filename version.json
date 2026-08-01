@@ -1,13 +1,13 @@
 {
-  "version": "2.9.69",
-  "notes": "Puts the cover frame back.",
+  "version": "2.9.72",
+  "notes": "Phone groups videos by batch and marks scheduled ones; scheduling never drops a post to a rate limit.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.69/Remixa-Windows.exe",
-    "sha256": "078434511f3c40a124c41df2c84aee7554b3603eae97fdb4a5558fd1cd2522e2"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.72/Remixa-Windows.exe",
+    "sha256": "366a03991b5b37d99df46aa41854e60c958731ba97a4a103fc20a436cdb51bf1"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.69/Remixa-Mac.dmg",
-    "sha256": "cca68403690560d8b9a790991b45f2ee78a3d25f07e4d39e5ca4b57a3e43aa29"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.72/Remixa-Mac.dmg",
+    "sha256": "23a636695d2b0eb325d86c9b721c948adb8a8b45532e292356cb08adb0c9c0fb"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

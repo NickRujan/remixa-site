@@ -1,13 +1,13 @@
 {
-  "version": "2.9.60",
-  "notes": "Moving a sound's start marker keeps your playback choice, delete several scheduling uploads at once, plus upload and Media-folder fixes.",
+  "version": "2.9.61",
+  "notes": "No more little windows flashing when you start a render or use the auto editor.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.60/Remixa-Windows.exe",
-    "sha256": "9763f59afd3534bf083e4cb1ae13287996c35886d562d5b485b05e581e767465"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.61/Remixa-Windows.exe",
+    "sha256": "1bf496fdeb6289fd32334253382aebe13f9f912c93b805a1394028e9a7ee26ab"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.60/Remixa-Mac.dmg",
-    "sha256": "21a4f65aa0fa90f0cf88eeb0a00e94bb963f01a51f495ecf1a67f271d80a8591"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.61/Remixa-Mac.dmg",
+    "sha256": "2233ae9716fb0295f78cff3bc16c4813cf3b4e09f7792788dbb14043f377a6ed"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

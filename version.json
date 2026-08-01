@@ -1,13 +1,13 @@
 {
-  "version": "2.9.59",
-  "notes": "Folder batches remember their analysis - the long first look at your clips happens once, then every batch after skips straight to rendering. The countdown stays honest while clips analyze. Scheduling frees the page the moment you click - pick your next account while it posts in the background. Caption or hashtag edits after a preview now rebuild the plan so exactly what you see is what posts.",
+  "version": "2.9.60",
+  "notes": "Moving a sound's start marker keeps your playback choice, delete several scheduling uploads at once, plus upload and Media-folder fixes.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.59/Remixa-Windows.exe",
-    "sha256": "31f6543f956555c4058a99b4f5cf388b50375eb32c0ff569cbec8b147534317a"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.60/Remixa-Windows.exe",
+    "sha256": "9763f59afd3534bf083e4cb1ae13287996c35886d562d5b485b05e581e767465"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.59/Remixa-Mac.dmg",
-    "sha256": "9656d2ce3936f3a47a9812ee077ddb30714b27a384c5cb2f2182a5299177d0ff"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.60/Remixa-Mac.dmg",
+    "sha256": "21a4f65aa0fa90f0cf88eeb0a00e94bb963f01a51f495ecf1a67f271d80a8591"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

@@ -1,13 +1,13 @@
 {
-  "version": "2.9.65",
-  "notes": "The render countdown holds steady - one slow clip no longer swings the whole estimate.",
+  "version": "2.9.66",
+  "notes": "Fixes a crash when cancelling a render and starting another right away.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.65/Remixa-Windows.exe",
-    "sha256": "8d05e04ce4bf19249e6a4dd3e71c28e4cd368faca973115458c0873db34ba7f9"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.66/Remixa-Windows.exe",
+    "sha256": "95f706d47177da3c94dd0cd84ec21eef9756ecb9ef82b9ab476395e08e1e2412"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.65/Remixa-Mac.dmg",
-    "sha256": "d4ef8f30bc15f6af3cdc76beca875eca5c2fa96fa35a1bd41c6b9b4b8bc7840c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.66/Remixa-Mac.dmg",
+    "sha256": "595089e9bc0050c4f9e64f1322764c66e107765c6c2a3a65957cf60171429049"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

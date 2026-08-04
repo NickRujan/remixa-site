@@ -1,13 +1,13 @@
 {
-  "version": "2.9.79",
-  "notes": "Talking faces keep their own voice when clips are mixed, scheduled posts always carry your captions, and the phone app can no longer lose its keys or library.",
+  "version": "2.9.80",
+  "notes": "Downloading videos always lands them somewhere and tells you where - even when your computer blocks the Downloads folder.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.79/Remixa-Windows.exe",
-    "sha256": "8231a1533914270990c6209b9f718ae5e5f0396090beef5a812ef402ab5c903c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.80/Remixa-Windows.exe",
+    "sha256": "b0671292102fe4c62558ee026e19ca790b18f00b14c4f732672971b7bc748992"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.79/Remixa-Mac.dmg",
-    "sha256": "f609e6f43f6e9ca2517df2eb12d79d2e45b729b0195348c682664bee585e1f23"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.80/Remixa-Mac.dmg",
+    "sha256": "77f1ce5fc6d9e0e785c1e0b1264e30f7b997dbc4903aa4dbf232ddbcf5886fbd"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

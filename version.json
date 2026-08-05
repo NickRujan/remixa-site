@@ -1,13 +1,13 @@
 {
-  "version": "2.9.80",
-  "notes": "Downloading videos always lands them somewhere and tells you where - even when your computer blocks the Downloads folder.",
+  "version": "2.9.81",
+  "notes": "The Snapchat caption style now matches real Snapchat exactly - same lettering, same size, same bar. Deleting a video from your newest batch works again.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.80/Remixa-Windows.exe",
-    "sha256": "b0671292102fe4c62558ee026e19ca790b18f00b14c4f732672971b7bc748992"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.81/Remixa-Windows.exe",
+    "sha256": "a6493b0baa866159815926f598ff2f1f5d2bc286243ed0a29e1acfdfc39bf610"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.80/Remixa-Mac.dmg",
-    "sha256": "77f1ce5fc6d9e0e785c1e0b1264e30f7b997dbc4903aa4dbf232ddbcf5886fbd"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.81/Remixa-Mac.dmg",
+    "sha256": "59dc8ed41352faa1cce533355a841f8d5a4981881f2002c7a9fff4c15d23aa37"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

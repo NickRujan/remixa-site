@@ -1,13 +1,13 @@
 {
-  "version": "2.9.82",
-  "notes": "Hooks always play their full opening, and mid-video the creator's own voice and face always stay in sync - no more cut-off hooks or mismatched lips when clips are mixed.",
+  "version": "2.9.83",
+  "notes": "Clear all now just makes room - cleared files move to your saved-set pool and come back when you load a set. The Low hook sound choice stays selected, and the Home screen's What's new reflects the latest updates.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.82/Remixa-Windows.exe",
-    "sha256": "f4244d3b0b4ba9d8da0605298f9afb7da2a3c5eaac1fc0518c6f765962d1e4ea"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.83/Remixa-Windows.exe",
+    "sha256": "4ecc7abec7fc2adc588796c7bb1b8cbc4bc67216bc708fd130243bf93cbe0350"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.82/Remixa-Mac.dmg",
-    "sha256": "42041c9c5a9898be23abdf2efc79c9e3ca4009038f6d1df0a624d3fd7a710e81"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.83/Remixa-Mac.dmg",
+    "sha256": "f81758cbcc044318af436b6c5d8d1b739c6aeb160dec1df0cc0a0029e0c0fe7e"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

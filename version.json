@@ -1,13 +1,13 @@
 {
-  "version": "2.9.86",
-  "notes": "Scheduling always uses the dates on your screen - changing the window or your picked videos after a preview no longer needs a manual rebuild.",
+  "version": "2.9.87",
+  "notes": "Deleting previous batches works again (plus a Delete all button), calendar changes show instantly, phone .mov files upload for scheduling, and the Snapchat caption bar matches the real app.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.86/Remixa-Windows.exe",
-    "sha256": "2cf59d9a17a9b57a76d38bcb420844f00118c4a797e462a7a5ab3204af06dc84"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.87/Remixa-Windows.exe",
+    "sha256": "57b5f14a3adffedc6e3ed80583e9a801cff382c305c5e11e8ab7f7205cd596d1"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.86/Remixa-Mac.dmg",
-    "sha256": "9cf3f974a878d0d79d129a0ae86fa6dc0cddf4b3dc9ddf119fdf87982c684c31"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.87/Remixa-Mac.dmg",
+    "sha256": "c490cb94aa1fabcc37e63f957ed47d6abeaf615e3940ff708e4bb2e5e9c8339c"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

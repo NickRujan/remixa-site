@@ -1,13 +1,13 @@
 {
-  "version": "2.9.83",
-  "notes": "Clear all now just makes room - cleared files move to your saved-set pool and come back when you load a set. The Low hook sound choice stays selected, and the Home screen's What's new reflects the latest updates.",
+  "version": "2.9.84",
+  "notes": "The Queue shows what's really happening - new footage gets studied once before rendering, clip by clip, instead of a frozen timer. Closing mid-batch asks first so unfinished videos are never lost by accident.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.83/Remixa-Windows.exe",
-    "sha256": "4ecc7abec7fc2adc588796c7bb1b8cbc4bc67216bc708fd130243bf93cbe0350"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.84/Remixa-Windows.exe",
+    "sha256": "f66b1470f8c9f29d8171ca7e01827fa6334863448e15ae2805461033ba89346c"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.83/Remixa-Mac.dmg",
-    "sha256": "f81758cbcc044318af436b6c5d8d1b739c6aeb160dec1df0cc0a0029e0c0fe7e"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.84/Remixa-Mac.dmg",
+    "sha256": "c79b2c6fac6e806d105dd49a342f7b797f18c8a52821275631c6ae7314b262c9"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

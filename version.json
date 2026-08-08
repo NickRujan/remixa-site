@@ -1,13 +1,13 @@
 {
-  "version": "2.9.92",
-  "notes": "Every split-screen clip is recognized now, even ones with a very calm bottom (a pool, sandblasting) where the two halves barely move - so no more videos with a missing or doubled talking part before the body.",
+  "version": "2.9.93",
+  "notes": "Split-screen clips whose split fades in over the first second now start cleanly on the split - no more stray one-second full-frame shot before the hook (which showed up as a doubled talking part before the body).",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.92/Remixa-Windows.exe",
-    "sha256": "89729bf8a87250a8cb0b3f4b41f4836068681bdb24d50fe95ec31e9646c96475"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.93/Remixa-Windows.exe",
+    "sha256": "c2f686f1f80d65dae50c3f0c9bb1b11538644e873c9a9457e37644f2b37db4aa"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.92/Remixa-Mac.dmg",
-    "sha256": "d1f4b541ff1a281ed2bd9472a8c5827a53df6fdbbe92598a398aa384fb023405"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.93/Remixa-Mac.dmg",
+    "sha256": "ae8b902cd96ca8ef2ae70e4bd33cf3613516ca90e726115e47cf7fe95e4e2bcd"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.93."
 }

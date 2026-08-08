@@ -1,13 +1,13 @@
 {
-  "version": "2.9.90",
-  "notes": "YouTube scheduling fully works now — YouTube requires both a title and a category, and Remixa now sets both automatically (title from your caption, People & Blogs category), so posts go through instead of being rejected.",
+  "version": "2.9.91",
+  "notes": "Split-screen clips with a calm bottom (a pool, pressure-washing) are recognized as splits now, so every output gets its opener and one talking part before the body. In Hooks mode only the hook changes - the body and ending stay from your clip.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.90/Remixa-Windows.exe",
-    "sha256": "c76dc176985542f64d11bef6f5ed52767c11667477c80eee6185a4e03ac8a092"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.91/Remixa-Windows.exe",
+    "sha256": "12e177a99fe898c2caa5659a4904603338b6a0392c5f15033892484d5bdcd5b1"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.90/Remixa-Mac.dmg",
-    "sha256": "256caeb64f1854a638ca21ce5e75c6e3f064a7348ca910ef79527099bf686e16"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.91/Remixa-Mac.dmg",
+    "sha256": "4d0cdb526c2aa49bc6de61190c7badb367e00eeb45a1529f44a8be3393fc9c18"
   },
   "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.59."
 }

@@ -1,13 +1,13 @@
 {
-  "version": "2.9.94",
-  "notes": "Split-screen hooks are now read edge to edge - whether the split fades in over the first few seconds or the bottom goes calm (a pool settling) mid-hook, the whole split is kept, so the talking part after the hook lands right and you no longer get a missing or doubled talking part before the body. Also: the creator talking right after a reaction hook is recognized even when the person in the hook is someone else.",
+  "version": "2.9.95",
+  "notes": "Split-screen hooks now keep the clip exactly as it was made - the top caption is never clipped and the bottom fills the frame, so no cut-off words and no thin sliver of the other clip at the divider.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.94/Remixa-Windows.exe",
-    "sha256": "dad03b690929d61c27f9e563b4605f00ca75a70e30eafd5a28a4d0cf8ca19f20"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.95/Remixa-Windows.exe",
+    "sha256": "e2627016f30cd6e78c57930f7719f5a0790025e1f2b6b5df52d5abdcf6f13bec"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.94/Remixa-Mac.dmg",
-    "sha256": "852e07e9651b8289a35d6ded4a73f373c1ce3f0c04998d4a45959d0f99560250"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.95/Remixa-Mac.dmg",
+    "sha256": "c8d89a4bb54cec08a0c7006583efabdb9e770c9febaa879b0c7edfaa82d9cd6d"
   },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.94."
+  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.95."
 }

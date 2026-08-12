@@ -1,7 +1,7 @@
 {
-  "version": "2.9.96",
-  "notes": "In Hooks mode your ending stays your own - a clip is only cut on the batch line when its script really matches, so a different-script clip keeps its own hook and ending.",
-  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.96/Remixa-Windows.exe", "sha256": "9581b6d3537a06d7b0a57578f8452f0f7fe2fceb4ab47c4d96c31187220a1490" },
-  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.96/Remixa-Mac.dmg", "sha256": "a53214c21082dcda76f49485761211ee660165a712a2b20c13193e0c151b0892" },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both platforms current as of 2.9.96."
+  "version": "2.9.97",
+  "notes": "New: a Randomize order toggle on the Schedule page mixes your posts across batches - one from each batch, rotating - so you never post one whole batch straight through.",
+  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.97/Remixa-Windows.exe", "sha256": "435b3bf29f4d9d3dc08e5e2a943990fd40bb1bf2d979989e9f95305a9b8ae6b6" },
+  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.97/Remixa-Mac.dmg", "sha256": "dffb7f090cdf550eb7a36ca0722fa1c78017cb806b08dd579e8f2c233563e9ba" },
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.97."
 }

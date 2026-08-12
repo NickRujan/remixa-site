@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remixa for Brands — join the waitlist</title>
+<meta name="description" content="Creators post original videos about your product. You pay only for verified views. Join as a brand.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0b0d11;--card:#13161d;--ink:#eceade;--dim:#9b978b;--faint:#6d6a60;--gold:#D4A62A;--line:#20242e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:15px/1.6 Geist,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  @media(max-width:700px){.wrap{padding:0 22px}}
+
+  em.acc{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;
+    text-decoration:underline;text-decoration-color:rgba(212,166,42,.7);
+    text-underline-offset:6px;text-decoration-thickness:3px;-webkit-text-stroke:.4px currentColor}
+
+  nav{display:flex;align-items:center;padding:18px 0}
+  nav .lg{display:flex;align-items:center;gap:10px}
+  nav img{width:26px;height:26px;border-radius:7px}
+  nav b{font-size:14.5px;font-weight:500}
+  .nvl{display:flex;gap:26px;margin-left:36px}
+  .nvl a{font-size:13.5px;color:var(--dim);transition:color .15s}
+  .nvl a:hover{color:var(--ink)}
+  .nvl a.act{color:var(--ink);text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1.5px}
+  nav .right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  nav .right a.q{font-size:13.5px;color:var(--dim);transition:color .15s}
+  nav .right a.q:hover{color:var(--ink)}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(180deg,#e6ba3e,#c89a1e);color:#191303;font-weight:600;
+    padding:12px 26px;border-radius:999px;font-size:14px;border:none;cursor:pointer;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 22px rgba(212,166,42,.16),0 1px 2px rgba(0,0,0,.45);
+    transition:transform .14s ease,box-shadow .14s ease,filter .14s}
+  .btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 12px 28px rgba(212,166,42,.22),0 2px 4px rgba(0,0,0,.45)}
+  .btn:active{transform:translateY(0);filter:brightness(.96)}
+  .btn.gh{background:rgba(255,255,255,.025);border:1px solid #2b323e;color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .btn.gh:hover{border-color:#414a5a;background:rgba(255,255,255,.05)}
+  .btn.sm{padding:9px 19px;font-size:13px}
+  .btn:disabled{opacity:.6;cursor:default;transform:none}
+
+  .hero{position:relative;text-align:center;padding:88px 0 56px}
+  .gridbg{position:absolute;top:-72px;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);pointer-events:none;
+    background-image:linear-gradient(to right,rgba(236,234,222,.055) 1px,transparent 1px),
+                     linear-gradient(to bottom,rgba(236,234,222,.055) 1px,transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:radial-gradient(ellipse at top,white 20%,transparent 70%);
+            mask-image:radial-gradient(ellipse at top,white 20%,transparent 70%)}
+  .goldwash{position:absolute;top:-72px;height:420px;left:calc(50% - 50vw);right:calc(50% - 50vw);pointer-events:none;
+    background:linear-gradient(to bottom,rgba(212,166,42,.07),transparent)}
+  h1{position:relative;font-size:50px;line-height:1.1;letter-spacing:-1.6px;font-weight:500;max-width:640px;margin:0 auto 18px}
+  .sub{position:relative;color:var(--dim);font-size:16.5px;max-width:500px;margin:0 auto}
+
+  .formwrap{position:relative;max-width:520px;margin:44px auto 0}
+  .formcard{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:30px;text-align:left;box-shadow:0 24px 60px rgba(0,0,0,.35)}
+  .formcard h2{font-size:19px;font-weight:500;margin-bottom:4px}
+  .formcard .fs{font-size:13px;color:var(--faint);margin-bottom:20px}
+  label{display:block;font-size:12.5px;font-weight:500;color:var(--dim);margin:14px 0 6px}
+  input,select,textarea{width:100%;background:#0e1116;border:1px solid #262c38;border-radius:10px;color:var(--ink);
+    font:14px Geist,sans-serif;padding:11px 13px;outline:none;transition:border-color .15s}
+  input:focus,select:focus,textarea:focus{border-color:rgba(212,166,42,.55)}
+  textarea{resize:vertical;min-height:74px}
+  .formcard .btn{width:100%;margin-top:22px}
+  .done{display:none;text-align:center;padding:34px 8px}
+  .done .big{font-family:"Instrument Serif",serif;font-style:italic;font-size:26px;margin-bottom:8px}
+  .done p{color:var(--dim);font-size:14px}
+  .err{display:none;color:#e2695f;font-size:12.5px;margin-top:10px;text-align:center}
+
+  section{padding:72px 0 0}
+  .shead{text-align:center;font-size:28px;font-weight:500;letter-spacing:-.8px;margin-bottom:48px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px;max-width:960px;margin:0 auto}
+  .step .num{font-family:"Instrument Serif",serif;font-style:italic;color:var(--gold);font-size:17px;margin-bottom:10px}
+  .step h3{font-size:15px;font-weight:500;margin-bottom:7px}
+  .step p{font-size:13.5px;color:var(--dim)}
+
+  footer{margin-top:88px;border-top:1px solid var(--line);padding:38px 0;font-size:12.5px;color:var(--faint);display:flex;gap:18px;flex-wrap:wrap}
+  footer a{color:var(--faint)} footer a:hover{color:var(--dim)}
+
+  @media(max-width:680px){h1{font-size:33px;letter-spacing:-1px}.hero{padding:60px 0 40px}.steps{grid-template-columns:1fr;gap:26px}.nvl{display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <a class="lg" href="campaigns.html"><img src="logo.png" alt=""><b>Remixa</b></a>
+    <div class="nvl">
+      <a href="portal.html">For Creators</a>
+      <a class="act" href="brands.html">For Brands</a>
+    </div>
+    <div class="right">
+      <a class="q" href="auth.html">Sign In</a>
+      <a class="btn sm" href="#join">Join as a brand</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="gridbg"></div>
+    <div class="goldwash"></div>
+    <h1>Your product, posted <em class="acc">everywhere</em></h1>
+    <p class="sub">Creators make original videos about your product and post them across Instagram, TikTok and YouTube. You pay per 1,000 verified views — zero views, zero cost.</p>
+
+    <div class="formwrap" id="join">
+      <div class="formcard">
+        <form id="wl" autocomplete="on">
+          <h2>Join as a brand</h2>
+          <div class="fs">Tell us what you're building — we reply with a rate per 1,000 views and the exact brief our creators would run for you.</div>
+          <label for="f-name">Your name</label>
+          <input id="f-name" name="name" required maxlength="120" placeholder="Jane Doe">
+          <label for="f-email">Work email</label>
+          <input id="f-email" name="email" type="email" required maxlength="200" placeholder="jane@company.com">
+          <label for="f-company">Company / product</label>
+          <input id="f-company" name="company" required maxlength="160" placeholder="Acme AI">
+          <label for="f-link">Product link</label>
+          <input id="f-link" name="link" maxlength="400" placeholder="https://">
+          <label for="f-budget">Monthly budget</label>
+          <select id="f-budget" name="budget">
+            <option>Under $2,000</option>
+            <option selected>$2,000 – $10,000</option>
+            <option>$10,000 – $50,000</option>
+            <option>$50,000+</option>
+          </select>
+          <label for="f-notes">What are you promoting?</label>
+          <textarea id="f-notes" name="notes" maxlength="1500" placeholder="One or two sentences about the product and who it's for"></textarea>
+          <button class="btn" id="f-go" type="submit">Join the waitlist</button>
+          <div class="err" id="f-err">Something went wrong — email us at support@remixa.app instead.</div>
+        </form>
+        <div class="done" id="wl-done">
+          <div class="big">You're on the list.</div>
+          <p>We'll reach out with your rate and creator brief shortly.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section>
+    <h2 class="shead">One budget, <em class="acc">many creators</em></h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Fund a campaign</h3><p>Set a budget and a rate per 1,000 views. The budget sits in escrow and only pays for delivered views.</p></div>
+      <div class="step"><div class="num">02</div><h3>Creators post</h3><p>Briefed creators publish original videos about your product, then multiply the winners into variants.</p></div>
+      <div class="step"><div class="num">03</div><h3>Pay per verified view</h3><p>Every post is reviewed and every view verified. You can audit each post and each count.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2026 Remixa</span>
+    <a href="campaigns.html">Home</a>
+    <a href="portal.html">For Creators</a>
+    <a href="terms.html">Terms</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="mailto:support@remixa.app">support@remixa.app</a>
+  </footer>
+
+</div>
+<script>
+const WAITLIST_API = "https://remixa-relay.nickr6767.workers.dev/waitlist";
+document.getElementById('wl').addEventListener('submit', async (e)=>{
+  e.preventDefault();
+  const b=document.getElementById('f-go'), err=document.getElementById('f-err');
+  b.disabled=true; b.textContent='Joining…'; err.style.display='none';
+  const body={
+    type:'brand',
+    name:document.getElementById('f-name').value.trim(),
+    email:document.getElementById('f-email').value.trim(),
+    company:document.getElementById('f-company').value.trim(),
+    link:document.getElementById('f-link').value.trim(),
+    budget:document.getElementById('f-budget').value,
+    notes:document.getElementById('f-notes').value.trim(),
+  };
+  try{
+    const r=await fetch(WAITLIST_API,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(body)});
+    const j=await r.json();
+    if(!r.ok||!j.ok) throw new Error(j.error||'failed');
+    document.getElementById('wl').style.display='none';
+    document.getElementById('wl-done').style.display='block';
+  }catch(ex){
+    err.style.display='block';
+    b.disabled=false; b.textContent='Join the waitlist';
+  }
+});
+</script>
+</body>
+</html>

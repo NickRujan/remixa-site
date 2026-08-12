@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Remixa — create content, get paid per view</title>
+<meta name="description" content="Create content and get paid per view. No followers needed.">
+<link rel="icon" href="logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0b0d11;--ink:#eceade;--dim:#9b978b;--faint:#6d6a60;--gold:#D4A62A;--line:#20242e}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:15px/1.6 Geist,-apple-system,"Segoe UI",sans-serif;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1280px;margin:0 auto;padding:0 40px}
+  @media(max-width:700px){.wrap{padding:0 22px}}
+
+  em.acc{font-family:"Instrument Serif",serif;font-style:italic;font-weight:400;
+    text-decoration:underline;text-decoration-color:rgba(212,166,42,.7);
+    text-underline-offset:6px;text-decoration-thickness:3px;-webkit-text-stroke:.4px currentColor}
+
+  nav{display:flex;align-items:center;padding:18px 0}
+  nav .lgo{display:flex;align-items:center;gap:10px}
+  nav img{width:26px;height:26px;border-radius:7px}
+  nav b{font-size:14.5px;font-weight:500}
+  .nvl{display:flex;gap:26px;margin-left:36px}
+  .nvl a{font-size:13.5px;color:var(--dim);transition:color .15s}
+  .nvl a:hover{color:var(--ink)}
+  nav .right{margin-left:auto;display:flex;align-items:center;gap:14px}
+  nav .right a.q{font-size:13.5px;color:var(--dim);transition:color .15s}
+  nav .right a.q:hover{color:var(--ink)}
+  @media(max-width:680px){.nvl{display:none}}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;
+    background:linear-gradient(180deg,#e6ba3e,#c89a1e);color:#191303;font-weight:600;
+    padding:12px 26px;border-radius:999px;font-size:14px;border:none;cursor:pointer;
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.28),0 8px 22px rgba(212,166,42,.16),0 1px 2px rgba(0,0,0,.45);
+    transition:transform .14s ease,box-shadow .14s ease,filter .14s}
+  .btn:hover{transform:translateY(-1px);box-shadow:inset 0 1px 0 rgba(255,255,255,.32),0 12px 28px rgba(212,166,42,.22),0 2px 4px rgba(0,0,0,.45)}
+  .btn:active{transform:translateY(0);filter:brightness(.96);box-shadow:inset 0 1px 0 rgba(255,255,255,.2),0 4px 12px rgba(212,166,42,.14)}
+  .btn.gh{background:rgba(255,255,255,.025);border:1px solid #2b323e;color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.3)}
+  .btn.gh:hover{border-color:#414a5a;background:rgba(255,255,255,.05);transform:translateY(-1px)}
+  .btn.gh:active{transform:translateY(0);background:rgba(255,255,255,.03)}
+  .btn.sm{padding:9px 19px;font-size:13px;border-radius:999px}
+
+  .hero{position:relative;text-align:center;padding:104px 0 96px}
+  .gridbg{position:absolute;top:-72px;bottom:0;left:calc(50% - 50vw);right:calc(50% - 50vw);pointer-events:none;
+    background-image:linear-gradient(to right,rgba(236,234,222,.055) 1px,transparent 1px),
+                     linear-gradient(to bottom,rgba(236,234,222,.055) 1px,transparent 1px);
+    background-size:48px 48px;
+    -webkit-mask-image:radial-gradient(ellipse at top,white 20%,transparent 70%);
+            mask-image:radial-gradient(ellipse at top,white 20%,transparent 70%)}
+  .goldwash{position:absolute;top:-72px;height:420px;left:calc(50% - 50vw);right:calc(50% - 50vw);pointer-events:none;
+    background:linear-gradient(to bottom,rgba(212,166,42,.07),transparent)}
+  h1{position:relative;font-size:56px;line-height:1.08;letter-spacing:-1.8px;font-weight:500;max-width:680px;margin:0 auto 20px}
+  .sub{position:relative;color:var(--dim);font-size:16.5px;max-width:460px;margin:0 auto 34px;font-weight:400}
+  .ctas{position:relative;display:flex;gap:12px;justify-content:center}
+  .roles{position:relative;display:flex;gap:28px;justify-content:center;margin-top:40px;font-size:13.5px}
+  .roles a{color:var(--faint);transition:color .15s}
+  .roles a:hover{color:var(--ink)}
+  .roles a span{color:var(--gold);margin-left:4px}
+
+  section{padding:72px 0}
+  section.line{}
+  .shead{text-align:center;font-size:30px;font-weight:500;letter-spacing:-.8px;margin-bottom:52px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:44px}
+  .step .num{font-family:"Instrument Serif",serif;font-style:italic;color:var(--gold);font-size:17px;margin-bottom:10px}
+  .step h3{font-size:15px;font-weight:500;margin-bottom:7px}
+  .step p{font-size:13.5px;color:var(--dim)}
+
+  footer{border-top:1px solid var(--line);padding:52px 0 40px}
+  .fgrid{display:flex;justify-content:space-between;gap:40px;flex-wrap:wrap}
+  .fbrand{max-width:280px}
+  .fbrand .lg{display:flex;align-items:center;gap:9px;margin-bottom:12px}
+  .fbrand img{width:24px;height:24px;border-radius:6px}
+  .fbrand b{font-size:13.5px;font-weight:500}
+  .fbrand p{font-size:13px;color:var(--faint)}
+  .fcols{display:flex;gap:64px}
+  .fcol span{display:block;font-size:13px;font-weight:500;margin-bottom:12px}
+  .fcol a{display:block;font-size:13px;color:var(--faint);margin-bottom:9px;transition:color .15s}
+  .fcol a:hover{color:var(--ink)}
+  .copyr{margin-top:44px;padding-top:20px;border-top:1px solid rgba(32,36,46,.6);font-size:12px;color:var(--faint)}
+
+  @media(max-width:680px){h1{font-size:36px;letter-spacing:-1px}.hero{padding:72px 0 64px}.ctas{flex-direction:column;align-items:center}.steps{grid-template-columns:1fr;gap:30px}.fcols{gap:40px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <nav>
+    <span class="lgo"><img src="logo.png" alt=""><b>Remixa</b></span>
+    <div class="nvl">
+      <a href="portal.html">For Creators</a>
+      <a href="brands.html">For Brands</a>
+    </div>
+    <div class="right">
+      <a class="q js-disc" href="#">Discord</a>
+      <a class="q" href="auth.html">Sign In</a>
+      <a class="btn sm" href="auth.html">Get Started</a>
+    </div>
+  </nav>
+
+  <div class="hero">
+    <div class="gridbg"></div>
+    <div class="goldwash"></div>
+    <h1>Create content and get <em class="acc">paid per view</em></h1>
+    <p class="sub">Browse campaigns, post original videos about real products, and earn for every 1,000 verified views. No followers needed.</p>
+    <div class="ctas">
+      <a class="btn" href="auth.html">Start creating</a>
+      <a class="btn gh" href="portal.html#campaigns">Browse campaigns</a>
+    </div>
+    <div class="roles">
+      <a href="portal.html">For creators<span>→</span></a>
+      <a href="brands.html">For brands<span>→</span></a>
+    </div>
+  </div>
+
+  <section class="line" id="how-it-works">
+    <h2 class="shead">Start earning in <em class="acc">three simple steps</em></h2>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Browse campaigns</h3><p>Explore live brand campaigns. Every one shows its rate per 1,000 views before you join.</p></div>
+      <div class="step"><div class="num">02</div><h3>Create content</h3><p>Follow the brief — tested hooks and a shot-by-shot structure. No experience or followers needed.</p></div>
+      <div class="step"><div class="num">03</div><h3>Earn per view</h3><p>Post, submit your link, and get paid for the verified views your content generates.</p></div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="fgrid">
+      <div class="fbrand">
+        <div class="lg"><img src="logo.png" alt=""><b>Remixa</b></div>
+        <p>Creators post original videos about real products and get paid per view.</p>
+      </div>
+      <div class="fcols">
+        <div class="fcol">
+          <span>Platform</span>
+          <a href="portal.html">For Creators</a>
+          <a href="brands.html">For Brands</a>
+          <a href="#how-it-works">How It Works</a>
+        </div>
+        <div class="fcol">
+          <span>Company</span>
+          <a href="auth.html">Sign In</a>
+          <a href="terms.html">Terms of Service</a>
+          <a href="privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="copyr">© 2026 Remixa. All rights reserved.</div>
+  </footer>
+
+</div>
+<script>
+const DISCORD_URL = "https://discord.gg/FjYE5hHMdr";
+document.querySelectorAll('.js-disc').forEach(a=>{
+  a.href = DISCORD_URL || "mailto:support@remixa.app?subject=Creator%20signup";
+  if(DISCORD_URL) a.target="_blank";
+});
+</script>
+</body>
+</html>

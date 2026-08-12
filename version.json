@@ -1,13 +1,7 @@
 {
-  "version": "2.9.95",
-  "notes": "Split-screen hooks now keep the clip exactly as it was made - the top caption is never clipped and the bottom fills the frame, so no cut-off words and no thin sliver of the other clip at the divider.",
-  "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.95/Remixa-Windows.exe",
-    "sha256": "e2627016f30cd6e78c57930f7719f5a0790025e1f2b6b5df52d5abdcf6f13bec"
-  },
-  "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.95/Remixa-Mac.dmg",
-    "sha256": "c8d89a4bb54cec08a0c7006583efabdb9e770c9febaa879b0c7edfaa82d9cd6d"
-  },
-  "_urls": "urls are GitHub Release assets (stable, public, direct .exe/.dmg) and sha256 pins the exact binary - the 2.9.8+ updater verifies the download against it before offering to install. Assets use customer-friendly names (Remixa-Windows.exe / Remixa-Mac.dmg); the release TAG carries the version. Mac dmg is signed + notarized + stapled (no Gatekeeper warning) from the cloud-Mac CI. Both platforms current as of 2.9.95."
+  "version": "2.9.96",
+  "notes": "In Hooks mode your ending stays your own - a clip is only cut on the batch line when its script really matches, so a different-script clip keeps its own hook and ending.",
+  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.96/Remixa-Windows.exe", "sha256": "9581b6d3537a06d7b0a57578f8452f0f7fe2fceb4ab47c4d96c31187220a1490" },
+  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.96/Remixa-Mac.dmg", "sha256": "a53214c21082dcda76f49485761211ee660165a712a2b20c13193e0c151b0892" },
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both platforms current as of 2.9.96."
 }

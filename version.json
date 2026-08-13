@@ -1,7 +1,7 @@
 {
-  "version": "2.9.97",
-  "notes": "New: a Randomize order toggle on the Schedule page mixes your posts across batches - one from each batch, rotating - so you never post one whole batch straight through.",
-  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.97/Remixa-Windows.exe", "sha256": "435b3bf29f4d9d3dc08e5e2a943990fd40bb1bf2d979989e9f95305a9b8ae6b6" },
-  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.97/Remixa-Mac.dmg", "sha256": "dffb7f090cdf550eb7a36ca0722fa1c78017cb806b08dd579e8f2c233563e9ba" },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.97."
+  "version": "2.9.98",
+  "notes": "Your uploads on the Schedule page now have a Delete all button - clears out old uploads in one tap (they move to a trash folder, nothing is lost for good).",
+  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.98/Remixa-Windows.exe", "sha256": "1e8559a6b3e7f4ba23e8247b39d6bd4eda28d6f84b97f0425256c5a6e5dbbe43" },
+  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.98/Remixa-Mac.dmg", "sha256": "91f175723d4a1125ece4bc28048b1d6d905c8a0eaed3086f46794a1ae4f35b9b" },
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.98."
 }

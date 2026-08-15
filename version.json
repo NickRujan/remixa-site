@@ -1,7 +1,7 @@
 {
-  "version": "2.9.100",
-  "notes": "Split-screen fixes: no more thin line of the other clip at the divider and no more cut-off faces on mixed splits. Low hook sound is actually audible now.",
-  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.100/Remixa-Windows.exe", "sha256": "f8af1cd1bb4e6e71a7985ed317be1a553c3b8c169bc704c47cdb87bb8d4bf4a5" },
-  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.100/Remixa-Mac.dmg", "sha256": "171daf44d04e0effd97733355d0f85ffb56e8db029561d7326e392650105c3b8" },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.100."
+  "version": "2.9.101",
+  "notes": "Split screens no longer cut anything off at the divider — each clip now ends exactly where its own footage ends.",
+  "windows": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.101/Remixa-Windows.exe", "sha256": "5bbbc4610b1b87cbd62e1d02d44128e1941bddf5fa1b8bd9fe83c3ae2281e3da" },
+  "mac": { "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.101/Remixa-Mac.dmg", "sha256": "71534131deff1ba89a25de3db27c0df4f5c5b8b8ae8448e27b0fd60cb86d57b9" },
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.101."
 }

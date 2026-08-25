@@ -1,13 +1,13 @@
 {
-  "version": "2.9.102",
-  "notes": "Settings now links to the license page, so you can switch keys or free a device slot on any computer.",
+  "version": "2.9.103",
+  "notes": "Scheduling now keeps every post inside the time window you pick - the last posts no longer land past your end time.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.102/Remixa-Windows.exe",
-    "sha256": "7eab92c07f454f2b6f14d42e08da563e64dd453aebef51c557aa455f6ef48ec5"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.103/Remixa-Windows.exe",
+    "sha256": "e1cd711513a0d27521b82bffad577a3ec42354d5ffb46482255134481adb0fa5"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.102/Remixa-Mac.dmg",
-    "sha256": "aba152b3bfd559420621cabbf6e234de2c5c23f5bbcbe2b8df8881657d05c243"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.103/Remixa-Mac.dmg",
+    "sha256": "7ed1f1b9a6022af093d9b9d5c7ef41803db9b37a50b4e0de7c1777a37cff8b33"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.102."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.103."
 }

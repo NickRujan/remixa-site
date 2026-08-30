@@ -1,13 +1,13 @@
 {
-  "version": "2.9.103",
-  "notes": "Scheduling now keeps every post inside the time window you pick - the last posts no longer land past your end time.",
+  "version": "2.9.104",
+  "notes": "New: a full video editor - cut, trim, text with your fonts and emoji, layers, sounds, and export straight to your new Edits folder. Media now has permanent Edits and Uploads folders. Scheduling no longer refuses times that are actually in the future.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.103/Remixa-Windows.exe",
-    "sha256": "e1cd711513a0d27521b82bffad577a3ec42354d5ffb46482255134481adb0fa5"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.104/Remixa-Windows.exe",
+    "sha256": "50d2b9d27160b535791fb24f639289242a8be1725142c3b7cd3dd9bd2ce55830"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.103/Remixa-Mac.dmg",
-    "sha256": "7ed1f1b9a6022af093d9b9d5c7ef41803db9b37a50b4e0de7c1777a37cff8b33"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.104/Remixa-Mac.dmg",
+    "sha256": "414328b73556439221a74829a347811a68e01741db18cef62fd415fc801c4d67"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.103."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.104."
 }

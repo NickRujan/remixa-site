@@ -1,13 +1,13 @@
 {
-  "version": "2.9.104",
-  "notes": "New: a full video editor - cut, trim, text with your fonts and emoji, layers, sounds, and export straight to your new Edits folder. Media now has permanent Edits and Uploads folders. Scheduling no longer refuses times that are actually in the future.",
+  "version": "2.9.105",
+  "notes": "Fixes exporting from the editor on fresh installs.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.104/Remixa-Windows.exe",
-    "sha256": "50d2b9d27160b535791fb24f639289242a8be1725142c3b7cd3dd9bd2ce55830"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.105/Remixa-Windows.exe",
+    "sha256": "35c00649eb4d9d581f5543e13e2b19dbfa94bbebfa56b4417ff946867f0e4b7d"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.104/Remixa-Mac.dmg",
-    "sha256": "414328b73556439221a74829a347811a68e01741db18cef62fd415fc801c4d67"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.105/Remixa-Mac.dmg",
+    "sha256": "472e40642ea53da7f3e67b6ec58befb8cf245003beec14110628d3c01b54c256"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.104."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.105."
 }

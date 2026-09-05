@@ -1,13 +1,13 @@
 {
-  "version": "2.9.105",
-  "notes": "Fixes exporting from the editor on fresh installs.",
+  "version": "2.9.106",
+  "notes": "Smarter scheduling: fill every day to your max starting after your last post, posts reach your end time, and internet blips no longer skip posts.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.105/Remixa-Windows.exe",
-    "sha256": "35c00649eb4d9d581f5543e13e2b19dbfa94bbebfa56b4417ff946867f0e4b7d"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.106/Remixa-Windows.exe",
+    "sha256": "1750d6edddbbc446a61a2ce45be0026b1cc61eb6604956b97115227416b5cdae"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.105/Remixa-Mac.dmg",
-    "sha256": "472e40642ea53da7f3e67b6ec58befb8cf245003beec14110628d3c01b54c256"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.106/Remixa-Mac.dmg",
+    "sha256": "f9898114b3f7bb243df134f266d34a0efdfa5d0fc397fe479a81bf0f3a2659a8"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.105."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.106."
 }

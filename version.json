@@ -1,13 +1,13 @@
 {
-  "version": "2.9.109",
-  "notes": "Daily-max scheduling posts on a steady rhythm around the clock.",
+  "version": "2.9.110",
+  "notes": "Editor: project folders, faster saving, shared sounds, export to any media folder.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.109/Remixa-Windows.exe",
-    "sha256": "c9f3a077dfb33bc1bcff6391453de72ebc70fe3ea0bd1ed1028cf3cfb04afe49"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.110/Remixa-Windows.exe",
+    "sha256": "6fa3b45fcb38e10a34eef4068f3e61119f61b39004622c722ed5e5268d091d7d"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.109/Remixa-Mac.dmg",
-    "sha256": "7bb4bd4f03551a8de52258c855901e2465220d7ffd7cbf280bd9e4371656e573"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.110/Remixa-Mac.dmg",
+    "sha256": "b16ce707b5e1f04e7dc892c43a2df3aea4de82f1f7bedbf74dc07cdd17b03abc"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.109."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.110."
 }

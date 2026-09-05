@@ -1,13 +1,13 @@
 {
-  "version": "2.9.107",
-  "notes": "Fixes a false 'Too many on one day' block when scheduling in the evening.",
+  "version": "2.9.108",
+  "notes": "Daily-limit scheduling now matches Buffer's own day counts exactly.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.107/Remixa-Windows.exe",
-    "sha256": "26d694fa616d563356c6207b3ffe47d2962070e6d54f6f9f242288712051e269"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.108/Remixa-Windows.exe",
+    "sha256": "6060a202f87d51864c6a431121a1596681eecf370db386dbf124d37a08e07395"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.107/Remixa-Mac.dmg",
-    "sha256": "99848bac06a966d80277afc6348f623f1d7ecb83b170b164f9e227082889e8a3"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.108/Remixa-Mac.dmg",
+    "sha256": "6bf33693f35cfdc0e570313510c8df98eb7c322d755667b43d9130fd2df1a35f"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.107."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.108."
 }

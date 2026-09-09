@@ -1,13 +1,13 @@
 {
-  "version": "2.9.112",
-  "notes": "Compilation hooks, better person detection, rolling 24-hour daily-limit scheduling.",
+  "version": "2.9.113",
+  "notes": "Fixes a false 'Too many on one day' warning in daily-max scheduling.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.112/Remixa-Windows.exe",
-    "sha256": "5d276d1e21aad343009fb544d6cab09c3931a25f049bacd83d91193cb49c403c"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.113/Remixa-Windows.exe",
+    "sha256": "7485f8e77fa923dc85214d7a5fc9e19d296ef565438c5dba9d5740b2b491b85d"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.112/Remixa-Mac.dmg",
-    "sha256": "f6a8eadb00856f3a5c3d89d992e0c33434eb226a03eddf030b3ee36a63d07fc3"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.113/Remixa-Mac.dmg",
+    "sha256": "a4f7e9214d8a9e125b7549f0267687e4f17739668212749d0986f873940ef437"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.112."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.113."
 }

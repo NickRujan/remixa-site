@@ -1,13 +1,13 @@
 {
-  "version": "2.9.113",
-  "notes": "Fixes a false 'Too many on one day' warning in daily-max scheduling.",
+  "version": "2.9.114",
+  "notes": "Daily scheduling always continues right after your last scheduled post and spreads posts evenly.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.113/Remixa-Windows.exe",
-    "sha256": "7485f8e77fa923dc85214d7a5fc9e19d296ef565438c5dba9d5740b2b491b85d"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.114/Remixa-Windows.exe",
+    "sha256": "acae793dedf05ee646a0a17e7ae6ef75d22286ae2e5523bf6578a4ee8e8df297"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.113/Remixa-Mac.dmg",
-    "sha256": "a4f7e9214d8a9e125b7549f0267687e4f17739668212749d0986f873940ef437"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.114/Remixa-Mac.dmg",
+    "sha256": "eee081457596bbb08301fb54c985c77d3763d2da09c6d3b826ab6568b9aa7696"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized+stapled. Both current as of 2.9.113."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

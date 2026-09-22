@@ -1,13 +1,13 @@
 {
-  "version": "2.9.114",
-  "notes": "Daily scheduling always continues right after your last scheduled post and spreads posts evenly.",
+  "version": "2.9.115",
+  "notes": "Randomize order now keeps posts with the same hook or same-looking cover as far apart as possible.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.114/Remixa-Windows.exe",
-    "sha256": "acae793dedf05ee646a0a17e7ae6ef75d22286ae2e5523bf6578a4ee8e8df297"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.115/Remixa-Windows.exe",
+    "sha256": "c771675531be4392b181170edf3f4c718eb7a6c945342689fed8fc7744e2f31b"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.114/Remixa-Mac.dmg",
-    "sha256": "eee081457596bbb08301fb54c985c77d3763d2da09c6d3b826ab6568b9aa7696"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.115/Remixa-Mac.dmg",
+    "sha256": "d81a7fbd581e3cd996c36a1d66488ff7779621da0ab0a860cd2f0caa187f15ff"
   },
   "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

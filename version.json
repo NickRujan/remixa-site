@@ -1,13 +1,13 @@
 {
-  "version": "2.9.115",
-  "notes": "Randomize order now keeps posts with the same hook or same-looking cover as far apart as possible.",
+  "version": "2.9.116",
+  "notes": "Use Buffer and Publer side by side with a one-click switch, and schedule Instagram trial reels on Publer accounts.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.115/Remixa-Windows.exe",
-    "sha256": "c771675531be4392b181170edf3f4c718eb7a6c945342689fed8fc7744e2f31b"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.116/Remixa-Windows.exe",
+    "sha256": "0a6714ca5ea403dd6a072f60f102550754c289c42cb601de665feca361e550e4"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.115/Remixa-Mac.dmg",
-    "sha256": "d81a7fbd581e3cd996c36a1d66488ff7779621da0ab0a860cd2f0caa187f15ff"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.116/Remixa-Mac.dmg",
+    "sha256": "a73b26a14b2d5650bb7d08b8fa0a9f6b1603a3b83cae9ad8e050db2c9856fb38"
   },
   "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

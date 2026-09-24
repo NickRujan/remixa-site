@@ -1,13 +1,13 @@
 {
-  "version": "2.9.116",
-  "notes": "Use Buffer and Publer side by side with a one-click switch, and schedule Instagram trial reels on Publer accounts.",
+  "version": "2.9.117",
+  "notes": "Trial reels post reliably on Publer, failed posts are reported instead of silently skipped, and trial reels show up when picking posts to submit.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.116/Remixa-Windows.exe",
-    "sha256": "0a6714ca5ea403dd6a072f60f102550754c289c42cb601de665feca361e550e4"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.117/Remixa-Windows.exe",
+    "sha256": "279a9ae9af5c1a6e6a5a6b8d70771276b79538fd06581da01742095add46445d"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.116/Remixa-Mac.dmg",
-    "sha256": "a73b26a14b2d5650bb7d08b8fa0a9f6b1603a3b83cae9ad8e050db2c9856fb38"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.117/Remixa-Mac.dmg",
+    "sha256": "31aa42056b8ae567084fe6379cf47a8cb883d6d4ff703277cb58a2d3a7545e90"
   },
   "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

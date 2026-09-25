@@ -1,13 +1,13 @@
 {
-  "version": "2.9.117",
-  "notes": "Trial reels post reliably on Publer, failed posts are reported instead of silently skipped, and trial reels show up when picking posts to submit.",
+  "version": "2.9.118",
+  "notes": "Switching between Buffer and Publer no longer mixes up which accounts show.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.117/Remixa-Windows.exe",
-    "sha256": "279a9ae9af5c1a6e6a5a6b8d70771276b79538fd06581da01742095add46445d"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.118/Remixa-Windows.exe",
+    "sha256": "2f9f06730f4a0f2a637bebf78f71a5abdb59085ab7ebdce2f04e1a8a4cfd4198"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.117/Remixa-Mac.dmg",
-    "sha256": "31aa42056b8ae567084fe6379cf47a8cb883d6d4ff703277cb58a2d3a7545e90"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.118/Remixa-Mac.dmg",
+    "sha256": "7bd8c3a46a2459aed52a38032fc8f3c2b9fd6b0ba05903cae48fdbff53c48162"
   },
   "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

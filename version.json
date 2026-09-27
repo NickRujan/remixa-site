@@ -1,13 +1,13 @@
 {
-  "version": "2.9.119",
+  "version": "2.9.120",
   "notes": "You can now delete and reschedule Publer posts from Remixa's calendar.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.119/Remixa-Windows.exe",
-    "sha256": "497f7c73890fb6d48bac71157a9a4a602f125ee68eded7bbf23c41dd93fa59a5"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.120/Remixa-Windows.exe",
+    "sha256": "82b4889dad68e0ecdf6ed99da89ae4ffc23571790d225b749ea829cc73d0ba4c"
   },
   "mac": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.119/Remixa-Mac.dmg",
-    "sha256": "be1f4466c9ad4c53d969f512500a2cd7ef405dd9fb3c10c819695292a741854e"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.120/Remixa-Mac.dmg",
+    "sha256": "19d2ac422d4bc6851fdeb5e4a846590a6ace49a01bd005c6da888ef0f6062e8f"
   },
   "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI"
 }

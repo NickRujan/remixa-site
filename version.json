@@ -1,9 +1,9 @@
 {
-  "version": "2.9.121",
-  "notes": "Scheduling fixes: posts spread evenly across your whole time window, and posts past Buffer's daily limit move to the next open day instead of being skipped.",
+  "version": "2.9.122",
+  "notes": "Pick exact posting times on a calendar, Uploads clear themselves once scheduled, and a more accurate 'made with Remixa' estimate.",
   "windows": {
-    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.121/Remixa-Windows.exe",
-    "sha256": "0bfa9d2fc661be1266a2398d3c71eed27a503a153abe03ddd9f1578bd84355d5"
+    "url": "https://github.com/NickRujan/remixa-site/releases/download/v2.9.122/Remixa-Windows.exe",
+    "sha256": "1cb323ff0525552fe36dd389d86b5429910ed2fe31f532327561eeedb1cb9138"
   },
-  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI. 2.9.121 mac entry omitted on purpose: notarization blocked by an expired Apple agreement - Mac clients see no update until it's added back."
+  "_urls": "GitHub Release assets, sha256-pinned, updater verifies before install; Mac dmg signed+notarized via CI. mac entry omitted on purpose: notarization blocked by an expired Apple agreement - Mac clients see no update until it's added back."
 }
